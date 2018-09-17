@@ -1,0 +1,13 @@
+.git/
+node_modules/
+react/node_modules/
+src/
+.eslintrc
+.gitignore
+package.json
+README.md
+CHANGELOG.md
+react/__tests__/**
+react/__mocks__/**
+react/.babelrc
+react/setupTests.js
