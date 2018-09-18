@@ -1,6 +1,6 @@
 {
   "vendor": "vtex",
-  "name": "footer",
+  "name": "dreamstore-footer",
   "version": "0.0.0",
   "title": "VTEX Footer component",
   "defaultLocale": "pt-BR",
