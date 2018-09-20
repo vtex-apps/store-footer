@@ -1,0 +1,12 @@
+{
+  "pages": {
+    "footer": {
+      "path": "/_v/footer"
+    }
+  },
+  "extensions": {
+    "footer": {
+      "component": "index"
+    }
+  }
+}
