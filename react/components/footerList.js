@@ -17,6 +17,7 @@ export default function footerList(WrappedComponent) {
       intl: intlShape.isRequired,
       alignRight: PropTypes.bool,
       horizontal: PropTypes.bool,
+      titleCapitals: PropTypes.bool,
     }
 
     static defaultProps = {
@@ -25,8 +26,7 @@ export default function footerList(WrappedComponent) {
     }
 
     formatMessage(id) {
-      console.log(id);  
-      return this.props.intl.messages[id] && this.props.intl.formatMessage({ id }) || id;
+      return this.props.intl.messages[id] && this.props.intl.formatMessage({ id }) || id
     }
 
     render() {
@@ -42,7 +42,7 @@ export default function footerList(WrappedComponent) {
       if (!list || list.length === 0) return null
 
       const titleClasses = classNames('vtex-footer__list-title f6 ma0 db', {
-        'ttu': !titleCapitals
+        'ttu': !titleCapitals,
       })
 
       const listContainerClasses = classNames('vtex-footer__list-container', {
