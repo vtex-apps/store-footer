@@ -257,7 +257,7 @@ export default class Footer extends Component {
               storeInformations.map(({ storeInformation }, index) => (
                 <div
                   key={`information-${index}`}
-                  className="vtex-footer__text-information w-50 f7 ph3"
+                  className="vtex-footer__text-information w-100 w-50-ns pa3 f7"
                 >
                   {storeInformation}
                 </div>
