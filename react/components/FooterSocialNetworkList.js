@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
 import footerList from './footerList'
 import withImage from './withImage'
@@ -22,6 +22,8 @@ const FooterSocialNetworkItem = ({ imageSrc, url }) => {
 FooterSocialNetworkItem.displayName = 'FooterSocialNetworkItem'
 
 FooterSocialNetworkItem.propTypes = {
+  /** Social network icon source */
+  imageSrc: PropTypes.string,
   /** For which link should the user be redirected if the image is clicked */
   url: PropTypes.string,
   /** If true, the original logo (with color) is used. If not, the grayscale's one */
