@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Collapse } from 'react-collapse'
-import { injectIntl, intlShape } from 'react-intl'
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import { IconCaretDown, IconCaretRight } from 'vtex.styleguide'
 
 class Accordion extends Component {
@@ -32,7 +32,7 @@ class Accordion extends Component {
           <div>
             {title && (
               <span className="vtex-footer__accordion-title dib ma0 ttu">
-                {this.props.intl.messages[title] && this.props.intl.formatMessage({ id: title })}
+                <FormattedMessage id={title} defaultMessage={title} />
               </span>
             )}
             <span className="vtex-footer__accordion-icon fr">
