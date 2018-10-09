@@ -7,10 +7,10 @@ function getDisplayName(Component) {
 /**
  * HOC used for lazily load an image in the 'images' folder right above
  * this component.
- * 
- * Used for loading the logos for the Footer 
- * 
- * @param {Function} getImageFilename 
+ *
+ * Used for loading the logos for the Footer
+ *
+ * @param {Function} getImageFilename
  */
 export default function withImage(getImageFilename) {
   return WrappedComponent => {
@@ -22,7 +22,7 @@ export default function withImage(getImageFilename) {
       componentDidMount() {
         const imageName = getImageFilename(this.props)
         import(`../images/${imageName}`).then(imageSrc => {
-          this.setState({ imageSrc })
+          this.setState({ imageSrc: imageSrc.default })
         })
       }
 

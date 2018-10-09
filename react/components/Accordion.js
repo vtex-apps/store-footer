@@ -23,7 +23,7 @@ class Accordion extends Component {
     const { open } = this.state
 
     return (
-      <div className="vtex-footer__accordion">
+      <div>
         <div
           className="pointer"
           onClick={() => {

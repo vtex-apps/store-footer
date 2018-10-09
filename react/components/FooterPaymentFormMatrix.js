@@ -23,11 +23,10 @@ export default class FooterPaymentFormMatrix extends Component {
 
     return (
       paymentForms && (
-        <div className="vtex-footer__matrix-container vtex-footer__payment-matrix-container flex flex-wrap">
+        <div className="flex flex-wrap">
           {paymentForms.map((paymentFormsItem, index) => (
             <div
-              key={`payment-container-${index}`}
-              className="vtex-footer__matrix-item vtex-footer__payment-matrix-item">
+              key={`payment-container-${index}`}>
               <FooterPaymentFormList
                 horizontal
                 titleId={paymentFormsItem.title}
