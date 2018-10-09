@@ -45,20 +45,17 @@ export default function footerList(WrappedComponent) {
         'ttu': !titleCapitals,
       })
 
-      const listContainerClasses = classNames('pl0 pr1 w-100 mt2 mt0-ns', {
-        'ml-auto-m': alignRight,
-        'w-auto-m': horizontal,
+      const listContainerClasses = classNames('vtex-footer__list-container pl0 pr1 w-100 mt2 mt0-ns', {
+        'vtex-footer__list-container--right-aligned ml-auto-m': alignRight,
+        'vtex-footer__list-container--horizontal w-auto-m': horizontal,
       })
 
-      const listClasses = classNames(
-        'list flex flex-column flex-wrap pa0 mb0 mt3',
-        {
-          'flex-row flex-wrap': horizontal,
-        }
-      )
+      const listClasses = classNames('vtex-footer__list list flex flex-column flex-wrap pa0 mb0 mt3', {
+        'vtex-footer__list--horizontal flex-row flex-wrap': horizontal,
+      })
 
-      const listItemClasses = classNames('mr0 w-100 mr3-m', {
-        'mr3 w-auto': horizontal,
+      const listItemClasses = classNames('vtex-footer__list-item mr0 w-100 mr3-m', {
+        'vtex-footer__list-item--horizontal mr3 w-auto': horizontal,
       })
 
       return (

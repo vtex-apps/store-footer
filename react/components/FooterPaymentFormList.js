@@ -11,7 +11,7 @@ const FooterPaymentFormItem = ({ imageSrc }) => {
     return null
   }
 
-  return <img className="w2 h2" src={imageSrc} />
+  return <img className="vtex-footer__payment-form-item w2 h2" src={imageSrc} />
 }
 
 FooterPaymentFormItem.displayName = 'FooterPaymentFormItem'

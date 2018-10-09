@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Collapse } from 'react-collapse'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import { IconCaretDown, IconCaretRight } from 'vtex.styleguide'
@@ -23,7 +23,7 @@ class Accordion extends Component {
     const { open } = this.state
 
     return (
-      <Fragment>
+      <div className="vtex-footer__accordion">
         <div
           className="pointer"
           onClick={() => {
@@ -44,7 +44,7 @@ class Accordion extends Component {
         <div style={{ overflowY: 'auto' }}>
           <Collapse isOpened={open}>{children}</Collapse>
         </div>
-      </Fragment>
+      </div>
     )
   }
 }
