@@ -12,7 +12,7 @@ function getDisplayName(Component) {
  *
  * @param {Function} getImageFilename
  */
-export default function withImage(getImageFilename) {
+export default getImageFilename => {
   return WrappedComponent => {
     class WithImage extends Component {
       static displayName = `WithImage(${getDisplayName(WrappedComponent)})`

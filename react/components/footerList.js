@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { injectIntl, intlShape } from 'react-intl'
 
-function getDisplayName(Component) {
+const getDisplayName = Component => {
   return Component.displayName || Component.name || 'Component'
 }
 
-export default function footerList(WrappedComponent) {
+export default (WrappedComponent) => {
   class FooterList extends Component {
     static displayName = `FooterList(${getDisplayName(WrappedComponent)})`
 

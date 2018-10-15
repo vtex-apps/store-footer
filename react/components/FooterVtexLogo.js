@@ -5,7 +5,6 @@ import withImage from './withImage'
 
 /**
  * "Powered By Vtex" image's component, used in Footer
- *
  */
 const FooterVtexLogo = ({ logoUrl, imageSrc }) => {
   if (!imageSrc) {
