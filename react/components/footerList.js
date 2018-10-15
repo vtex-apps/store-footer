@@ -7,7 +7,7 @@ const getDisplayName = Component => {
   return Component.displayName || Component.name || 'Component'
 }
 
-export default (WrappedComponent) => {
+export default WrappedComponent => {
   class FooterList extends Component {
     static displayName = `FooterList(${getDisplayName(WrappedComponent)})`
 
