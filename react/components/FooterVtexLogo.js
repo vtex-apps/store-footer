@@ -14,10 +14,10 @@ const FooterVtexLogo = ({ logoUrl, imageSrc }) => {
   return (
     <div className="vtex-footer__badge-list  vtex-footer__list-container--right-aligned flex flex-row justify-center items-center ml-auto-m">
       <span className="vtex-footer__badge pa1">
-        <img className="vtex-footer__logo-image" src={logoUrl} />
+        <img className="vtex-footer__logo-image h3" src={logoUrl} />
       </span>
       <span className="vtex-footer__badge pa1 nt7-ns">
-        <img className="vtex-footer__vtexlogo-form-item" src={imageSrc} />
+        <img className="vtex-footer__vtexlogo-form-item h3 w3" src={imageSrc} />
       </span>
     </div>
   )

@@ -6,22 +6,8 @@
   min-height: 0.875rem;
 }
 
-.vtex-footer__vtexlogo-form-item {
-  height: 64px;
-  width: 64px;
-}
-
-.vtex-footer__social-network-item {
-  height: 32px;
-  width: 32px;
-}
-
 .vtex-footer__accordion-icon path {
   fill: #727273;
-}
-
-.vtex-footer__logo-image {
-  height: 64px;
 }
 
 /* Mobile */
