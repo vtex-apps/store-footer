@@ -5,7 +5,6 @@ import withImage from './withImage'
 
 /**
  * "Powered By Vtex" image's component, used in Footer
- * 
  */
 const FooterVtexLogo = ({ logoUrl, imageSrc }) => {
   if (!imageSrc) {
@@ -13,12 +12,12 @@ const FooterVtexLogo = ({ logoUrl, imageSrc }) => {
   }
 
   return (
-    <div className="vtex-footer__badge-list vtex-footer__list-container--right-aligned justify-center items-center">
-      <span className="vtex-footer__badge">
-        <img className="vtex-footer__logo-image" src={logoUrl} />
+    <div className="vtex-footer__badge-list  vtex-footer__list-container--right-aligned flex flex-row justify-center items-center ml-auto-m">
+      <span className="vtex-footer__badge pa1">
+        <img className="vtex-footer__logo-image h3" src={logoUrl} />
       </span>
-      <span className="vtex-footer__badge nt7-ns">
-        <img className="vtex-footer__vtexlogo-form-item" src={imageSrc} />
+      <span className="vtex-footer__badge pa1 nt7-ns">
+        <img className="vtex-footer__vtexlogo-form-item h3 w3" src={imageSrc} />
       </span>
     </div>
   )

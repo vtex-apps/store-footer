@@ -30,13 +30,13 @@ export default class FooterLinksMatrix extends Component {
         <div className="vtex-footer__matrix-container vtex-footer__links-matrix-container flex flex-wrap">
           {links.map((linkItem, index) => (
             <Fragment key={`links-container-${index}`}>
-              <div className="vtex-footer__matrix-item vtex-footer__link-matrix-item dn-s flex-ns">
+              <div className="vtex-footer__matrix-item vtex-footer__link-matrix-item flex flex-auto dn-s flex-ns">
                 <FooterLinkList
                   titleId={linkItem.title}
                   list={linkItem.links}
                 />
               </div>
-              <div className="vtex-footer__matrix-item--small vtex-footer__link-matrix-item--small dn-ns db-s w-100 ph2 pv3">
+              <div className="vtex-footer__matrix-item--small vtex-footer__link-matrix-item--small bb b--silver dn-ns db-s w-100 ph2 pv3">
                 <Accordion title={linkItem.title}>
                   {linkItem.links.map(link => (
                     <div
