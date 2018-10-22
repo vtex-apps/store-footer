@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Replace shadow by line.
 
-
 ## [1.0.5] - 2018-10-18
 ### Changed
 - Refactored to use tachyons classes instead of custom CSS.
