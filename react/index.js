@@ -228,7 +228,7 @@ export default class Footer extends Component {
     } = this.props
 
     return (
-      <footer className="vtex-footer bt bw2 b--light-gray mt4">
+      <footer className="vtex-footer bt bw1 b--muted-4 mt4">
         <div className="vtex-footer__container flex justify-between bg-white mid-gray">
           <div className="vtex-footer__links-container f6 w-100-s w-80-ns">
             <FooterLinksMatrix links={sectionLinks} />
