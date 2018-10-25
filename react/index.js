@@ -215,6 +215,22 @@ export default class Footer extends Component {
     },
   }
 
+  getInformationPaddingClasses(listLength, index) {
+    let classes = ''
+    // Only apply vertical paddings if there is more than 1 element
+    if (listLength > 1) {
+      if (index === 0) {
+        classes += ' pb3-s'
+      } else if (index + 1 === listLength) {
+        classes += ' pt3-s'
+      } else {
+        classes += ' pv3-s'
+      }
+    }
+
+    return classes
+  }
+
   render() {
     const {
       showPaymentFormsInColor,
@@ -226,14 +242,15 @@ export default class Footer extends Component {
       badges,
       storeInformations,
     } = this.props
+    console.log('badges', badges)
 
     return (
-      <footer className="vtex-footer bt bw1 b--muted-4 mt4">
-        <div className="vtex-footer__container flex justify-between bg-white mid-gray">
-          <div className="vtex-footer__links-container f6 w-100-s w-80-ns">
+      <footer className="vtex-footer bt bw1 b--muted-4 mt4 pv5">
+        <div className="vtex-footer__container pt5-s flex justify-between ph4-s bg-white mid-gray">
+          <div className="vtex-footer__links-container f6 w-100-s w-80-ns pb5-s">
             <FooterLinksMatrix links={sectionLinks} />
           </div>
-          <div className="vtex-footer__social-networks-container pa1 mt0-ns mt7 relative">
+          <div className="vtex-footer__social-networks-container pv5-s pa1-ns">
             <FooterSocialNetworkList
               titleId="social-networks"
               list={socialNetworks}
@@ -244,23 +261,24 @@ export default class Footer extends Component {
             />
           </div>
         </div>
-        <div className="vtex-footer__container flex justify-between bg-white mid-gray">
+        <div className="vtex-footer__container pv5-s flex justify-between ph4-s bg-white mid-gray">
           <FooterPaymentFormMatrix
             paymentForms={paymentForms}
             horizontal
             showInColor={showPaymentFormsInColor}
           />
         </div>
-        <div className="vtex-footer__container flex justify-between bg-white mid-gray">
-          <div className="vtex-footer__text-container w-100-s w-80-ns flex flex-wrap">
+        <div className="vtex-footer__container pt5-s flex justify-between bg-white mid-gray ph4-s">
+          <div className="vtex-footer__text-container w-100-s pb5-s w-80-ns flex flex-wrap">
             {storeInformations &&
               storeInformations.map(({ storeInformation }, index) => (
-                <div
+                <p
                   key={`information-${index}`}
-                  className="vtex-footer__text-information w-100 w-50-ns pa3 f7"
+                  className={`vtex-footer__text-information w-100 w-50-ns pa3-ns f7 ma0 ${
+                    this.getInformationPaddingClasses(storeInformations.length, index)}`}
                 >
                   {storeInformation}
-                </div>
+                </p>
               ))}
           </div>
           <FooterVtexLogo logoUrl={logo} />
