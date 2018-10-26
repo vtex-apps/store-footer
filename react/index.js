@@ -2,12 +2,13 @@ import './global.css'
 
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import classNames from 'classnames'
 
 import FooterBadgeList from './components/FooterBadgeList'
 import FooterLinksMatrix from './components/FooterLinksMatrix'
 import FooterPaymentFormMatrix from './components/FooterPaymentFormMatrix'
-import FooterSocialNetworkList from './components/FooterSocialNetworkList'
 import FooterVtexLogo from './components/FooterVtexLogo'
+import FooterSocialNetworkList from './components/FooterSocialNetworkList'
 import { objectLikeBadgeArray, objectLikeLinkArray } from './propTypes'
 
 /**
@@ -215,20 +216,20 @@ export default class Footer extends Component {
     },
   }
 
-  getInformationPaddingClasses(listLength, index) {
-    let classes = ''
+  getInformationCssClasses(listLength, index) {
+    let paddingClass;
+    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns f7 ma0'
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
-        classes += ' pb3-s'
+        paddingClass = 'pb3-s'
       } else if (index + 1 === listLength) {
-        classes += ' pt3-s'
+        paddingClass = 'pt3-s'
       } else {
-        classes += ' pv3-s'
+        paddingClass = 'pv3-s'
       }
     }
-
-    return classes
+    return classNames(defaultClasses, paddingClass)
   }
 
   render() {
@@ -242,7 +243,6 @@ export default class Footer extends Component {
       badges,
       storeInformations,
     } = this.props
-    console.log('badges', badges)
 
     return (
       <footer className="vtex-footer bt bw1 b--muted-4 mt4 pv5">
@@ -274,8 +274,7 @@ export default class Footer extends Component {
               storeInformations.map(({ storeInformation }, index) => (
                 <p
                   key={`information-${index}`}
-                  className={`vtex-footer__text-information w-100 w-50-ns pa3-ns f7 ma0 ${
-                    this.getInformationPaddingClasses(storeInformations.length, index)}`}
+                  className={this.getInformationCssClasses(storeInformations.length, index)}
                 >
                   {storeInformation}
                 </p>
