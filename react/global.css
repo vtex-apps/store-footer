@@ -11,10 +11,6 @@
   .vtex-footer__container {
     flex-direction: column;
   }
-
-  .vtex-footer__badge {
-    padding: 0.25rem;
-  }
 }
 
 @media screen and (min-width: 40em) {
