@@ -9,7 +9,6 @@ import FooterPaymentFormMatrix from './components/FooterPaymentFormMatrix'
 import FooterSocialNetworkList from './components/FooterSocialNetworkList'
 import FooterVtexLogo from './components/FooterVtexLogo'
 import { objectLikeBadgeArray, objectLikeLinkArray } from './propTypes'
-import { ExtensionPoint } from 'render'
 
 /**
  * Footer component that appears in the bottom of every page.
@@ -230,7 +229,6 @@ export default class Footer extends Component {
 
     return (
       <footer className="vtex-footer bt bw1 b--muted-4 mt4">
-        <ExtensionPoint id="wishlist"/>
         <div className="vtex-footer__container flex justify-between bg-white mid-gray">
           <div className="vtex-footer__links-container f6 w-100-s w-80-ns">
             <FooterLinksMatrix links={sectionLinks} />
