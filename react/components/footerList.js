@@ -45,7 +45,7 @@ export default WrappedComponent => {
         'ttu': !titleCapitals,
       })
 
-      const listContainerClasses = classNames('vtex-footer__list-container pl0 pr1 w-100 mt2 mt0-ns', {
+      const listContainerClasses = classNames('vtex-footer__list-container pl0 pr1-ns w-100 mt0-ns', {
         'vtex-footer__list-container--right-aligned ml-auto-m': alignRight,
         'vtex-footer__list-container--horizontal w-auto-m': horizontal,
       })
