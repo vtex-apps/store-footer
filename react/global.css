@@ -13,15 +13,24 @@
   }
 }
 
-@media screen and (min-width: 40em) {
+@media only screen and (max-width: 40em) {
   .vtex-footer__container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .vtex-footer__container {
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
     flex-flow: row wrap;
   }
 }
 
-@media screen and (min-width: 64em) {
+@media only screen and (min-width: 64em) {
   .vtex-footer__container {
-    padding: 20px 70px 20px;
+    padding: 20px 4.375em 20px 4.375em;
   }
 
   .vtex-footer__container:first-of-type {
@@ -35,22 +44,8 @@
 
 @media screen and (min-width: 80em) {
   .vtex-footer__container {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
-}
-
-@media screen and (min-width: 100em) {
-  .vtex-footer__container {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-}
-
-@media screen and (min-width: 120em) {
-  .vtex-footer__container {
-    padding-left: 320px;
-    padding-right: 320px;
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
   }
 }
 
