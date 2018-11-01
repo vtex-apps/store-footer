@@ -247,7 +247,7 @@ export default class Footer extends Component {
     return (
       <footer className="vtex-footer bt bw1 b--muted-4 mt4 pv5">
         <div className="vtex-footer__container center pt5-s flex justify-between ph4-s bg-white mid-gray">
-          <div className="vtex-footer__links-container f6 w-100-s w-80-ns pb5-s">
+          <div className="vtex-footer__links-container f6 w-100-s w-80-ns pb5-s pl3-ns">
             <FooterLinksMatrix links={sectionLinks} />
           </div>
           <div className="vtex-footer__social-networks-container pv5-s pa1-ns">
