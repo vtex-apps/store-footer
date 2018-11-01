@@ -13,24 +13,26 @@
   }
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (min-width: 20em) {
   .vtex-footer__container {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 }
 
 @media only screen and (min-width: 40em) {
   .vtex-footer__container {
-    padding-left: 3.25rem;
-    padding-right: 3.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     flex-flow: row wrap;
   }
 }
 
 @media only screen and (min-width: 64em) {
   .vtex-footer__container {
-    padding: 20px 4.375em 20px 4.375em;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .vtex-footer__container:first-of-type {
@@ -44,8 +46,8 @@
 
 @media screen and (min-width: 80em) {
   .vtex-footer__container {
-    padding-left: 8.75rem;
-    padding-right: 8.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
