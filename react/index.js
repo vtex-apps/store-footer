@@ -9,6 +9,7 @@ import FooterLinksMatrix from './components/FooterLinksMatrix'
 import FooterPaymentFormMatrix from './components/FooterPaymentFormMatrix'
 import FooterVtexLogo from './components/FooterVtexLogo'
 import FooterSocialNetworkList from './components/FooterSocialNetworkList'
+import footerDefaultProps from './defaultProps.json'
 import { objectLikeBadgeArray, objectLikeLinkArray } from './propTypes'
 
 /**
@@ -51,25 +52,7 @@ export default class Footer extends Component {
     storeInformations: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
   }
 
-  static defaultProps = {
-    showPaymentFormsInColor: false,
-    showSocialNetworksInColor: false,
-    socialNetworks: [
-      {
-        socialNetwork: 'Facebook',
-        url: '#',
-      },
-    ],
-    sectionLinks: [],
-    badges: [],
-    paymentForms: [
-      {
-        title: 'editor.footer.paymentForms.paymentForm',
-        paymentTypes: ['MasterCard'],
-      },
-    ],
-    storeInformations: [],
-  }
+  static defaultProps = footerDefaultProps
 
   static schema = {
     title: 'editor.footer.title',
@@ -218,7 +201,7 @@ export default class Footer extends Component {
 
   getInformationCssClasses = (listLength, index) => {
     let paddingClass
-    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns f7 ma0'
+    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns t-small ma0'
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {

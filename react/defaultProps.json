@@ -1,0 +1,110 @@
+{
+    "showPaymentFormsInColor": false,
+    "showsocialNetworksInColor": false,
+    "socialNetworks": [
+        {
+            "socialNetwork": "Facebook",
+            "url": "#"
+        },
+        {
+            "socialNetwork": "Twitter",
+            "url": "#"
+        },
+        {
+            "socialNetwork": "Instagram",
+            "url": "#"
+        }
+    ],
+    "sectionLinks": [
+        {
+            "title": "Know more about us",
+            "links": [
+                {
+                    "title": "Extended Warranty",
+                    "url": "#"
+                },
+                {
+                    "title": "Investor Relations",
+                    "url": "#"
+                },
+                {
+                    "title": "Careers",
+                    "url": "#"
+                },
+                {
+                    "title": "Privacy Policy",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Talk to us",
+            "links": [
+                {
+                    "title": "Attendance",
+                    "url": "#"
+                },
+                {
+                    "title": "Returns & Replacements",
+                    "url": "#"
+                },
+                {
+                    "title": "Buyers Remorse",
+                    "url": "#"
+                },
+                {
+                    "title": "Shipping Policies",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Our Card",
+            "links": [
+                {
+                    "title": "Get yours!",
+                    "url": "#"
+                },
+                {
+                    "title": "Special Offers",
+                    "url": "#"
+                },
+                {
+                    "title": "Travel Miles",
+                    "url": "#"
+                },
+                {
+                    "title": "Benefits",
+                    "url": "#"
+                }
+            ]
+        }
+    ],
+    "badges": [],
+    "paymentForms": [
+        {
+            "title": "editor.footer.paymentForms.paymentForm",
+            "paymentTypes": [
+                "MasterCard",
+                "Visa",
+                "Diners Club"
+            ]
+        },
+        {
+            "title": "Debit",
+            "paymentTypes": [
+                "MasterCard",
+                "Visa",
+                "Diners Club"
+            ]
+        }
+    ],
+    "storeInformations": [
+        {
+            "storeInformation": "Todas as regras e promoções são válidas apenas para produtos vendidos e entregues pela nossa Loja. O valor de oferta do produto será garantido após a finalização da compra. Havendo divergência, prevalecerá o menor preço ofertado."
+        },
+        {
+            "storeInformation": "CNPJ n.º 01.002.333/0001-00 | Centro Empresarial Botafogo - Praia de Botafogo, 300 - 2º Andar - Botafogo, Rio de Janeiro - RJ, 22250-040- empresa do grupo VTEX."
+        }
+    ]
+}
