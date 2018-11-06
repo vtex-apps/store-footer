@@ -218,7 +218,7 @@ export default class Footer extends Component {
 
   getInformationCssClasses = (listLength, index) => {
     let paddingClass
-    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns f7 ma0'
+    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pl4-ns pa3-ns f7 ma0'
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
@@ -247,10 +247,10 @@ export default class Footer extends Component {
     return (
       <footer className="vtex-footer bt bw1 b--muted-4 mt4 pv5">
         <div className="vtex-footer__container vtex-page-padding center pt5-s flex justify-between bg-white mid-gray">
-          <div className="vtex-footer__links-container f6 w-100-s w-80-ns pb5-s pl3-ns">
+          <div className="vtex-footer__links-container f6 w-100-s w-80-ns pb5-s pl4-ns">
             <FooterLinksMatrix links={sectionLinks} />
           </div>
-          <div className="vtex-footer__social-networks-container pv5-s pa1-ns">
+          <div className="vtex-footer__social-networks-container pv5-s pa1-ns pr2-ns">
             <FooterSocialNetworkList
               titleId="social-networks"
               list={socialNetworks}
