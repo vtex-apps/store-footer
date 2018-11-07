@@ -1,49 +1,49 @@
 {
-    "showPaymentFormsInColor": false,
-    "showsocialNetworksInColor": false,
-    "socialNetworks": [
+  "showPaymentFormsInColor": false,
+  "showsocialNetworksInColor": false,
+  "socialNetworks": [
+    {
+      "socialNetwork": "Facebook",
+      "url": "#"
+    }
+  ],
+  "sectionLinks": [
+    {
+      "title": "Talk to us",
+      "links": [
         {
-            "socialNetwork": "Facebook",
-            "url": "#"
-        }
-    ],
-    "sectionLinks": [
+          "title": "Attendance",
+          "url": "#"
+        },
         {
-            "title": "Talk to us",
-            "links": [
-                {
-                    "title": "Attendance",
-                    "url": "#"
-                },
-                {
-                    "title": "Returns & Replacements",
-                    "url": "#"
-                },
-                {
-                    "title": "Buyers Remorse",
-                    "url": "#"
-                },
-                {
-                    "title": "Shipping Policies",
-                    "url": "#"
-                }
-            ]
-        }
-    ],
-    "badges": [],
-    "paymentForms": [
+          "title": "Returns & Replacements",
+          "url": "#"
+        },
         {
-            "title": "editor.footer.paymentForms.paymentForm",
-            "paymentTypes": [
-                "MasterCard",
-                "Visa",
-                "Diners Club"
-            ]
-        }
-    ],
-    "storeInformations": [
+          "title": "Buyers Remorse",
+          "url": "#"
+        },
         {
-            "storeInformation": "All the rules and promotions are only valid for products sold and delivered by our store. The product's offer price will be granted after the sale conclusion. If there's divergence, the lower price shall prevail."
+          "title": "Shipping Policies",
+          "url": "#"
         }
-    ]
+      ]
+    }
+  ],
+  "badges": [],
+  "paymentForms": [
+    {
+      "title": "editor.footer.paymentForms.paymentForm",
+      "paymentTypes": [
+        "MasterCard",
+        "Visa",
+        "Diners Club"
+      ]
+    }
+  ],
+  "storeInformations": [
+    {
+      "storeInformation": "All the rules and promotions are only valid for products sold and delivered by our store. The product's offer price will be granted after the sale conclusion. If there's divergence, the lower price shall prevail."
+    }
+  ]
 }
