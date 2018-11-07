@@ -44,6 +44,9 @@
   "storeInformations": [
     {
       "storeInformation": "All the rules and promotions are only valid for products sold and delivered by our store. The product's offer price will be granted after the sale conclusion. If there's divergence, the lower price shall prevail."
+    },
+    {
+      "storeInformation": "CNPJ n.º 01.002.333/0001-00 | Centro Empresarial Botafogo - Praia de Botafogo, 300 - 2º Andar - Botafogo, Rio de Janeiro - RJ, 22250-040- a VTEX group company."
     }
   ]
 }
