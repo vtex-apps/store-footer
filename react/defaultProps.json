@@ -5,38 +5,9 @@
         {
             "socialNetwork": "Facebook",
             "url": "#"
-        },
-        {
-            "socialNetwork": "Twitter",
-            "url": "#"
-        },
-        {
-            "socialNetwork": "Instagram",
-            "url": "#"
         }
     ],
     "sectionLinks": [
-        {
-            "title": "Know more about us",
-            "links": [
-                {
-                    "title": "Extended Warranty",
-                    "url": "#"
-                },
-                {
-                    "title": "Investor Relations",
-                    "url": "#"
-                },
-                {
-                    "title": "Careers",
-                    "url": "#"
-                },
-                {
-                    "title": "Privacy Policy",
-                    "url": "#"
-                }
-            ]
-        },
         {
             "title": "Talk to us",
             "links": [
@@ -57,27 +28,6 @@
                     "url": "#"
                 }
             ]
-        },
-        {
-            "title": "Our Card",
-            "links": [
-                {
-                    "title": "Get yours!",
-                    "url": "#"
-                },
-                {
-                    "title": "Special Offers",
-                    "url": "#"
-                },
-                {
-                    "title": "Travel Miles",
-                    "url": "#"
-                },
-                {
-                    "title": "Benefits",
-                    "url": "#"
-                }
-            ]
         }
     ],
     "badges": [],
@@ -89,22 +39,11 @@
                 "Visa",
                 "Diners Club"
             ]
-        },
-        {
-            "title": "Debit",
-            "paymentTypes": [
-                "MasterCard",
-                "Visa",
-                "Diners Club"
-            ]
         }
     ],
     "storeInformations": [
         {
             "storeInformation": "All the rules and promotions are only valid for products sold and delivered by our store. The product's offer price will be granted after the sale conclusion. If there's divergence, the lower price shall prevail."
-        },
-        {
-            "storeInformation": "CNPJ n.º 01.002.333/0001-00 | Centro Empresarial Botafogo - Praia de Botafogo, 300 - 2º Andar - Botafogo, Rio de Janeiro - RJ, 22250-040- a VTEX group company."
         }
     ]
 }
