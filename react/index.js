@@ -218,7 +218,7 @@ export default class Footer extends Component {
 
   getInformationCssClasses = (listLength, index) => {
     let paddingClass
-    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns f7 ma0'
+    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns t-mini ma0'
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
