@@ -41,7 +41,7 @@ export default WrappedComponent => {
 
       if (!list || list.length === 0) return null
 
-      const titleClasses = classNames('vtex-footer__list-title f6 ma0 db', {
+      const titleClasses = classNames('vtex-footer__list-title t-small ma0 db', {
         'ttu': !titleCapitals,
       })
 
