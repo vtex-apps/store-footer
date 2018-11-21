@@ -36,7 +36,7 @@ export default class FooterLinksMatrix extends Component {
                   list={linkItem.links}
                 />
               </div>
-              <div className="vtex-footer__matrix-item--small vtex-footer__link-matrix-item--small bb b--silver dn-ns db-s w-100 ph2 pv3">
+              <div className="vtex-footer__matrix-item--small vtex-footer__link-matrix-item--small bb b--muted-2 dn-ns db-s w-100 ph2 pv3">
                 <Accordion title={linkItem.title}>
                   {linkItem.links.map(link => (
                     <div
