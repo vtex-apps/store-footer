@@ -218,15 +218,15 @@ export default class Footer extends Component {
 
   getInformationCssClasses = (listLength, index) => {
     let paddingClass
-    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns t-mini ma0'
+    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns t-mini ma0'
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
-        paddingClass = 'pb3-s'
+        paddingClass = 'pt4-s pb4-s pr4-s'
       } else if (index + 1 === listLength) {
-        paddingClass = 'pt3-s'
+        paddingClass = 'pt4-s pb4-ns pl4-s'
       } else {
-        paddingClass = 'pv3-s'
+        paddingClass = 'pv4-s'
       }
     }
     return classNames(defaultClasses, paddingClass)
