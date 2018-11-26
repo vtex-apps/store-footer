@@ -222,9 +222,9 @@ export default class Footer extends Component {
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
-        paddingClass = 'pt4-s pb4-s pr4-s'
+        paddingClass = 'pt4-s pb4-s pr4-ns'
       } else if (index + 1 === listLength) {
-        paddingClass = 'pt4-s pb4-ns pl4-s'
+        paddingClass = 'pt4-s pb4-ns pl4-ns'
       } else {
         paddingClass = 'pv4-s'
       }
