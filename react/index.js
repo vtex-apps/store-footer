@@ -218,15 +218,15 @@ export default class Footer extends Component {
 
   getInformationCssClasses = (listLength, index) => {
     let paddingClass
-    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns pa3-ns t-mini ma0'
+    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns t-mini ma0'
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
-        paddingClass = 'pb3-s'
+        paddingClass = 'pt4-s pb4-s pr4-ns'
       } else if (index + 1 === listLength) {
-        paddingClass = 'pt3-s'
+        paddingClass = 'pt4-s pb4-ns pl4-ns'
       } else {
-        paddingClass = 'pv3-s'
+        paddingClass = 'pv4-s'
       }
     }
     return classNames(defaultClasses, paddingClass)
@@ -245,7 +245,7 @@ export default class Footer extends Component {
     } = this.props
 
     return (
-      <footer className="vtex-footer bt bw1 b--muted-4 mt4 pv5">
+      <footer className="vtex-footer force-full-width ph3 ph5-m ph8-l ph9-xl bt bw1 b--muted-4 mt4 pv5">
         <div className="vtex-footer__container pt5-s flex justify-between ph4-s bg-base c-muted-1">
           <div className="vtex-footer__links-container t-small w-100-s w-80-ns pb5-s">
             <FooterLinksMatrix links={sectionLinks} />

@@ -1,9 +1,16 @@
+.vtex-footer {
+  --vpadding: 1.25rem;
+  --vpadding-limits: 1.5rem;
+  --icon-filling: #727273;
+  --tilte-min-height: 0.875rem;
+}
+
 .vtex-footer__list-title {
-  min-height: 0.875rem;
+  min-height: var(--tilte-min-height);
 }
 
 .vtex-footer__accordion-icon path {
-  fill: #727273;
+  fill: var(--icon-filling);
 }
 
 /* Mobile */
@@ -21,45 +28,24 @@
 
 @media screen and (min-width: 64em) {
   .vtex-footer__container {
-    padding: 20px 70px 20px;
+    padding-top: var(--vpadding);
+    padding-bottom: var(--vpadding);
   }
 
   .vtex-footer__container:first-of-type {
-    padding-top: 25px;
+    padding-top: var(--vpadding-limits);
   }
 
   .vtex-footer__container:last-of-type {
-    padding-bottom: 25px;
+    padding-bottom: var(--vpadding-limits);
   }
 }
 
-@media screen and (min-width: 80em) {
-  .vtex-footer__container {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
+/** Social links specific margin and padding fixes **/
+.vtex-footer .vtex-footer__container .vtex-footer__social-networks-container .vtex-footer__list-container ul li:last-child {
+  margin-right: 0 !important;
 }
 
-@media screen and (min-width: 100em) {
-  .vtex-footer__container {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-}
-
-@media screen and (min-width: 120em) {
-  .vtex-footer__container {
-    padding-left: 320px;
-    padding-right: 320px;
-  }
-}
-
-.vtex-store__template > div {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.vtex-store__template > div > div:last-child {
-  margin-top: auto;
+.vtex-footer .vtex-footer__container .vtex-footer__social-networks-container .vtex-footer__list-container {
+  padding-right: 0 !important;
 }
