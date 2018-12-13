@@ -7,6 +7,7 @@
   "description": "The canonical VTEX store footer component",
   "builders": {
     "react": "2.x",
+    "store": "0.x",
     "messages": "0.x"
   },
   "mustUpdateAt": "2019-09-17",
