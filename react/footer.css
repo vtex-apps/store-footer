@@ -5,11 +5,11 @@
   --tilte-min-height: 0.875rem;
 }
 
-.vtex-footer__list-title {
+.listTitle {
   min-height: var(--tilte-min-height);
 }
 
-.vtex-footer__accordion-icon path {
+.accordionIcon path {
   fill: var(--icon-filling);
 }
 
@@ -42,10 +42,10 @@
 }
 
 /** Social links specific margin and padding fixes **/
-.vtex-footer .vtex-footer__container .vtex-footer__social-networks-container .vtex-footer__list-container ul li:last-child {
+.footer .paymentContainer .paymentMatrix .paymentMatrixItem .listContainer ul li:last-child {
   margin-right: 0 !important;
 }
 
-.vtex-footer .vtex-footer__container .vtex-footer__social-networks-container .vtex-footer__list-container {
+.footer .paymentContainer .paymentMatrix .paymentMatrixItem .listContainer {
   padding-right: 0 !important;
 }

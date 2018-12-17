@@ -3,6 +3,7 @@ import React from 'react'
 
 import footerList from './footerList'
 import withImage from './withImage'
+import footer from '../footer.css'
 
 /**
  * Shows an image for an specific social network
@@ -14,7 +15,7 @@ const FooterSocialNetworkItem = ({ imageSrc, url }) => {
 
   return (
     <a href={url} target="_blank" className="c-muted-1">
-      <img className="vtex-footer__social-network-item w2 h2" src={imageSrc} />
+      <img className={`${footer.socialNetworkItem} w2 h2`} src={imageSrc} />
     </a>
   )
 }

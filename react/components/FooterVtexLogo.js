@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import withImage from './withImage'
+import footer from '../footer.css'
 
 /**
  * "Powered By Vtex" image's component, used in Footer
@@ -12,12 +13,12 @@ const FooterVtexLogo = ({ logoUrl, imageSrc }) => {
   }
 
   return (
-    <div className="vtex-footer__badge-list  vtex-footer__list-container--right-aligned flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m">
-      <span className="vtex-footer__badge pa2-s pa1-ns">
-        <img className="vtex-footer__logo-image h3" src={logoUrl} />
+    <div className={`${footer.badgeList} flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}>
+      <span className={`${footer.badge} pa2-s pa1-ns`}>
+        <img className={`${footer.logoImage} h3`} src={logoUrl} />
       </span>
-      <span className="vtex-footer__badge pa2-s pa1-ns nt7-ns">
-        <img className="vtex-footer__vtexlogo-form-item h3 w3" src={imageSrc} />
+      <span className={`${footer.badge} pa2-s pa1-ns nt7-ns`}>
+        <img className={`${footer.vtexLogoItem} h3 w3`} src={imageSrc} />
       </span>
     </div>
   )
