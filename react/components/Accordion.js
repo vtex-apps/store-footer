@@ -4,6 +4,8 @@ import { Collapse } from 'react-collapse'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import { IconCaretDown, IconCaretRight } from 'vtex.styleguide'
 
+import footer from '../footer.css'
+
 class Accordion extends Component {
   static propTypes = {
     /** Title shown in Accordion */
@@ -23,7 +25,7 @@ class Accordion extends Component {
     const { open } = this.state
 
     return (
-      <div className="vtex-footer__accordion pv2">
+      <div className={`${footer.accordion} pv2`}>
         <div
           className="pointer"
           onClick={() => {
@@ -31,11 +33,11 @@ class Accordion extends Component {
           }}>
           <div>
             {title && (
-              <span className="vtex-footer__accordion-title dib ma0 ttu">
+              <span className={`${footer.accordionTitle} dib ma0 ttu`}>
                 <FormattedMessage id={title} defaultMessage={title} />
               </span>
             )}
-            <span className="vtex-footer__accordion-icon fr">
+            <span className={`${footer.accordionIcon} fr`}>
               {open ? <IconCaretDown /> : <IconCaretRight />}
             </span>
           </div>
@@ -44,7 +46,7 @@ class Accordion extends Component {
         <div style={{ overflowY: 'auto' }}>
           <Collapse isOpened={open}>{children}</Collapse>
         </div>
-      </div>
+      </div >
     )
   }
 }

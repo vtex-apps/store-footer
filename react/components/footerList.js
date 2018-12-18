@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { injectIntl, intlShape } from 'react-intl'
 
+import footer from '../footer.css'
+
 const getDisplayName = Component => {
   return Component.displayName || Component.name || 'Component'
 }
@@ -41,21 +43,21 @@ export default WrappedComponent => {
 
       if (!list || list.length === 0) return null
 
-      const titleClasses = classNames('vtex-footer__list-title t-small ma0 db', {
+      const titleClasses = classNames(`${footer.listTitle} t-small ma0 db`, {
         'ttu': !titleCapitals,
       })
 
-      const listContainerClasses = classNames('vtex-footer__list-container pl0 pr1-ns w-100 mt0-ns', {
-        'vtex-footer__list-container--right-aligned ml-auto-m': alignRight,
-        'vtex-footer__list-container--horizontal w-auto-m': horizontal,
+      const listContainerClasses = classNames(`${footer.listContainer} pl0 w-100 mt0-ns`, {
+        [`${footer.listContainerRightAligned} ml-auto-m`]: alignRight,
+        [`${footer.listContainerHorizontal} w-auto-m`]: horizontal,
       })
 
-      const listClasses = classNames('vtex-footer__list list flex flex-column flex-wrap pa0 mb0 mt3', {
-        'vtex-footer__list--horizontal flex-row flex-wrap': horizontal,
+      const listClasses = classNames(`${footer.list} list flex flex-column flex-wrap pa0 mb0 mt3`, {
+        [`${footer.listHorizontal} flex-row flex-wrap`]: horizontal,
       })
 
-      const listItemClasses = classNames('vtex-footer__list-item mr0 w-100 mr3-m', {
-        'vtex-footer__list-item--horizontal mr3 w-auto': horizontal,
+      const listItemClasses = classNames(`${footer.listItem} mr0 mr3`, {
+        [`${footer.listItemHorizontal}`]: horizontal,
       })
 
       return (

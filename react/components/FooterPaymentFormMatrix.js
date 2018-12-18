@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 
 import FooterPaymentFormList from './FooterPaymentFormList'
 
+import footer from '../footer.css'
+
 export default class FooterPaymentFormMatrix extends Component {
   static propTypes = {
     /** Payment forms array */
@@ -23,11 +25,11 @@ export default class FooterPaymentFormMatrix extends Component {
 
     return (
       paymentForms && (
-        <div className="vtex-footer__matrix-container vtex-footer__payment-matrix-container flex flex-wrap">
+        <div className={`${footer.paymentMatrix} flex flex-wrap`}>
           {paymentForms.map((paymentFormsItem, index) => (
             <div
               key={`payment-container-${index}`}
-              className="vtex-footer__matrix-item vtex-footer__payment-matrix-item">
+              className={footer.paymentMatrixItem}>
               <FooterPaymentFormList
                 horizontal
                 titleId={paymentFormsItem.title}

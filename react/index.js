@@ -1,5 +1,3 @@
-import './global.css'
-
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import classNames from 'classnames'
@@ -10,6 +8,8 @@ import FooterPaymentFormMatrix from './components/FooterPaymentFormMatrix'
 import FooterVtexLogo from './components/FooterVtexLogo'
 import FooterSocialNetworkList from './components/FooterSocialNetworkList'
 import { objectLikeBadgeArray, objectLikeLinkArray } from './propTypes'
+
+import footer from './footer.css'
 
 /**
  * Footer component that appears in the bottom of every page.
@@ -218,7 +218,7 @@ export default class Footer extends Component {
 
   getInformationCssClasses = (listLength, index) => {
     let paddingClass
-    const defaultClasses = 'vtex-footer__text-information w-100 w-50-ns t-mini ma0'
+    const defaultClasses = `${footer.textInformation} w-100 w-50-ns t-mini ma0`
     // Only apply vertical paddings if there is more than 1 element
     if (listLength > 1) {
       if (index === 0) {
@@ -245,12 +245,12 @@ export default class Footer extends Component {
     } = this.props
 
     return (
-      <footer className="vtex-footer force-full-width ph3 ph5-m ph8-l ph9-xl bt bw1 b--muted-4 mt4 pv5">
-        <div className="vtex-footer__container pt5-s flex justify-between ph4-s bg-base c-muted-1">
-          <div className="vtex-footer__links-container t-small w-100-s w-80-ns pb5-s">
+      <footer className={`${footer.footer} force-full-width ph3 ph5-m ph8-l ph9-xl bt bw1 b--muted-4 mt4 pv5`}>
+        <div className={`${footer.container} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
+          <div className={`${footer.linksContainer} t-small w-100-s w-80-ns pb5-s`}>
             <FooterLinksMatrix links={sectionLinks} />
           </div>
-          <div className="vtex-footer__social-networks-container pv5-s pa1-ns">
+          <div className={`${footer.socialNetworkContainer} pv5-s pa1-ns`}>
             <FooterSocialNetworkList
               titleId="social-networks"
               list={socialNetworks}
@@ -261,15 +261,15 @@ export default class Footer extends Component {
             />
           </div>
         </div>
-        <div className="vtex-footer__container pv5-s flex justify-between ph4-s bg-base c-muted-1">
+        <div className={`${footer.container} pv5-s flex justify-between ph4-s bg-base c-muted-1`}>
           <FooterPaymentFormMatrix
             paymentForms={paymentForms}
             horizontal
             showInColor={showPaymentFormsInColor}
           />
         </div>
-        <div className="vtex-footer__container pt5-s flex justify-between bg-base c-muted-1 ph4-s">
-          <div className="vtex-footer__text-container w-100-s pb5-s w-80-ns flex flex-wrap">
+        <div className={`${footer.container} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
+          <div className={`${footer.textContainer} w-100-s pb5-s w-80-ns flex flex-wrap`}>
             {storeInformations &&
               storeInformations.map(({ storeInformation }, index) => (
                 <p
