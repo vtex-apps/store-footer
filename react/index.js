@@ -261,7 +261,7 @@ export default class Footer extends Component {
             />
           </div>
         </div>
-        <div className={`${footer.paymentContainer} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
+        <div className={`${footer.container} pv5-s flex justify-between ph4-s bg-base c-muted-1`}>
           <FooterPaymentFormMatrix
             paymentForms={paymentForms}
             horizontal

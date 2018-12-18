@@ -40,12 +40,3 @@
     padding-bottom: var(--vpadding-limits);
   }
 }
-
-/** Social links specific margin and padding fixes **/
-.footer .paymentContainer .paymentMatrix .paymentMatrixItem .listContainer ul li:last-child {
-  margin-right: 0 !important;
-}
-
-.footer .paymentContainer .paymentMatrix .paymentMatrixItem .listContainer {
-  padding-right: 0 !important;
-}

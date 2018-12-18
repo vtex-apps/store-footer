@@ -47,7 +47,7 @@ export default WrappedComponent => {
         'ttu': !titleCapitals,
       })
 
-      const listContainerClasses = classNames(`${footer.listContainer} pl0 pr1-ns w-100 mt0-ns`, {
+      const listContainerClasses = classNames(`${footer.listContainer} pl0 w-100 mt0-ns`, {
         [`${footer.listContainerRightAligned} ml-auto-m`]: alignRight,
         [`${footer.listContainerHorizontal} w-auto-m`]: horizontal,
       })
@@ -56,7 +56,7 @@ export default WrappedComponent => {
         [`${footer.listHorizontal} flex-row flex-wrap`]: horizontal,
       })
 
-      const listItemClasses = classNames(`${footer.listItem} mr0 w-100 mr3-m`, {
+      const listItemClasses = classNames(`${footer.listItem} mr0 mr3`, {
         [`${footer.listItemHorizontal}`]: horizontal,
       })
 
