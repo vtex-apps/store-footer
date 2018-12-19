@@ -5,14 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
+### Changed
+- Bye `pages.json`! Welcome `store-builder`.
+ 
 ## [2.2.1] - 2019-01-02
 ### Added
- - Support to GoCommerce logo.
+- Support to GoCommerce logo.
 
 ## [2.2.0] - 2018-12-18
 ### Added
- - Support to CSS Modules.
+- Support to CSS Modules.
 
 ## [2.1.0] - 2018-12-17
 ### Added
