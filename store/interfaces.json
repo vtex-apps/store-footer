@@ -2,6 +2,6 @@
   "footer": {
     "allowed": [],
     "required": [],
-    "component": "index"
+    "inheritComponent": true
   }
 }
