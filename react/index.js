@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { RenderContextConsumer } from 'render'
 
 import FooterBadgeList from './components/FooterBadgeList'
 import FooterLinksMatrix from './components/FooterLinksMatrix'
@@ -281,11 +280,7 @@ export default class Footer extends Component {
                 </p>
               ))}
           </div>
-          <RenderContextConsumer>
-            {({ account }) => (
-              <FooterVtexLogo logoUrl={logo} account={account} />
-            )}
-          </RenderContextConsumer>
+          <FooterVtexLogo logoUrl={logo} />
           <FooterBadgeList list={badges} />
         </div>
       </footer>

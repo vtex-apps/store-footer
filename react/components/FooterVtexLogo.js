@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { withRuntimeContext } from 'render'
 
 import withImage from './withImage'
 import footer from '../footer.css'
@@ -10,12 +11,12 @@ const isPlatformGC = account => account.indexOf('gc_') === 0 || account.indexOf(
 /**
  * "Powered By Vtex" image's component, used in Footer
  */
-const FooterVtexLogo = ({ account, logoUrl, imageSrc }) => {
+const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
   if (!imageSrc) {
     return null
   }
 
-  const isPlatformGCResult = isPlatformGC(account)
+  const isPlatformGCResult = isPlatformGC(runtime.account)
   const vtexLogoItemClasses = classNames(footer.vtexLogoItem, {
     'w4': isPlatformGCResult,
     'h3 w3': !isPlatformGCResult
@@ -36,14 +37,17 @@ const FooterVtexLogo = ({ account, logoUrl, imageSrc }) => {
 FooterVtexLogo.displayName = 'FooterVtexLogo'
 
 FooterVtexLogo.propTypes = {
-  account: PropTypes.string,
+  /** Get the account name to find the correct platfom */
+  runtime: PropTypes.shape({
+    account: PropTypes.string.isRequired,
+  }).isRequired,
   /** If true, the original logo (with color) is used. If not, the grayscale's one */
   showInColor: PropTypes.bool,
   /** The source for an external customizable logo to show above "Powered By Vtex" */
   logoUrl: PropTypes.string,
 }
 
-const getImagePathFromProps = ({ showInColor, account }) =>
-  `${isPlatformGC(account) ? 'GoCommerce' : 'VTEX'}${showInColor ? '' : '-BW'}.svg`
+const getImagePathFromProps = ({ runtime, showInColor }) =>
+  `${isPlatformGC(runtime.account) ? 'GoCommerce' : 'VTEX'}${showInColor ? '' : '-BW'}.svg`
 
-export default withImage(getImagePathFromProps)(FooterVtexLogo)
+export default withRuntimeContext(withImage(getImagePathFromProps)(FooterVtexLogo))
