@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import withImage from './withImage'
 import footer from '../footer.css'
@@ -14,13 +15,19 @@ const FooterVtexLogo = ({ account, logoUrl, imageSrc }) => {
     return null
   }
 
+  const isPlatformGCResult = isPlatformGC(account)
+  const vtexLogoItemClasses = classNames(footer.vtexLogoItem, {
+    'w4': isPlatformGCResult,
+    'h3 w3': !isPlatformGCResult
+  })
+
   return (
     <div className={`${footer.badgeList} flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}>
       <span className={`${footer.badge} pa2-s pa1-ns`}>
         <img className={`${footer.logoImage} h3`} src={logoUrl} />
       </span>
       <span className={`${footer.badge} pa2-s pa1-ns nt7-ns`}>
-        <img className={`${footer.vtexLogoItem} ${isPlatformGC(account) ? 'w4' : 'h3 w3'}`} src={imageSrc} />
+        <img className={vtexLogoItemClasses} src={imageSrc} />
       </span>
     </div>
   )
