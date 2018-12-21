@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { includes } from 'ramda'
 import { withRuntimeContext } from 'render'
 
 import withImage from './withImage'
 import footer from '../footer.css'
 
-const isPlatformGC = account => account.indexOf('gc_') === 0 || account.indexOf('gc-') === 0
+const isPlatformGC = account => includes('gc_', account) || includes('gc-', account)
 
 /**
  * "Powered By Vtex" image's component, used in Footer
