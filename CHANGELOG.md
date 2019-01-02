@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.1] - 2019-01-02
+### Added
+ - Support to GoCommerce logo.
+
 ## [2.2.0] - 2018-12-18
 ### Added
  - Support to CSS Modules.
