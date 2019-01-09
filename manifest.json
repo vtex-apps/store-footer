@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "vtex.styleguide": "8.x",
-    "vtex.store-components": "3.4.1-beta"
+    "vtex.store-components": "3.x"
   }
 }

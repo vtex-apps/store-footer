@@ -1,7 +1,5 @@
 {
   "footer": {
-    "allowed": [],
-    "required": [],
     "component": "index"
   }
 }

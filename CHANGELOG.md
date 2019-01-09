@@ -7,9 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Add padding on footer through `Container` component.
-
-## [2.2.2-beta] - 2019-01-04
-### Changed
 - Bye `pages.json`! Welcome `store-builder`.
  
 ## [2.2.2] - 2019-01-07
