@@ -1,4 +1,10 @@
 .footer {
+  width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
   --vpadding: 1.25rem;
   --vpadding-limits: 1.5rem;
   --icon-filling: #727273;

@@ -245,7 +245,7 @@ export default class Footer extends Component {
     } = this.props
 
     return (
-      <footer className={`${footer.footer} force-full-width ph3 ph5-m ph8-l ph9-xl bt bw1 b--muted-4 mt4 pv5`}>
+      <footer className={`${footer.footer} ph3 ph5-m ph8-l ph9-xl bt bw1 b--muted-4 mt4 pv5`}>
         <div className={`${footer.container} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
           <div className={`${footer.linksContainer} t-small w-100-s w-80-ns pb5-s`}>
             <FooterLinksMatrix links={sectionLinks} />
