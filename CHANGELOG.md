@@ -6,17 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.0] - 2019-01-09
+### Changed
+- Add padding on footer through `Container` component.
+- Bye `pages.json`! Welcome `store-builder`.
+ 
 ## [2.2.2] - 2019-01-07
 ### Fixed
 - Fixed footer item class and link
 
 ## [2.2.1] - 2019-01-02
 ### Added
- - Support to GoCommerce logo.
+- Support to GoCommerce logo.
 
 ## [2.2.0] - 2018-12-18
 ### Added
- - Support to CSS Modules.
+- Support to CSS Modules.
 
 ## [2.1.0] - 2018-12-17
 ### Added
