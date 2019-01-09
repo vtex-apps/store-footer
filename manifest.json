@@ -19,6 +19,7 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
-    "vtex.styleguide": "8.x"
+    "vtex.styleguide": "8.x",
+    "vtex.store-components": "3.4.1-beta"
   }
 }
