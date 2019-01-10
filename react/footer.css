@@ -40,3 +40,55 @@
     padding-bottom: var(--vpadding-limits);
   }
 }
+
+.accordion {}
+
+.accordionTitle {}
+
+.listLink {}
+
+.matrixContainer {}
+
+.matrixItem {}
+
+.matrixItemSmall {}
+
+.accordionItem {}
+
+.listContainer {}
+
+.listContainerRightAligned {}
+
+.listContainerHorizontal {}
+
+.list {}
+
+.listHorizontal {}
+
+.listItem {}
+
+.listItemHorizontal {}
+
+.paymentFormItem {}
+
+.paymentMatrix {}
+
+.paymentMatrixItem {}
+
+.socialNetworkItem {}
+
+.vtexLogoItem {}
+
+.badgeList {}
+
+.badge {}
+
+.logoImage {}
+
+.textInformation {}
+
+.linksContainer {}
+
+.socialNetworkContainer {}
+
+.textContainer {}
