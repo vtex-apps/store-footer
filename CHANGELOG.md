@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.1] - 2019-01-11
+### Changed
+- Remove `undefined` class.
+
 ## [2.3.0] - 2019-01-09
 ### Changed
 - Add padding on footer through `Container` component.
