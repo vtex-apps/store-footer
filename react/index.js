@@ -247,9 +247,9 @@ export default class Footer extends Component {
 
     return (
       <footer className={`${footer.footer} bt bw1 b--muted-4 mt4 pv5`}>
-        <Container className={`${footer.container} justify-center flex`}>
+        <Container className="justify-center flex">
           <div className="w-100 mw9">
-            <div className={`${footer.section1} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
+            <div className={`${footer.container} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
               <div className={`${footer.linksContainer} t-small w-100-s w-80-ns pb5-s`}>
                 <FooterLinksMatrix links={sectionLinks} />
               </div>
@@ -264,14 +264,14 @@ export default class Footer extends Component {
                 />
               </div>
             </div>
-            <div className={`${footer.section2} pv5-s flex justify-between ph4-s bg-base c-muted-1`}>
+            <div className={`${footer.container} pv5-s flex justify-between ph4-s bg-base c-muted-1`}>
               <FooterPaymentFormMatrix
                 paymentForms={paymentForms}
                 horizontal
                 showInColor={showPaymentFormsInColor}
               />
             </div>
-            <div className={`${footer.section3} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
+            <div className={`${footer.container} pt5-s flex justify-between ph4-s bg-base c-muted-1`}>
               <div className={`${footer.textContainer} w-100-s pb5-s w-80-ns flex flex-wrap`}>
                 {storeInformations &&
                   storeInformations.map(({ storeInformation }, index) => (
