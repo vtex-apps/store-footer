@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.4] - 2019-01-15
+### Fixed
+- Using html5 tags to a more semantic structure.
+
 ## [2.3.3] - 2019-01-11
 ### Fixed
 - Fix component responsive behavior. 
