@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { Functions } from '@gocommerce/utils'
 import { includes } from 'ramda'
 import { withRuntimeContext } from 'vtex.render-runtime'
 
 import withImage from './withImage'
 import footer from '../footer.css'
-
-const isPlatformGC = account => includes('gc_', account) || includes('gc-', account)
 
 /**
  * "Powered By Vtex" image's component, used in Footer
@@ -17,7 +16,7 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
     return null
   }
 
-  const isPlatformGCResult = isPlatformGC(runtime.account)
+  const isPlatformGCResult = Functions.isGoCommerceAcc(runtime.account)
   const vtexLogoItemClasses = classNames(footer.vtexLogoItem, {
     'w4': isPlatformGCResult,
     'h3 w3': !isPlatformGCResult
@@ -51,6 +50,6 @@ FooterVtexLogo.propTypes = {
 }
 
 const getImagePathFromProps = ({ runtime, showInColor }) =>
-  `${isPlatformGC(runtime.account) ? 'GoCommerce' : 'VTEX'}${showInColor ? '' : '-BW'}.svg`
+  `${Functions.isGoCommerceAcc(runtime.account) ? 'GoCommerce' : 'VTEX'}${showInColor ? '' : '-BW'}.svg`
 
 export default withRuntimeContext(withImage(getImagePathFromProps)(FooterVtexLogo))

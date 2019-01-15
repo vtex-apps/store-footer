@@ -6,7 +6,7 @@
     "gen:coveralls": "yarn test:coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
-    "@types/ramda": "^0.25.39",
+    "@gocommerce/utils": "^0.5.29",
     "classnames": "^2.2.6",
     "ramda": "^0.26.1",
     "react": "^16.8.3",
@@ -15,6 +15,7 @@
     "react-motion": "^0.5.2"
   },
   "devDependencies": {
+    "@types/ramda": "^0.25.39",
     "@vtex/test-tools": "^0.2.0",
     "apollo-client": "^2.5.1",
     "coveralls": "^3.0.3",
