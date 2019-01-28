@@ -11,18 +11,19 @@ Footer is a canonical component that any VTEX app can import.
 To import it into your code:
 
 ```js
-import { Footer } from 'vtex.dreamstore-footer'
+import { Footer } from 'vtex.store-footer'
 ```
 
 Also, you can import as a dependency in your `manifest.json`
 
 ```json
   dependencies: {
-    "vtex.dreamstore-footer: 1.x"
+    "vtex.store-footer: 2.x"
   }
 ```
 
 ## Usage
+#### Deprecated
 
 You can use it in your code like a React component with the jsx tag: `<Footer />`.
 
