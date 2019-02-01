@@ -15,7 +15,7 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
-    "vtex.styleguide": "9.x",
-    "vtex.store-components": "3.x"
+    "vtex.store-components": "3.x",
+    "vtex.dreamstore-icons": "0.x"
   }
 }

@@ -2,7 +2,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Collapse } from 'react-collapse'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
-import { IconCaretDown, IconCaretRight } from 'vtex.styleguide'
+
+import { IconCaret } from 'vtex.dreamstore-icons'
 
 import footer from '../footer.css'
 
@@ -38,7 +39,7 @@ class Accordion extends Component {
               </span>
             )}
             <span className={`${footer.accordionIcon} fr`}>
-              {open ? <IconCaretDown /> : <IconCaretRight />}
+              {open ? <IconCaret orientation="down" /> : <IconCaret orientation="right" />}
             </span>
           </div>
         </div>
