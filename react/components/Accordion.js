@@ -21,6 +21,10 @@ class Accordion extends Component {
     open: false,
   }
 
+  translate = id => {
+    return this.props.intl.messages[id] ? this.props.intl.formatMessage({ id }) : id
+  }
+
   render() {
     const { children, title } = this.props
     const { open } = this.state
@@ -31,15 +35,20 @@ class Accordion extends Component {
           className="pointer"
           onClick={() => {
             this.setState({ open: !open })
-          }}>
+          }}
+        >
           <div>
             {title && (
               <span className={`${footer.accordionTitle} dib ma0 ttu`}>
-                <FormattedMessage id={title} defaultMessage={title} />
+                {this.translate(title)}
               </span>
             )}
             <span className={`${footer.accordionIcon} fr`}>
-              {open ? <IconCaret orientation="down" /> : <IconCaret orientation="right" />}
+              {open ? (
+                <IconCaret orientation="down" />
+              ) : (
+                <IconCaret orientation="right" />
+              )}
             </span>
           </div>
         </div>
@@ -47,7 +56,7 @@ class Accordion extends Component {
         <div style={{ overflowY: 'auto' }}>
           <Collapse isOpened={open}>{children}</Collapse>
         </div>
-      </div >
+      </div>
     )
   }
 }

@@ -63,7 +63,7 @@ export default WrappedComponent => {
       return (
         <div className={listContainerClasses}>
           <span className={titleClasses}>
-            {titleId && this.formatMessage(titleId)}
+            {this.formatMessage(titleId)}
           </span>
           <ul className={listClasses}>
             {list.map((item, index) => (
