@@ -17,7 +17,7 @@ export default class FooterLinksMatrix extends Component {
           PropTypes.shape({
             /** Link text */
             title: PropTypes.string.isRequired,
-          }),
+          })
         ),
       })
     ),
@@ -26,32 +26,36 @@ export default class FooterLinksMatrix extends Component {
   render() {
     const { links } = this.props
 
+    if (!links) {
+      return null
+    }
+
     return (
-      links && (
-        <div className={`${footer.matrixContainer} flex flex-wrap`}>
-          {links.map((linkItem, index) => (
-            <Fragment key={`links-container-${index}`}>
-              <div className={`${footer.matrixItem} flex flex-auto dn-s flex-ns`}>
-                <FooterLinkList
-                  titleId={linkItem.title}
-                  list={linkItem.links}
-                />
-              </div>
-              <div className={`${footer.matrixItemSmall} bb b--muted-2 dn-ns db-s w-100 ph2 pv3`}>
-                <Accordion title={linkItem.title}>
-                  {linkItem.links.map(link => (
-                    <div
-                      key={`${link.title}-${index}`}
-                      className={`${footer.accordionItem} pt1`}>
-                      <FooterLinkItem {...link} />
-                    </div>
-                  ))}
-                </Accordion>
-              </div>
-            </Fragment>
-          ))}
-        </div>
-      )
+      <div className={`${footer.matrixContainer} flex flex-wrap`}>
+        {links.map((linkItem, index) => (
+          <Fragment key={`links-container-${index}`}>
+            <div className={`${footer.matrixItem} flex flex-auto dn-s flex-ns`}>
+              <FooterLinkList titleId={linkItem.title} list={linkItem.links} />
+            </div>
+            <div
+              className={`${
+                footer.matrixItemSmall
+              } bb b--muted-2 dn-ns db-s w-100 ph2 pv3`}
+            >
+              <Accordion title={linkItem.title}>
+                {linkItem.links.map(link => (
+                  <div
+                    key={`${link.title}-${index}`}
+                    className={`${footer.accordionItem} pt1`}
+                  >
+                    <FooterLinkItem {...link} />
+                  </div>
+                ))}
+              </Accordion>
+            </div>
+          </Fragment>
+        ))}
+      </div>
     )
   }
 }
