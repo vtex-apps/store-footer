@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.6.5] - 2019-02-14
 ### Added
 - Update documentation.
-
+ 
 ## [2.6.4] - 2019-02-13
 ### Added
 - Add missing css-handles in components in order to allow customization with CSS Modules.
