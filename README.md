@@ -1,6 +1,11 @@
-# Footer
+VTEX Footer
+=====
 
-Footer is a canonical component that any VTEX app can import.
+## Description
+The VTEX Footer app shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This is a VTEX app that is used by Dreamstore product.
+
+:loudspeaker: **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
+
 ## Release schedule
 | Release  | Status              | Initial Release | Maintenance LTS Start | End-of-life | Dreamstore Compatibility
 | :--:     | :---:               |  :---:          | :---:                 | :---:       | :---: 
@@ -8,13 +13,21 @@ Footer is a canonical component that any VTEX app can import.
 | [2.x]    | **Current Release** |  2018-11-21     |                       |             | 2.x
 
 
-To import it into your code:
+See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for more information.
 
-```js
-import { Footer } from 'vtex.store-footer'
-```
+## Table of Contents
+- [Usage](#usage)
+- [API](#api)
+  - [Blocks API](#blocks-api)
+    - [Configuration](#configuration)
+  - [Styles API](#styles-api)
+- [Troubleshooting](#troubleshooting)
 
-Also, you can import as a dependency in your `manifest.json`
+## Usage
+
+This app use our store builder with the blocks architecture. To know more about Store Builder [click here.](https://help.vtex.com/en/tutorial/understanding-storebuilder-and-stylesbuilder#structuring-and-configuring-our-store-with-object-object)
+
+To use this app you need to import in your dependencies on `manifest.json`.
 
 ```json
   dependencies: {
@@ -22,22 +35,20 @@ Also, you can import as a dependency in your `manifest.json`
   }
 ```
 
-## Usage
-#### Deprecated
+Then, add `footer` block into our app theme, like we do in our [Dreamstore app](https://github.com/vtex-apps/dreamstore/blob/master/store/blocks.json).
 
-You can use it in your code like a React component with the jsx tag: `<Footer />`.
+### Blocks API
+:construction: :construction: :construction:
 
-```jsx
-<Footer />
-```
-
-Or, you can add in your `pages.json`:
+This app have an interface that describes what are the rules that the blocks must implement when you want to use the footer block. 
 
 ```json
- "store/footer": {
-      "component": "vtex.dreamstore-footer/index"
- }
+  "footer": {
+    "component": "index"
+  }
 ```
+#### Configuration
+Through the Storefront you can change the behavior and interface of the footer. But, you can also make adjusts in your theme app, like Dreamstore does.
 
 | Prop name | Type | Description |
 | --- | --- | --- |
@@ -50,4 +61,8 @@ Or, you can add in your `pages.json`:
 | `showSocialNetworksInColor` | `Boolean` | Set color of social networks |
 | `logo` | `String` | Link of Store logo |
 
-See an example at [Dreamstore](https://github.com/vtex-apps/dreamstore/blob/master/pages/pages.json#L24) and [Store](https://github.com/vtex-apps/store/blob/master/react/StoreTemplate.js#L16) apps
+### Styles API
+:construction: :construction: :construction:
+
+## Troubleshooting
+You can check if others are passing through similar issues [here](https://github.com/vtex-apps/minicart/issues). Also feel free to [open issues](https://github.com/vtex-apps/minicart/issues/new) or contribute with pull requests.
