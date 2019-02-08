@@ -48,16 +48,53 @@ This app have an interface that describes what are the rules that the blocks mus
 #### Configuration
 Through the Storefront you can change the behavior and interface of the footer. But, you can also make adjusts in your theme app, like Dreamstore does.
 
+Store Footer:
+
 | Prop name | Type | Description |
 | --- | --- | --- |
-| `socialNetworks` | `Array` | Array of social network links |
-| `sectionLinks` | `Array` | Array of name and links |
-| `storeInformations` | `Array` | Array of links about store information |
+| `socialNetworks` | `Array` | Array of social networks |
+| `sectionLinks` | `Array` | Array of section links |
+| `storeInformations` | `Array` | Array of strings containing informations about the store |
 | `badges` | `Array` | Array of badges |
 | `paymentForms` | `Array` | Array of payment forms |
 | `showPaymentFormsInColor` | `Boolean` | Set color of payment forms |
 | `showSocialNetworksInColor` | `Boolean` | Set color of social networks |
 | `logo` | `String` | Link of Store logo |
+
+Social Network:
+
+| Prop name | Type | Description |
+| --- | --- | --- |
+| `title` | `String!` | Title of the section |
+| `links` | `Array` | Array of sections links |
+
+Section Link:
+
+| Prop name | Type | Description |
+| --- | --- | --- |
+| `title` | `String!` | Title of the section |
+| `links` | `Array` | Array of sections links |
+
+Link:
+
+| Prop name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | URL |
+| `title` | `String` | Title of the link |
+
+
+Badge:
+
+| Prop name | Type | Description |
+| --- | --- | --- |
+| `image` | `String` | URL of the badge |
+
+Payment Form:
+
+| Prop name | Type | Description |
+| --- | --- | --- |
+| `title` | `String!` | Title of payment form |
+| `paymentTypes` | `Array` | Array of strings containing the payment types |
 
 ### Styles API
 :construction: :construction: :construction:
