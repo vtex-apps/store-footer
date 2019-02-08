@@ -23,9 +23,9 @@ See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for mor
 
 ## Usage
 
-This app use our store builder with the blocks architecture. To know more about Store Builder [click here.](https://help.vtex.com/en/tutorial/understanding-storebuilder-and-stylesbuilder#structuring-and-configuring-our-store-with-object-object)
+This app uses our store builder with the blocks architecture. To know more about Store Builder [click here.](https://help.vtex.com/en/tutorial/understanding-storebuilder-and-stylesbuilder#structuring-and-configuring-our-store-with-object-object)
 
-To use this app you need to import in your dependencies on `manifest.json` file.
+To use this app you need to add it in your `dependencies` in the `manifest.json` file.
 
 ```json
   dependencies: {
@@ -52,11 +52,11 @@ Store Footer:
 
 | Prop name | Type | Description |
 | --- | --- | --- |
-| `socialNetworks` | `Array` | Array of social networks |
-| `sectionLinks` | `Array` | Array of section links |
-| `storeInformations` | `Array` | Array of strings containing informations about the store |
-| `badges` | `Array` | Array of badges |
-| `paymentForms` | `Array` | Array of payment forms |
+| `socialNetworks` | `Array(Social Network)` | Array of social networks |
+| `sectionLinks` | `Array(Section Link)` | Array of section links |
+| `storeInformations` | `Array(String)` | Array of informations about the store |
+| `badges` | `Array(Badge)` | Array of badges |
+| `paymentForms` | `Array(Payment Form)` | Array of payment forms |
 | `showPaymentFormsInColor` | `Boolean` | Set color of payment forms |
 | `showSocialNetworksInColor` | `Boolean` | Set color of social networks |
 | `logo` | `String` | Link of Store logo |
@@ -65,15 +65,14 @@ Social Network:
 
 | Prop name | Type | Description |
 | --- | --- | --- |
-| `title` | `String!` | Title of the section |
-| `links` | `Array` | Array of sections links |
+| `links` | `Array(Link)` | Array of links |
 
 Section Link:
 
 | Prop name | Type | Description |
 | --- | --- | --- |
 | `title` | `String!` | Title of the section |
-| `links` | `Array` | Array of sections links |
+| `links` | `Array(Link)` | Array of links |
 
 Link:
 
@@ -81,7 +80,6 @@ Link:
 | --- | --- | --- |
 | `url` | `String` | URL |
 | `title` | `String` | Title of the link |
-
 
 Badge:
 
@@ -94,10 +92,10 @@ Payment Form:
 | Prop name | Type | Description |
 | --- | --- | --- |
 | `title` | `String!` | Title of payment form |
-| `paymentTypes` | `Array` | Array of strings containing the payment types |
+| `paymentTypes` | `Array(String)` | Array of strings containing the payment types |
 
 ### Styles API
 :construction: :construction: :construction:
 
 ## Troubleshooting
-You can check if others are passing through similar issues [here](https://github.com/vtex-apps/minicart/issues). Also feel free to [open issues](https://github.com/vtex-apps/minicart/issues/new) or contribute with pull requests.
+You can check if others are passing through similar issues [here](https://github.com/vtex-apps/store-footer/issues). Also feel free to [open issues](https://github.com/vtex-apps/store-footer/issues/new) or contribute with pull requests.
