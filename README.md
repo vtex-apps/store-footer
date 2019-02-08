@@ -38,7 +38,7 @@ Then, add `footer` block into our app theme, like we do in our [Dreamstore app](
 ### Blocks API
 :construction: :construction: :construction:
 
-This app have an interface that describes what are the rules that the blocks must implement when you want to use the footer block. 
+This app has an interface that describes what rules must be implemented by a block when you want to use the footer. 
 
 ```json
   "footer": {
