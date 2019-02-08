@@ -1,5 +1,4 @@
-VTEX Footer
-=====
+# VTEX Footer
 
 ## Description
 The VTEX Footer app shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This is a VTEX app that is used by Dreamstore product.
@@ -17,7 +16,6 @@ See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for mor
 
 ## Table of Contents
 - [Usage](#usage)
-- [API](#api)
   - [Blocks API](#blocks-api)
     - [Configuration](#configuration)
   - [Styles API](#styles-api)
@@ -27,7 +25,7 @@ See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for mor
 
 This app use our store builder with the blocks architecture. To know more about Store Builder [click here.](https://help.vtex.com/en/tutorial/understanding-storebuilder-and-stylesbuilder#structuring-and-configuring-our-store-with-object-object)
 
-To use this app you need to import in your dependencies on `manifest.json`.
+To use this app you need to import in your dependencies on `manifest.json` file.
 
 ```json
   dependencies: {
@@ -52,11 +50,11 @@ Through the Storefront you can change the behavior and interface of the footer. 
 
 | Prop name | Type | Description |
 | --- | --- | --- |
-| `socialNetworkLinks` | `Object` | Array of social network links |
-| `sectionLinks` | `Object` | Array of name and links |
-| `moreInformationLinks` | `Object` | Array of links about store information |
-| `badges` | `Object` | Array of badges |
-| `paymentForms` | `Object` | Array of payment forms |
+| `socialNetworks` | `Array` | Array of social network links |
+| `sectionLinks` | `Array` | Array of name and links |
+| `storeInformations` | `Array` | Array of links about store information |
+| `badges` | `Array` | Array of badges |
+| `paymentForms` | `Array` | Array of payment forms |
 | `showPaymentFormsInColor` | `Boolean` | Set color of payment forms |
 | `showSocialNetworksInColor` | `Boolean` | Set color of social networks |
 | `logo` | `String` | Link of Store logo |
