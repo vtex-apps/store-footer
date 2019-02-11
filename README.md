@@ -99,3 +99,6 @@ Payment Form:
 
 ## Troubleshooting
 You can check if others are passing through similar issues [here](https://github.com/vtex-apps/store-footer/issues). Also feel free to [open issues](https://github.com/vtex-apps/store-footer/issues/new) or contribute with pull requests.
+
+## Tests
+:construction: :construction: :construction:
