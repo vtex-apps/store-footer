@@ -20,6 +20,7 @@ See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for mor
     - [Configuration](#configuration)
   - [Styles API](#styles-api)
 - [Troubleshooting](#troubleshooting)
+- [Tests](#tests)
 
 ## Usage
 
