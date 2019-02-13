@@ -113,36 +113,40 @@ Below, we describe the tokens, their explanation and the component where it is l
 | Token name         | Component          | Description                                            |
 | ------------------ | ----------         |------------------------------------------------------- |
 | `footer`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The main content of the footer                         |
-| `container`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The links and payment methods containers                         |
-| `linksContainer`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The inner links container                         |
+| `container`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The generical container of the footer|
+| `linksContainer`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The wrapper containing the matrices of links                         |
+| `matrixContainer`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)| The container that holds all the listContainers                        |
+| `matrixItem`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)| The wrapper for an item of the matrix. (e.g, `listContainer`)                        |
+| `listContainer`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The wrapper containing the `listTitle` and a `list`                         |
+| `listContainerHorizontal`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The properties to be applied when the `listContainer` is horizontal                        |
+| `listContainerRightAligned`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The properties to be applied when the `listContainer` is right aligned                         |
+| `listTitle`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The title of a item list. (e.g, 'Institutional')                         |
+| `list`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           |     The container for a list of `listItem`                    |
+| `listHorizontal`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The properties to be applied to the list when the `horizontal` props is true                        |
+| `listItem`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The item of a list                       |
+| `listLink`        | [FooterLinkList](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinkList.js)           |  The link inside a list                       |
+| `listItemHorizontal`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           |  The properties to be applied to the item list when the `horizontal` props is true                       |
 | `socialNetworkContainer`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The social networks container                         |
 |`socialNetworkItem`| [FooterSocialNetworkList](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterSocialNetworkList.js)|The image of a social network                         
-| `textContainer`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The container for the text informations of the store                         |
-| `listContainer`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The wrapper containing the list title and its items                         |
-| `listContainerHorizontal`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The properties to be applied when the listContainer is horizontal                        |
-| `listContainerRightAligned`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The properties to be applied when the listContainer is right aligned                         |
-| `matrixContainer`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)| The container that holds all the listContainers                        |
-| `matrixItem`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)| The wrapper for an item of the matrix. (e.g, list)                        |
-| `matrixItemSmall`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)|  The item of the matrix in mobile view                        |
 | `paymentMatrix`        | [FooterPaymentFormMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterPaymentFormMatrix.js)|The wrapper that holds all the paymentMatrixItems                        
 |`paymentMatrixItem`        | [FooterPaymentFormMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterPaymentFormMatrix.js)|The container that holds a payment method and the accepted cards                      
 | `paymentFormItem`        | [FooterPaymentFormList](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterPaymentFormList.js)|The image of the payment form|
-| `list`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           |     The container for a list of items                    |
-| `listHorizontal`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The properties to be applied to the list when the `horizontal` props is true                        |
-| `listTitle`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The title of a item list. (e.g, 'Institutional')                         |
-| `listItem`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           | The item of a list                       |
-| `listItemHorizontal`        | [footerList](https://github.com/vtex-apps/store-footer/blob/master/react/components/footerList.js)           |  The properties to be applied to the item list when the `horizontal` props is true                       |
-| `listLink`        | [FooterLinkList](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinkList.js)           |  The link inside a list                       |
-| `accordion`        | [Accordion](https://github.com/vtex-apps/store-footer/blob/master/react/components/Accordion.js)           |  The accordion container for list in mobile view                       |
-| `accordionTitle`        | [Accordion](https://github.com/vtex-apps/store-footer/blob/master/react/components/Accordion.js)           | The accordion title for list in mobile view                        |
-| `accordionIcon`        | [Accordion](https://github.com/vtex-apps/store-footer/blob/master/react/components/Accordion.js)           |  The accordion icon in mobile view                      |
-| `accordionItem`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)| The item inside the accordion (e.g, link)                         |
+| `textContainer`        | [index](https://github.com/vtex-apps/store-footer/blob/master/react/index.js)           | The container for the text informations of the store                         |
+|  `badgeList`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)| The wrapper for all the bagdes                         |
+|    `badge`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)| One store badge                         |
 |  `vtexLogoItem`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)|The 'Powered by VTEX' logo|
-|  `badgeList`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)| The wrapper for all the VTEX bagdes                         |
-|    `badge`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)| One VTEX badge                         |
-|    `logoImage`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)| The image of the VTEX logo                         |
+|    `logoImage`        | [FooterVtexLogo](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterVtexLogo.js)| The image of one logo of the store                        |
 
 
+When the footer is displayed in mobile view, the `matrixContainer` constricts itself and displays a list of `matrixItemSmall`, each one containing an `accordion`. Below, we describe the tokens, their explanation and the component where it is located.
+
+| Token name         | Component          | Description                                            |
+| ------------------ | ----------         |------------------------------------------------------- |
+| `matrixItemSmall`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)|  The item of the matrix                       |
+| `accordionTitle`        | [Accordion](https://github.com/vtex-apps/store-footer/blob/master/react/components/Accordion.js)           | The accordion title                       |
+| `accordion`        | [Accordion](https://github.com/vtex-apps/store-footer/blob/master/react/components/Accordion.js)           |  The accordion container for a list of `accordionItem`                      |
+| `accordionItem`        | [FooterLinksMatrix](https://github.com/vtex-apps/store-footer/blob/master/react/components/FooterLinksMatrix.js)| The item inside the accordion (e.g, `listLink`)                         |
+| `accordionIcon`        | [Accordion](https://github.com/vtex-apps/store-footer/blob/master/react/components/Accordion.js)           |  The accordion icon                     |
 
 
 ## Troubleshooting
