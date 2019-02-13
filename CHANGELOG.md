@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed 
-- Fix typo in `footer.css`, `.navegation` to `.navigation` .
+- Fix typo in `footer.css`, `.navegation` to `.navigation`.
 
 ## [2.6.9] - 2019-02-22
 ### Fixed
