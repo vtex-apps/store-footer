@@ -42,27 +42,25 @@ Now, you can change the behavior of the footer block. See an example of how to c
 "footer": {
   "props": {
     "socialNetworks": [
-                        { "links":[
-                                    { "url":"www.facebook.com", "title":"Facebook" }, 
-                                    { "url":"www.twitter.com", "title":"Twitter" }
-                                  ]
-                        }
-                      ],
+      { "links":[
+        { "url":"www.facebook.com", "title":"Facebook" }, 
+        { "url":"www.twitter.com", "title":"Twitter" }
+      ]}
+    ],
     "sectionLinks": [
-                      {"title": "About us", "links":[
-                                                      { "url":"www.mystore.com/faq", "title":"FAQ" }, 
-                                                      { "url":"www.mystore.com/talktous", "title":"Talk to us" }
-                                                    ]
-                      }
-                    ],
+      {"title": "About us", "links":[
+        { "url":"www.mystore.com/faq", "title":"FAQ" }, 
+        { "url":"www.mystore.com/talktous", "title":"Talk to us" }
+      ]}
+    ],
     "storeInformations": ["CNPJ n.º 1231132.231.1231/000", "All the rights reserved."],
     "badges": [
-                {"image":"https://phots.icons8.com/foo"}, 
-                {"image":"https://phots.icons8.com/xpto"}
-              ],
+      {"image":"https://phots.icons8.com/foo"}, 
+      {"image":"https://phots.icons8.com/xpto"}
+    ],
     "paymentForms": [
-                      {"title": "Payment form", "paymentTypes": ["MasterCard"]}
-                    ],
+      {"title": "Payment form", "paymentTypes": ["MasterCard"]}
+    ],
     "showPaymentFormsInColor": true,
     "showSocialNetworksInColor": true,
     "logo": "My store logo",
