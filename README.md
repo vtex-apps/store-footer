@@ -6,7 +6,7 @@ The VTEX Footer app shows information about the store such as address, social ne
 :loudspeaker: **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
 
 ## Release schedule
-| Release  | Status              | Initial Release | Maintenance LTS Start | End-of-life | Dreamstore Compatibility
+| Release  | Status              | Initial Release | Maintenance LTS Start | End-of-life | Store Compatibility
 | :--:     | :---:               |  :---:          | :---:                 | :---:       | :---: 
 | [2.x]    | **Current Release** |  2018-11-21     |                       |             | 2.x
 | [1.x]    | **Maintenance LTS** |  2018-09-20     | 2018-11-21            | March 2019  | 1.x
@@ -77,7 +77,7 @@ This app has an interface that describes what rules must be implemented by a blo
   }
 ```
 #### Configuration
-Through the Storefront you can change the behavior and interface of the footer. But, you can also make adjusts in your theme app, like Dreamstore does.
+Through the Storefront, you can change the footer's behavior and interface. However, you also can make in your theme app, as Store theme does.
 
 Store Footer:
 
