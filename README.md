@@ -41,14 +41,28 @@ Now, you can change the behavior of the footer block. See an example of how to c
 ```json
 "footer": {
     "props": {
-      "socialNetworks": [{"links": [{ "url":"www.facebook.com", "title":"Facebook" }, 
-                                    { "url":"www.twitter.com", "title":"Twitter" }]}],
-      "sectionLinks": [{"title": "About us", "links": [{ "url":"www.mystore.com/faq", "title":"FAQ" }, 
-                                                       { "url":"www.mystore.com/talktous", "title":"Talk to us" }]}],
+      "socialNetworks": [
+                          { "links":[
+                                      { "url":"www.facebook.com", "title":"Facebook" }, 
+                                      { "url":"www.twitter.com", "title":"Twitter" }
+                                    ]
+                          }
+                        ],
+      "sectionLinks": [
+                        {"title": "About us", "links":[
+                                                        { "url":"www.mystore.com/faq", "title":"FAQ" }, 
+                                                        { "url":"www.mystore.com/talktous", "title":"Talk to us" }
+                                                      ]
+                        }
+                      ],
       "storeInformations": ["CNPJ n.º 1231132.231.1231/000", "All the rights reserved."],
-      "badges": [{"image":"https://phots.icons8.com/foo"}, 
-                 {"image":"https://phots.icons8.com/xpto"}],
-      "paymentForms": [{"title": "Payment form", "paymentTypes": ["MasterCard"]}],
+      "badges": [
+                  {"image":"https://phots.icons8.com/foo"}, 
+                  {"image":"https://phots.icons8.com/xpto"}
+                ],
+      "paymentForms": [
+                        {"title": "Payment form", "paymentTypes": ["MasterCard"]}
+                      ],
       "showPaymentFormsInColor": true,
       "showSocialNetworksInColor": true,
       "logo": "My store logo",
@@ -75,7 +89,7 @@ Store Footer:
 | `sectionLinks` | `Array(Section Link)` | Array of section links | [] |
 | `storeInformations` | `Array(String)` | Array of informations about the store | [] |
 | `badges` | `Array(Badge)` | Array of badges | [] |
-| `paymentForms` | `Array(Payment Form)` | Array of payment forms | [{title: 'editor.footer.paymentForms.paymentForm',paymentTypes: ['MasterCard'],},] |
+| `paymentForms` | `Array(Payment Form)` | Array of payment forms | [{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}] |
 | `showPaymentFormsInColor` | `Boolean` | Set color of payment forms | false |
 | `showSocialNetworksInColor` | `Boolean` | Set color of social networks | false |
 | `logo` | `String` | Link of Store logo | -
