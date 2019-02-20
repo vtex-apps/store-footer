@@ -46,6 +46,8 @@ export default class Footer extends Component {
     showPaymentFormsInColor: PropTypes.bool,
     /** Determines if the icons are colorful */
     showSocialNetworksInColor: PropTypes.bool,
+    /** Determines if VTEX logo are colorful */
+    showVtexLogoInColor: PropTypes.bool,
     /** Logo URL */
     logo: PropTypes.string,
     /** Store Informations */
@@ -55,6 +57,7 @@ export default class Footer extends Component {
   static defaultProps = {
     showPaymentFormsInColor: false,
     showSocialNetworksInColor: false,
+    showVtexLogoInColor: false,
     socialNetworks: [
       {
         socialNetwork: 'Facebook',
@@ -90,6 +93,12 @@ export default class Footer extends Component {
       showSocialNetworksInColor: {
         type: 'boolean',
         title: 'editor.footer.showSocialNetworksInColor.title',
+        default: false,
+        isLayout: true,
+      },
+      showVtexLogoInColor: {
+        type: 'boolean',
+        title: 'editor.footer.showVtexLogoInColor.title',
         default: false,
         isLayout: true,
       },
@@ -237,6 +246,7 @@ export default class Footer extends Component {
     const {
       showPaymentFormsInColor,
       showSocialNetworksInColor,
+      showVtexLogoInColor,
       logo,
       sectionLinks,
       socialNetworks,
@@ -283,7 +293,7 @@ export default class Footer extends Component {
                     </p>
                   ))}
               </div>
-              <FooterVtexLogo logoUrl={logo} />
+              <FooterVtexLogo logoUrl={logo} showInColor={showVtexLogoInColor} />
               <FooterBadgeList list={badges} />
             </div>
           </div>
