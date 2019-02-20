@@ -188,7 +188,7 @@ Below, we describe the namespaces that are define in the `Footer`.
 | `socialNetworkContainer`    | The wrapper for the `FooterSocialNetworkList`                                     | [index](/react/index.js)                                               |
 | `textContainer`             | The wrapper for all the information at the footer's bottom                        | [index](/react/index.js)                                               |
 | `navigation`                | The wrapper for the navigation area in footer                                     | [index](/react/index.js)                                               |
-| `payment`                   | The wrapper for `FooterPaymentFormMatrix`                                         |                                                                        | [index](/react/index.js) |
+| `payment`                   | The wrapper for `FooterPaymentFormMatrix`                                         | [index](/react/index.js)                                               |
 
 When the footer is displayed in mobile view, the `matrixContainer` constricts itself and displays a list of `matrixItemSmall`, each one containing an `accordion`. Below, we describe the tokens, their explanation and the component where it is located.
 
