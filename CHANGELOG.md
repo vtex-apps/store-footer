@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.6.8] - 2019-02-21
+
 ## [2.6.7] - 2019-02-21
 ### Added
 - Add option to choose color of VTEX logo and update GoCommerce logo.
