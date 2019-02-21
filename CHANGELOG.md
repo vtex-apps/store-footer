@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.6.8] - 2019-02-21
+
+## [2.6.7] - 2019-02-21
+### Added
+- Add option to choose color of VTEX logo and update GoCommerce logo.
+
 ## [2.6.6] - 2019-02-14
 
 ## [2.6.5] - 2019-02-14
@@ -14,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.6.4] - 2019-02-13
 ### Added
-- Add missing css-handles in components in order to allow customization with CSS Modules. 
+- Add missing css-handles in components in order to allow customization with CSS Modules.
 
 ## [2.6.3] - 2019-02-12
 
@@ -53,8 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.3.3] - 2019-01-11
 ### Fixed
-- Fix component responsive behavior. 
- 
+- Fix component responsive behavior.
+
 ## [2.3.2] - 2019-01-11
 ### Changed
 - Add Container for adjusting search result to store padding.
@@ -67,7 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add padding on footer through `Container` component.
 - Bye `pages.json`! Welcome `store-builder`.
- 
+
 ## [2.2.2] - 2019-01-07
 ### Fixed
 - Fixed footer item class and link
