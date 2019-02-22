@@ -7,7 +7,7 @@ The VTEX Footer app is a store component that shows information about the store 
 
 ## Release schedule
 | Release  | Status              | Initial Release | Maintenance LTS Start | End-of-life | Store Compatibility
-| :--:     | :---:               |  :---:          | :---:                 | :---:       | :---: 
+| :--:     | :---:               |  :---:          | :---:                 | :---:       | :---:
 | [2.x]    | **Current Release** |  2018-11-21     |                       |             | 2.x
 | [1.x]    | **Maintenance LTS** |  2018-09-20     | 2018-11-21            | March 2019  | 1.x
 
@@ -35,27 +35,27 @@ To configure or customize this app, you need to import it in your dependencies i
   }
 ```
 
-Then, add `footer` block into our app theme, like we do in our [Store theme app](https://github.com/vtex-apps/store-theme/blob/master/store/blocks.json). 
+Then, add `footer` block into our app theme, like we do in our [Store theme app](https://github.com/vtex-apps/store-theme/blob/master/store/blocks.json).
 
-Now, you can change the behavior of the footer block. See an example of how to configure: 
+Now, you can change the behavior of the footer block. See an example of how to configure:
 ```json
 "footer": {
   "props": {
     "socialNetworks": [
       { "links":[
-        { "url":"www.facebook.com", "title":"Facebook" }, 
+        { "url":"www.facebook.com", "title":"Facebook" },
         { "url":"www.twitter.com", "title":"Twitter" }
       ]}
     ],
     "sectionLinks": [
       {"title": "About us", "links":[
-        { "url":"www.mystore.com/faq", "title":"FAQ" }, 
+        { "url":"www.mystore.com/faq", "title":"FAQ" },
         { "url":"www.mystore.com/talktous", "title":"Talk to us" }
       ]}
     ],
     "storeInformations": ["CNPJ n.º 1231132.231.1231/000", "All the rights reserved."],
     "badges": [
-      {"image":"https://phots.icons8.com/foo"}, 
+      {"image":"https://phots.icons8.com/foo"},
       {"image":"https://phots.icons8.com/xpto"}
     ],
     "paymentForms": [
@@ -63,13 +63,14 @@ Now, you can change the behavior of the footer block. See an example of how to c
     ],
     "showPaymentFormsInColor": true,
     "showSocialNetworksInColor": true,
+    "showVtexLogoInColor": true,
     "logo": "My store logo",
   }
 }
 ```
 
 ### Blocks API
-This app has an interface that describes what rules must be implemented by a block when you want to use the footer. 
+This app has an interface that describes what rules must be implemented by a block when you want to use the footer.
 
 ```json
   "footer": {
@@ -90,6 +91,7 @@ Store Footer:
 | `paymentForms` | `Array(Payment Form)` | Array of payment forms | ```[{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}]``` |
 | `showPaymentFormsInColor` | `Boolean` | Set color of payment forms | false |
 | `showSocialNetworksInColor` | `Boolean` | Set color of social networks | false |
+| `showVtexLogoInColor` | `Boolean` | Set color of VTEX logo | false |
 | `logo` | `String` | Link of Store logo | - |
 
 Social Network:
