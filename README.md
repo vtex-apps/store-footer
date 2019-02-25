@@ -1,20 +1,22 @@
 # VTEX Footer
 
 ## Description
+
 The VTEX Footer app is a store component that shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This app is used by store theme.
 
 :loudspeaker: **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
 
 ## Release schedule
-| Release  | Status              | Initial Release | Maintenance LTS Start | End-of-life | Store Compatibility
-| :--:     | :---:               |  :---:          | :---:                 | :---:       | :---:
-| [2.x]    | **Current Release** |  2018-11-21     |                       |             | 2.x
-| [1.x]    | **Maintenance LTS** |  2018-09-20     | 2018-11-21            | March 2019  | 1.x
 
+| Release |       Status        | Initial Release | Maintenance LTS Start | End-of-life | Store Compatibility |
+| :-----: | :-----------------: | :-------------: | :-------------------: | :---------: | :-----------------: |
+|  [2.x]  | **Current Release** |   2018-11-21    |                       |             |         2.x         |
+|  [1.x]  | **Maintenance LTS** |   2018-09-20    |      2018-11-21       | March 2019  |         1.x         |
 
 See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for more information.
 
 ## Table of Contents
+
 - [VTEX Footer](#vtex-footer)
   - [Description](#description)
   - [Release schedule](#release-schedule)
@@ -42,6 +44,7 @@ To configure or customize this app, you need to import it in your dependencies i
 Then, add `footer` block into our app theme, like we do in our [Store theme app](https://github.com/vtex-apps/store-theme/blob/master/store/blocks.json).
 
 Now, you can change the behavior of the footer block. See an example of how to configure:
+
 ```json
 "footer": {
   "props": {
@@ -74,6 +77,7 @@ Now, you can change the behavior of the footer block. See an example of how to c
 ```
 
 ### Blocks API
+
 This app has an interface that describes what rules must be implemented by a block when you want to use the footer.
 
 ```json
@@ -81,18 +85,20 @@ This app has an interface that describes what rules must be implemented by a blo
     "component": "index"
   }
 ```
+
 #### Configuration
+
 Through the Storefront, you can change the footer's behavior and interface. However, you also can make in your theme app, as Store theme does.
 
 Store Footer:
 
 | Prop name                   | Type                    | Description                           | Default Value                                                                                  |
 | --------------------------- | ----------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `socialNetworks`            | `Array(Social Network)` | Array of social networks              | ```[{socialNetwork: 'Facebook', url: '#'},]```                                                 |
+| `socialNetworks`            | `Array(Social Network)` | Array of social networks              | `[{socialNetwork: 'Facebook', url: '#'},]`                                                     |
 | `sectionLinks`              | `Array(Section Link)`   | Array of section links                | []                                                                                             |
 | `storeInformations`         | `Array(String)`         | Array of informations about the store | []                                                                                             |
 | `badges`                    | `Array(Badge)`          | Array of badges                       | []                                                                                             |
-| `paymentForms`              | `Array(Payment Form)`   | Array of payment forms                | ```[{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}]``` |
+| `paymentForms`              | `Array(Payment Form)`   | Array of payment forms                | `` [{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}] `` |
 | `showPaymentFormsInColor`   | `Boolean`               | Set color of payment forms            | false                                                                                          |
 | `showSocialNetworksInColor` | `Boolean`               | Set color of social networks          | false                                                                                          |
 | `showVtexLogoInColor`       | `Boolean`               | Set color of VTEX logo                | false                                                                                          |
@@ -152,9 +158,11 @@ To use this CSS API, you must add the `styles` builder and create an app styling
   margin-top: 10px;
 }
 ```
+
 Also, create a `vtex.footer.css` file in `styles/css` for your handlers customization.
 
 #### CSS namespaces
+
 Below, we describe the namespaces that are define in the `Footer`.
 
 | Class name                  | Description                                                                       | Component Source                                                       |
@@ -200,9 +208,14 @@ When the footer is displayed in mobile view, the `matrixContainer` constricts it
 | `accordionItem`   | The item inside the accordion (e.g, `listLink`)       | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
 | `accordionIcon`   | The accordion icon                                    | [Accordion](react/components/Accordion.js)                 |
 
-
 ## Troubleshooting
+
 You can check if others are passing through similar issues [here](https://github.com/vtex-apps/store-footer/issues). Also feel free to [open issues](https://github.com/vtex-apps/store-footer/issues/new) or contribute with pull requests.
 
 ## Tests
-:construction: :construction: :construction:
+
+To execute our tests go to `react/` folder and run `yarn test`
+
+### Travis CI
+
+[![Build Status](https://api.travis-ci.org/vtex-apps/store-footer.svg?branch=master)](https://travis-ci.org/vtex-apps/store-footer)
