@@ -34,10 +34,10 @@ describe('<Footer /> component', () => {
   }
 
   it('should be rendered', () => {
-    expect(renderComponent()).toBeDefined()
+    expect(renderComponent().asFragment()).toBeDefined()
   })
 
   it('should match the snapshot', () => {
-    expect(renderComponent()).toMatchSnapshot()
+    expect(renderComponent().asFragment()).toMatchSnapshot()
   })
 })

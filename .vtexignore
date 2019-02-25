@@ -5,6 +5,7 @@ src/
 .eslintrc
 .gitignore
 package.json
+.prettierrc
 README.md
 CHANGELOG.md
 react/**/__tests__/**

@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "pretest": "yarn",
     "test": "jest",
     "test:watch": "jest --watch"
   },
