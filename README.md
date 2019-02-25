@@ -15,13 +15,17 @@ The VTEX Footer app is a store component that shows information about the store 
 See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for more information.
 
 ## Table of Contents
-- [Usage](#usage)
-  - [Blocks API](#blocks-api)
-    - [Configuration](#configuration)
-  - [Styles API](#styles-api)
-    - [CSS namespaces](#css-namespaces)
-- [Troubleshooting](#troubleshooting)
-- [Tests](#tests)
+- [VTEX Footer](#vtex-footer)
+  - [Description](#description)
+  - [Release schedule](#release-schedule)
+  - [Table of Contents](#table-of-contents)
+  - [Usage](#usage)
+    - [Blocks API](#blocks-api)
+      - [Configuration](#configuration)
+    - [Styles API](#styles-api)
+      - [CSS namespaces](#css-namespaces)
+  - [Troubleshooting](#troubleshooting)
+  - [Tests](#tests)
 
 ## Usage
 
@@ -82,49 +86,49 @@ Through the Storefront, you can change the footer's behavior and interface. Howe
 
 Store Footer:
 
-| Prop name | Type | Description | Default Value |
-| --- | --- | --- | ------ |
-| `socialNetworks` | `Array(Social Network)` | Array of social networks | ```[{socialNetwork: 'Facebook', url: '#'},]``` |
-| `sectionLinks` | `Array(Section Link)` | Array of section links | [] |
-| `storeInformations` | `Array(String)` | Array of informations about the store | [] |
-| `badges` | `Array(Badge)` | Array of badges | [] |
-| `paymentForms` | `Array(Payment Form)` | Array of payment forms | ```[{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}]``` |
-| `showPaymentFormsInColor` | `Boolean` | Set color of payment forms | false |
-| `showSocialNetworksInColor` | `Boolean` | Set color of social networks | false |
-| `showVtexLogoInColor` | `Boolean` | Set color of VTEX logo | false |
-| `logo` | `String` | Link of Store logo | - |
+| Prop name                   | Type                    | Description                           | Default Value                                                                                  |
+| --------------------------- | ----------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `socialNetworks`            | `Array(Social Network)` | Array of social networks              | ```[{socialNetwork: 'Facebook', url: '#'},]```                                                 |
+| `sectionLinks`              | `Array(Section Link)`   | Array of section links                | []                                                                                             |
+| `storeInformations`         | `Array(String)`         | Array of informations about the store | []                                                                                             |
+| `badges`                    | `Array(Badge)`          | Array of badges                       | []                                                                                             |
+| `paymentForms`              | `Array(Payment Form)`   | Array of payment forms                | ```[{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}]``` |
+| `showPaymentFormsInColor`   | `Boolean`               | Set color of payment forms            | false                                                                                          |
+| `showSocialNetworksInColor` | `Boolean`               | Set color of social networks          | false                                                                                          |
+| `showVtexLogoInColor`       | `Boolean`               | Set color of VTEX logo                | false                                                                                          |
+| `logo`                      | `String`                | Link of Store logo                    | -                                                                                              |
 
 Social Network:
 
-| Prop name | Type | Description |
-| --- | --- | --- |
-| `links` | `Array(Link)` | Array of links |
+| Prop name | Type          | Description    |
+| --------- | ------------- | -------------- |
+| `links`   | `Array(Link)` | Array of links |
 
 Section Link:
 
-| Prop name | Type | Description |
-| --- | --- | --- |
-| `title` | `String!` | Title of the section |
-| `links` | `Array(Link)` | Array of links |
+| Prop name | Type          | Description          |
+| --------- | ------------- | -------------------- |
+| `title`   | `String!`     | Title of the section |
+| `links`   | `Array(Link)` | Array of links       |
 
 Link:
 
-| Prop name | Type | Description |
-| --- | --- | --- |
-| `url` | `String` | URL |
-| `title` | `String` | Title of the link |
+| Prop name | Type     | Description       |
+| --------- | -------- | ----------------- |
+| `url`     | `String` | URL               |
+| `title`   | `String` | Title of the link |
 
 Badge:
 
-| Prop name | Type | Description |
-| --- | --- | --- |
-| `image` | `String` | URL of the badge |
+| Prop name | Type     | Description      |
+| --------- | -------- | ---------------- |
+| `image`   | `String` | URL of the badge |
 
 Payment Form:
 
-| Prop name | Type | Description |
-| --- | --- | --- |
-| `title` | `String!` | Title of payment form |
+| Prop name      | Type            | Description                                   |
+| -------------- | --------------- | --------------------------------------------- |
+| `title`        | `String!`       | Title of payment form                         |
 | `paymentTypes` | `Array(String)` | Array of strings containing the payment types |
 
 ### Styles API
@@ -153,42 +157,48 @@ Also, create a `vtex.footer.css` file in `styles/css` for your handlers customiz
 #### CSS namespaces
 Below, we describe the namespaces that are define in the `Footer`.
 
-| Class name         |    Description     |  Component Source                                      |
-| ------------------ | ----------         |------------------------------------------------------- |
-| `footer`        |  The main content of the footer                     | [index](/react/index.js) |
-| `container`        |  The generical container of the footer                     | [index](/react/index.js) |
-| `linksContainer`        |  The wrapper containing the matrices of links                     | [index](/react/index.js) |
-| `matrixContainer`        |  The container that holds all the listContainers                    | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
-| `matrixItem`        |  The wrapper for an item of the matrix. (e.g, `listContainer`)           | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
-| `listContainer`        |  The wrapper containing the `listTitle` and a `list`                     | [footerList](react/components/footerList.js) |
-| `listContainerHorizontal`        |  The properties to be applied when the `listContainer` is horizontal | [footerList](react/components/footerList.js) |
-| `listContainerRightAligned`        |  The properties to be applied when the `listContainer` is right aligned | [footerList](react/components/footerList.js) |
-| `listTitle`        |  The title of a item list. (e.g, `Institutional`) | [footerList](react/components/footerList.js) |
-| `list`        |  The container for a list of `listItem`                      | [footerList](react/components/footerList.js) |
-| `listHorizontal`        |  The properties to be applied to the list when the `horizontal` props is true | [footerList](react/components/footerList.js) |
-| `listItem`        |  The item of a list                     | [footerList](react/components/footerList.js) |
-| `listLink`        |  The link inside a list                     | [footerList](react/components/footerList.js) |
-| `listItemHorizontal`        |  The properties to be applied to the item list when the `horizontal` props is true| [footerList](react/components/footerList.js) |
-| `socialNetworkContainer`        |  The social networks container                    | [index](/react/index.js) |
-| `socialNetworkItem`        |  The image of a social network                     | [FooterSocialNetworkList](react/components/FooterSocialNetworkList.js) |
-| `paymentMatrix`        |  The wrapper that holds all the paymentMatrixItems                     | [FooterPaymentFormMatrix](react/components/FooterPaymentFormMatrix.js) |
-| `paymentMatrixItem`        |  The image of a social network                     | [FooterPaymentFormMatrix](react/components/FooterPaymentFormMatrix.js) |
-| `paymentFormItem`        |  The image of the payment form                     | [FooterPaymentFormList](react/components/FooterPaymentFormList.js) |
-| `textContainer`        |  The container for the text informations of the store | [index](/react/index.js) |
-| `badgeList`        |  The wrapper for all the bagdes                     | [FooterVtexLogo](react/components/FooterVtexLogo.js) |
-| `badge`        |  One store badge                     | [FooterVtexLogo](react/components/FooterVtexLogo.js) |
-| `vtexLogoItem`        |  The 'Powered by VTEX' logo                     | [FooterVtexLogo](react/components/FooterVtexLogo.js) |
-| `logoImage`        |  The image of one logo of the store                     | [FooterVtexLogo](react/components/FooterVtexLogo.js) |
+| Class name                  | Description                                                                       | Component Source                                                       |
+| --------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `footer`                    | The main content of the footer                                                    | [index](/react/index.js)                                               |
+| `container`                 | The generical container of the footer                                             | [index](/react/index.js)                                               |
+| `linksContainer`            | The wrapper containing the matrices of links                                      | [index](/react/index.js)                                               |
+| `matrixContainer`           | The container that holds all the listContainers                                   | [FooterLinksMatrix](react/components/FooterLinksMatrix.js)             |
+| `matrixItem`                | The wrapper for an item of the matrix. (e.g, `listContainer`)                     | [FooterLinksMatrix](react/components/FooterLinksMatrix.js)             |
+| `listContainer`             | The wrapper containing the `listTitle` and a `list`                               | [footerList](react/components/footerList.js)                           |
+| `listContainerHorizontal`   | The properties to be applied when the `listContainer` is horizontal               | [footerList](react/components/footerList.js)                           |
+| `listContainerRightAligned` | The properties to be applied when the `listContainer` is right aligned            | [footerList](react/components/footerList.js)                           |
+| `listTitle`                 | The title of a item list. (e.g, `Institutional`)                                  | [footerList](react/components/footerList.js)                           |
+| `list`                      | The container for a list of `listItem`                                            | [footerList](react/components/footerList.js)                           |
+| `listHorizontal`            | The properties to be applied to the list when the `horizontal` props is true      | [footerList](react/components/footerList.js)                           |
+| `listItem`                  | The item of a list                                                                | [footerList](react/components/footerList.js)                           |
+| `listLink`                  | The link inside a list                                                            | [footerList](react/components/footerList.js)                           |
+| `listItemHorizontal`        | The properties to be applied to the item list when the `horizontal` props is true | [footerList](react/components/footerList.js)                           |
+| `socialNetworkContainer`    | The social networks container                                                     | [index](/react/index.js)                                               |
+| `socialNetworkItem`         | The image of a social network                                                     | [FooterSocialNetworkList](react/components/FooterSocialNetworkList.js) |
+| `paymentMatrix`             | The wrapper that holds all the paymentMatrixItems                                 | [FooterPaymentFormMatrix](react/components/FooterPaymentFormMatrix.js) |
+| `paymentMatrixItem`         | The image of a social network                                                     | [FooterPaymentFormMatrix](react/components/FooterPaymentFormMatrix.js) |
+| `paymentFormItem`           | The image of the payment form                                                     | [FooterPaymentFormList](react/components/FooterPaymentFormList.js)     |
+| `textContainer`             | The container for the text informations of the store                              | [index](/react/index.js)                                               |
+| `badgeList`                 | The wrapper for all the bagdes                                                    | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
+| `badge`                     | One store badge                                                                   | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
+| `vtexLogoItem`              | The 'Powered by VTEX' logo                                                        | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
+| `logoImage`                 | The image of one logo of the store                                                | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
+| `textInformation`           | Information at the footer's bottom                                                | [index](/react/index.js)                                               |
+| `links`                     | The wrapper for `FooterLinksMatrix`                                               | [index](/react/index.js)                                               |
+| `socialNetworkContainer`    | The wrapper for the `FooterSocialNetworkList`                                     | [index](/react/index.js)                                               |
+| `textContainer`             | The wrapper for all the information at the footer's bottom                        | [index](/react/index.js)                                               |
+| `navigation`                | The wrapper for the navigation area in footer                                     | [index](/react/index.js)                                               |
+| `payment`                   | The wrapper for `FooterPaymentFormMatrix`                                         | [index](/react/index.js)                                               |
 
 When the footer is displayed in mobile view, the `matrixContainer` constricts itself and displays a list of `matrixItemSmall`, each one containing an `accordion`. Below, we describe the tokens, their explanation and the component where it is located.
 
-| Class name         |    Description     |  Component Source                                      |
-| ------------------ | ----------         |------------------------------------------------------- |
-| `matrixItemSmall`        |  The item of the matrix                     | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
-| `accordionTitle`        |  The accordion title                     | [Accordion](react/components/Accordion.js) |
-| `accordion`        |  The accordion container for a list of `accordionItem` | [Accordion](react/components/Accordion.js) |
-| `accordionItem`        |  The item inside the accordion (e.g, `listLink`) |[FooterLinksMatrix](react/components/FooterLinksMatrix.js)|
-| `accordionIcon`        |  The accordion icon                     | [Accordion](react/components/Accordion.js) |
+| Class name        | Description                                           | Component Source                                           |
+| ----------------- | ----------------------------------------------------- | ---------------------------------------------------------- |
+| `matrixItemSmall` | The item of the matrix                                | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
+| `accordionTitle`  | The accordion title                                   | [Accordion](react/components/Accordion.js)                 |
+| `accordion`       | The accordion container for a list of `accordionItem` | [Accordion](react/components/Accordion.js)                 |
+| `accordionItem`   | The item inside the accordion (e.g, `listLink`)       | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
+| `accordionIcon`   | The accordion icon                                    | [Accordion](react/components/Accordion.js)                 |
 
 
 ## Troubleshooting
