@@ -5,9 +5,11 @@ src/
 .eslintrc
 .gitignore
 package.json
+.prettierrc
 README.md
 CHANGELOG.md
-react/__tests__/**
-react/__mocks__/**
+react/**/__tests__/**
+react/**/__mocks__/**
+react/**/*.test.js
+react/testUtils/**/*
 react/.babelrc
-react/setupTests.js
