@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Collapse } from 'react-collapse'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 
-import { IconCaret } from 'vtex.dreamstore-icons'
+import { IconCaret } from 'vtex.store-icons'
 
 import footer from '../footer.css'
 
