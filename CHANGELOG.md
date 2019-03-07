@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Check if prop logoUrl exists before render, preventing to render a inexistent image
+
 ## [2.6.11] - 2019-03-01
 
 ### Changed
