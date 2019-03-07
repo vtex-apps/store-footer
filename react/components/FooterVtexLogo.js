@@ -25,9 +25,11 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
 
   return (
     <div className={`${footer.badgeList} flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}>
-      <span className={`${footer.badge} pa2-s pa1-ns`}>
-        <img className={`${footer.logoImage} h3`} src={logoUrl} />
-      </span>
+      {logoUrl && 
+        <span className={`${footer.badge} pa2-s pa1-ns`}>
+          <img className={`${footer.logoImage} h3`} src={logoUrl} />
+        </span>
+      }
       <span className={`${footer.badge} pa2-s pa1-ns nt7-ns`}>
         <img className={vtexLogoItemClasses} src={imageSrc} />
       </span>
