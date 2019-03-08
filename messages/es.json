@@ -21,6 +21,7 @@
   "editor.footer.linksSections.linksSection.links.link": "Enlace",
   "editor.footer.linksSections.linksSection.links.link.title": "Título del Enlace",
   "editor.footer.linksSections.linksSection.links.link.url": "URL del Enlace",
+  "editor.footer.linksSections.linksSection.links.link.target": "Objetivo del Enlace",
   "editor.footer.moreInformationLink": "Enlaces para más información",
   "editor.footer.moreInformationLink.title": "Enlace para más información",
   "editor.footer.badge": "Medallas",

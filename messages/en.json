@@ -21,6 +21,7 @@
   "editor.footer.linksSections.linksSection.links.link": "Link",
   "editor.footer.linksSections.linksSection.links.link.title": "Link Title",
   "editor.footer.linksSections.linksSection.links.link.url": "Link URL",
+  "editor.footer.linksSections.linksSection.links.link.target": "Link Target",
   "editor.footer.moreInformationLink": "More Information Links",
   "editor.footer.moreInformationLink.title": "More Information Link",
   "editor.footer.badge": "Badges",

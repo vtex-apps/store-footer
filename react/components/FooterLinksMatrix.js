@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react'
 
 import Accordion from './Accordion'
 import FooterLinkList, { FooterLinkItem } from './FooterLinkList'
+import { objectLikeLinkArray } from './../propTypes'
 import footer from '../footer.css'
 
 export default class FooterLinksMatrix extends Component {
@@ -13,12 +14,7 @@ export default class FooterLinksMatrix extends Component {
         /** Link section title */
         title: PropTypes.string.isRequired,
         /** Link section links */
-        links: PropTypes.arrayOf(
-          PropTypes.shape({
-            /** Link text */
-            title: PropTypes.string.isRequired,
-          })
-        ),
+        links: objectLikeLinkArray,
       })
     ),
   }

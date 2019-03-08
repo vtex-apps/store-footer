@@ -156,6 +156,13 @@ export default class Footer extends Component {
                       'editor.footer.linksSections.linksSection.links.link.url',
                     type: 'string',
                   },
+                  target: {
+                    title:
+                      'editor.footer.linksSections.linksSection.links.link.target',
+                    type: 'string',
+                    default: 'self_tab',
+                    enum: ['self_tab', 'new_tab'],
+                  },
                 },
               },
             },

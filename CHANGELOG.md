@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- sectionLinks now contains the prop `target` in links where is possible to use one of values `[self_tab, new_tab]`. `self_tab` it means the value for target attribute it will be `_self`. `new_tab` it will be `_blank`
 
 ## [2.6.13] - 2019-03-14
 ### Changed
