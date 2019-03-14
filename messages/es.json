@@ -22,6 +22,8 @@
   "editor.footer.linksSections.linksSection.links.link.title": "Título del Enlace",
   "editor.footer.linksSections.linksSection.links.link.url": "URL del Enlace",
   "editor.footer.linksSections.linksSection.links.link.target": "Objetivo del Enlace",
+  "editor.footer.linksSections.linksSection.links.link.target.self": "Pestaña actual del navegador",
+  "editor.footer.linksSections.linksSection.links.link.target.blank": "Nueva pestaña del navegador",
   "editor.footer.moreInformationLink": "Enlaces para más información",
   "editor.footer.moreInformationLink.title": "Enlace para más información",
   "editor.footer.badge": "Medallas",

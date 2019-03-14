@@ -160,8 +160,12 @@ export default class Footer extends Component {
                     title:
                       'editor.footer.linksSections.linksSection.links.link.target',
                     type: 'string',
-                    default: 'self_tab',
-                    enum: ['self_tab', 'new_tab'],
+                    default: '_self',
+                    enum: ['_self', '_blank'],
+                    enumNames: [
+                      'editor.footer.linksSections.linksSection.links.link.target.self',
+                      'editor.footer.linksSections.linksSection.links.link.target.blank',
+                    ],
                   },
                 },
               },
@@ -266,7 +270,11 @@ export default class Footer extends Component {
       <footer className={`${footer.footer} bt bw1 b--muted-4 mt4 pv5`}>
         <Container className="justify-center flex">
           <div className="w-100 mw9">
-            <nav className={`${footer.container} ${footer.navigation} pt5-s flex justify-between bg-base c-muted-1`}>
+            <nav
+              className={`${footer.container} ${
+                footer.navigation
+              } pt5-s flex justify-between bg-base c-muted-1`}
+            >
               <div className={`${footer.links} t-small w-100-s w-80-ns pb5-s`}>
                 <FooterLinksMatrix links={sectionLinks} />
               </div>
@@ -281,26 +289,44 @@ export default class Footer extends Component {
                 />
               </div>
             </nav>
-            <div className={`${footer.container} ${footer.payment} pv5-s flex justify-between bg-base c-muted-1`}>
+            <div
+              className={`${footer.container} ${
+                footer.payment
+              } pv5-s flex justify-between bg-base c-muted-1`}
+            >
               <FooterPaymentFormMatrix
                 paymentForms={paymentForms}
                 horizontal
                 showInColor={showPaymentFormsInColor}
               />
             </div>
-            <div className={`${footer.container} ${footer.informationContainer} pt5-s flex justify-between bg-base c-muted-1`}>
-              <div className={`${footer.textContainer} w-100-s pb5-s w-80-ns flex flex-wrap`}>
+            <div
+              className={`${footer.container} ${
+                footer.informationContainer
+              } pt5-s flex justify-between bg-base c-muted-1`}
+            >
+              <div
+                className={`${
+                  footer.textContainer
+                } w-100-s pb5-s w-80-ns flex flex-wrap`}
+              >
                 {storeInformations &&
                   storeInformations.map(({ storeInformation }, index) => (
                     <p
                       key={`information-${index}`}
-                      className={this.getInformationCssClasses(storeInformations.length, index)}
+                      className={this.getInformationCssClasses(
+                        storeInformations.length,
+                        index
+                      )}
                     >
                       {storeInformation}
                     </p>
                   ))}
               </div>
-              <FooterVtexLogo logoUrl={logo} showInColor={showVtexLogoInColor} />
+              <FooterVtexLogo
+                logoUrl={logo}
+                showInColor={showVtexLogoInColor}
+              />
               <FooterBadgeList list={badges} />
             </div>
           </div>

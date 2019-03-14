@@ -56,8 +56,8 @@ Now, you can change the behavior of the footer block. See an example of how to c
     ],
     "sectionLinks": [
       {"title": "About us", "links":[
-        { "url":"www.mystore.com/faq", "title":"FAQ", "target": "new_tab" },
-        { "url":"www.mystore.com/talktous", "title":"Talk to us", "target": "self_tab" }
+        { "url":"www.mystore.com/faq", "title":"FAQ", "target": "_blank" },
+        { "url":"www.mystore.com/talktous", "title":"Talk to us", "target": "_self" }
       ]}
     ],
     "storeInformations": ["CNPJ n.º 1231132.231.1231/000", "All the rights reserved."],
@@ -123,7 +123,7 @@ Link:
 | --------- | -------- | ----------------- |
 | `url`     | `String` | URL               |
 | `title`   | `String` | Title of the link |
-| `target`  | `Enum`   | Target of the link. (values: `self_tab` or `new_tab`) |
+| `target`  | `Enum`   | Target of the link. (values: `_self` or `_blank`) |
 
 Badge:
 
