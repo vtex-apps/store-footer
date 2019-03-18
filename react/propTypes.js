@@ -4,6 +4,7 @@ export const objectLikeLinkArray = PropTypes.arrayOf(
   PropTypes.shape({
     url: PropTypes.string,
     title: PropTypes.string,
+    target: PropTypes.oneOf(['_self', '_blank']),
   })
 )
 
