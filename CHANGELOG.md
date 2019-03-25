@@ -7,12 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fix
+
+- Fix proptypes warnings.
+
 ## [2.6.14] - 2019-03-18
+
 ### Added
+
 - sectionLinks now contains the prop `target` in links where is possible to use one of the values `[_self_, _blank_]`. That will define the value for target attribute. `<a href="/" target="_self">`
 
 ## [2.6.13] - 2019-03-14
+
 ### Changed
+
 - Change language files to most generic.
 
 ## [2.6.12] - 2019-03-07
