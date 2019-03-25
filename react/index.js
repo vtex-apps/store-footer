@@ -37,7 +37,7 @@ export default class Footer extends Component {
     paymentForms: PropTypes.arrayOf(
       PropTypes.shape({
         /** Payment Form title */
-        title: PropTypes.string.isRequired,
+        title: PropTypes.string,
         /** Payment Types */
         paymentTypes: PropTypes.arrayOf(PropTypes.string),
       })

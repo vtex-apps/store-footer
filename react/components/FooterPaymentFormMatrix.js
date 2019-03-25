@@ -11,7 +11,7 @@ export default class FooterPaymentFormMatrix extends Component {
     paymentForms: PropTypes.arrayOf(
       PropTypes.shape({
         /** Payment form title */
-        title: PropTypes.string.isRequired,
+        title: PropTypes.string,
         /** Payment types */
         paymentTypes: PropTypes.arrayOf(PropTypes.string.isRequired),
       })
@@ -29,7 +29,8 @@ export default class FooterPaymentFormMatrix extends Component {
           {paymentForms.map((paymentFormsItem, index) => (
             <div
               key={`payment-container-${index}`}
-              className={footer.paymentMatrixItem}>
+              className={footer.paymentMatrixItem}
+            >
               <FooterPaymentFormList
                 horizontal
                 titleId={paymentFormsItem.title}

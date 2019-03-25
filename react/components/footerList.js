@@ -28,7 +28,11 @@ export default WrappedComponent => {
     }
 
     formatMessage(id) {
-      return this.props.intl.messages[id] && this.props.intl.formatMessage({ id }) || id
+      return (
+        (this.props.intl.messages[id] &&
+          this.props.intl.formatMessage({ id })) ||
+        id
+      )
     }
 
     render() {
@@ -44,17 +48,23 @@ export default WrappedComponent => {
       if (!list || list.length === 0) return null
 
       const titleClasses = classNames(`${footer.listTitle} t-small ma0 db`, {
-        'ttu': !titleCapitals,
+        ttu: !titleCapitals,
       })
 
-      const listContainerClasses = classNames(`${footer.listContainer} pl0 w-100 mt0-ns`, {
-        [`${footer.listContainerRightAligned} ml-auto-m`]: alignRight,
-        [`${footer.listContainerHorizontal} w-auto-m`]: horizontal,
-      })
+      const listContainerClasses = classNames(
+        `${footer.listContainer} pl0 w-100 mt0-ns`,
+        {
+          [`${footer.listContainerRightAligned} ml-auto-m`]: alignRight,
+          [`${footer.listContainerHorizontal} w-auto-m`]: horizontal,
+        }
+      )
 
-      const listClasses = classNames(`${footer.list} list flex flex-column flex-wrap pa0 mb0 mt3`, {
-        [`${footer.listHorizontal} flex-row flex-wrap`]: horizontal,
-      })
+      const listClasses = classNames(
+        `${footer.list} list flex flex-column flex-wrap pa0 mb0 mt3`,
+        {
+          [`${footer.listHorizontal} flex-row flex-wrap`]: horizontal,
+        }
+      )
 
       const listItemClasses = classNames(`${footer.listItem} mr0 mr3`, {
         [`${footer.listItemHorizontal}`]: horizontal,
@@ -62,9 +72,9 @@ export default WrappedComponent => {
 
       return (
         <div className={listContainerClasses}>
-          <span className={titleClasses}>
-            {this.formatMessage(titleId)}
-          </span>
+          {titleId && (
+            <span className={titleClasses}>{this.formatMessage(titleId)}</span>
+          )}
           <ul className={listClasses}>
             {list.map((item, index) => (
               <li key={index} className={listItemClasses}>
