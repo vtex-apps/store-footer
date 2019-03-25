@@ -12,7 +12,7 @@ export default class FooterLinksMatrix extends Component {
     links: PropTypes.arrayOf(
       PropTypes.shape({
         /** Link section title */
-        title: PropTypes.string.isRequired,
+        title: PropTypes.string,
         /** Link section links */
         links: objectLikeLinkArray,
       })

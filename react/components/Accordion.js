@@ -10,7 +10,7 @@ import footer from '../footer.css'
 class Accordion extends Component {
   static propTypes = {
     /** Title shown in Accordion */
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     /** Accordion children. Components shown inside Collapse */
     children: PropTypes.node.isRequired,
     /** Internationalization */
@@ -22,7 +22,9 @@ class Accordion extends Component {
   }
 
   translate = id => {
-    return this.props.intl.messages[id] ? this.props.intl.formatMessage({ id }) : id
+    return this.props.intl.messages[id]
+      ? this.props.intl.formatMessage({ id })
+      : id
   }
 
   render() {
