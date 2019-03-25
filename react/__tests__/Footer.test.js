@@ -1,27 +1,28 @@
 import React from 'react'
-import { render } from 'test-utils'
+import { render } from '@vtex/test-tools/react'
 
 import Footer from '../index'
 
 describe('<Footer /> component', () => {
   const renderComponent = customProps => {
-    const OBJECT_LIKE_LINK = {
-      url: 'mockedUrl',
-      title: 'Some title',
-    }
     const props = {
-      socialNetworks: [OBJECT_LIKE_LINK],
+      socialNetworks: [
+        {
+          url: 'https://www.facebook.com/',
+          socialNetwork: 'Facebook',
+        },
+      ],
       sectionLinks: [
         {
           title: 'Section title',
-          links: [OBJECT_LIKE_LINK],
+          links: [{ url: 'mockedUrl', title: 'Some title' }],
         },
       ],
       badges: [{ image: 'imageURL' }],
       paymentForms: [
         {
           title: 'Title payment',
-          paymentTypes: ['Mastercard, Visa, AmericanExpress'],
+          paymentTypes: ['MasterCard', 'Visa', 'Diners Club'],
         },
       ],
       showPaymentFormsInColor: true,
@@ -34,10 +35,12 @@ describe('<Footer /> component', () => {
   }
 
   it('should be rendered', () => {
-    expect(renderComponent().asFragment()).toBeDefined()
+    const { asFragment } = renderComponent()
+    expect(asFragment()).toBeDefined()
   })
 
   it('should match the snapshot', () => {
-    expect(renderComponent().asFragment()).toMatchSnapshot()
+    const { asFragment } = renderComponent()
+    expect(asFragment()).toMatchSnapshot()
   })
 })
