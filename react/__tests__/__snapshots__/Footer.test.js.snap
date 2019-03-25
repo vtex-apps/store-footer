@@ -142,6 +142,12 @@ exports[`<Footer /> component should match the snapshot 1`] = `
                   <li
                     class="listItem mr0 mr3 listItemHorizontal"
                   />
+                  <li
+                    class="listItem mr0 mr3 listItemHorizontal"
+                  />
+                  <li
+                    class="listItem mr0 mr3 listItemHorizontal"
+                  />
                 </ul>
               </div>
             </div>
