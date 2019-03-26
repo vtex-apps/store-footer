@@ -29,6 +29,10 @@ export default class Footer extends Component {
         title: PropTypes.string.isRequired,
         /** Link  section links */
         links: objectLikeLinkArray,
+        /** Make header capital */
+        titleCapitals: PropTypes.bool,
+        /** Make header bold */
+        titleBold: PropTypes.bool,
       })
     ),
     /** Badges */
@@ -170,6 +174,16 @@ export default class Footer extends Component {
                 },
               },
             },
+            titleCapitals: {
+              title: 'editor.footer.linksSections.titleCapitals',
+              type: 'boolean',
+              default: false
+            },
+            titleBold: {
+              title: 'editor.footer.linksSections.titleBold',
+              type: 'boolean',
+              default: false
+            }
           },
         },
       },

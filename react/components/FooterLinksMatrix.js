@@ -14,7 +14,7 @@ export default class FooterLinksMatrix extends Component {
         /** Link section title */
         title: PropTypes.string.isRequired,
         /** Link section links */
-        links: objectLikeLinkArray,
+        links: objectLikeLinkArray
       })
     ),
   }
@@ -31,7 +31,7 @@ export default class FooterLinksMatrix extends Component {
         {links.map((linkItem, index) => (
           <Fragment key={`links-container-${index}`}>
             <div className={`${footer.matrixItem} flex flex-auto dn-s flex-ns`}>
-              <FooterLinkList titleId={linkItem.title} list={linkItem.links} />
+              <FooterLinkList titleId={linkItem.title} list={linkItem.links} titleCapitals={linkItem.titleCapitals} titleBold={linkItem.titleBold}/>
             </div>
             <div
               className={`${

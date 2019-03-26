@@ -39,5 +39,7 @@
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Payment Types",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Payment Type",
   "editor.footer.storeInformations": "Store Informations",
-  "editor.footer.storeInformations.storeInformation": "Store Information"
+  "editor.footer.storeInformations.storeInformation": "Store Information",
+  "editor.footer.linksSections.titleCapitals": "Make title capital",
+  "editor.footer.linksSections.titleBold": "Make title bold"
 }

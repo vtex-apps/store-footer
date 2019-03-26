@@ -39,5 +39,7 @@
   "editor.footer.paymentForms.paymentForm.paymentTypes": "editor.footer.paymentForms.paymentForm.paymentTypes",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType",
   "editor.footer.storeInformations": "editor.footer.storeInformations",
-  "editor.footer.storeInformations.storeInformation": "editor.footer.storeInformations.storeInformation"
+  "editor.footer.storeInformations.storeInformation": "editor.footer.storeInformations.storeInformation",
+  "editor.footer.linksSections.titleCapitals": "editor.footer.linksSections.titleCapitals",
+  "editor.footer.linksSections.titleBold": "editor.footer.linksSections.titleBold"
 }

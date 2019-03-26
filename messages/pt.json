@@ -37,5 +37,7 @@
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Tipos de pagamento",
   "editor.footer.paymentForms.paymentForm.paymentTypes.paymentType": "Tipos de pagamento",
   "editor.footer.storeInformations": "Informações da Loja",
-  "editor.footer.storeInformations.storeInformation": "Informação da Loja"
+  "editor.footer.storeInformations.storeInformation": "Informação da Loja",
+  "editor.footer.linksSections.titleCapitals": "Faça o capital do título",
+  "editor.footer.linksSections.titleBold": "Tornar o título negrito"
 }

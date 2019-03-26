@@ -20,11 +20,14 @@ export default WrappedComponent => {
       alignRight: PropTypes.bool,
       horizontal: PropTypes.bool,
       titleCapitals: PropTypes.bool,
+      titleBold: PropTypes.bool,
     }
 
     static defaultProps = {
       alignRight: false,
       horizontal: false,
+      titleCapitals: false,
+      titleBold: false,
     }
 
     formatMessage(id) {
@@ -38,13 +41,16 @@ export default WrappedComponent => {
         alignRight,
         horizontal,
         titleCapitals,
+        titleBold,
         ...otherProps
       } = this.props
 
       if (!list || list.length === 0) return null
 
-      const titleClasses = classNames(`${footer.listTitle} t-small ma0 db`, {
-        'ttu': !titleCapitals,
+      const titleClasses = classNames(`${footer.listTitle} ma0 db`, {
+        'ttu': titleCapitals,
+      }, {
+        'b-ns': titleBold
       })
 
       const listContainerClasses = classNames(`${footer.listContainer} pl0 w-100 mt0-ns`, {

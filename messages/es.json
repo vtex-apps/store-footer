@@ -39,5 +39,7 @@
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Tipos de pago",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Tipo de pago",
   "editor.footer.storeInformations": "Informaciónes de la Tienda",
-  "editor.footer.storeInformations.storeInformation": "Información de la Tienda"
+  "editor.footer.storeInformations.storeInformation": "Información de la Tienda",
+  "editor.footer.linksSections.titleCapitals": "Hacer capital del título",
+  "editor.footer.linksSections.titleBold": "Poner el título en negrita"
 }
