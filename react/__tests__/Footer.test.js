@@ -1,12 +1,11 @@
 import React from 'react'
-import { mergeDeepRight } from 'ramda'
 import { render } from '@vtex/test-tools/react'
 
 import Footer from '../index'
 
 describe('<Footer /> component', () => {
-  const renderComponent = (customProps = {}) => {
-    const defaultProps = {
+  const renderComponent = customProps => {
+    const props = {
       socialNetworks: [
         {
           url: 'https://www.facebook.com/',
@@ -30,9 +29,9 @@ describe('<Footer /> component', () => {
       showSocialNetworksInColor: true,
       showVtexLogoInColor: true,
       logo: 'logoUrl',
+      ...customProps,
     }
 
-    const props = mergeDeepRight(defaultProps, customProps)
     return render(<Footer {...props} />)
   }
 
