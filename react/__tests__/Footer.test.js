@@ -31,6 +31,7 @@ describe('<Footer /> component', () => {
       logo: 'logoUrl',
       ...customProps,
     }
+
     return render(<Footer {...props} />)
   }
 
@@ -42,5 +43,50 @@ describe('<Footer /> component', () => {
   it('should match the snapshot', () => {
     const { asFragment } = renderComponent()
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('should contain the section links', () => {
+    const sectionLinks = [
+      {
+        title: 'We have one section title',
+        links: [
+          { url: 'someUrl', title: 'someTitle' },
+          { url: 'anotherUrl', title: 'anotherTitle' },
+        ],
+      },
+      {
+        title: 'We have two section titles',
+        links: [{ url: 'yetAnotherUrl', title: 'yetAnotherUrl' }],
+      },
+    ]
+
+    const { getByText } = renderComponent({ sectionLinks })
+
+    sectionLinks.forEach(({ title, links }) => {
+      expect(getByText(title)).toBeTruthy()
+
+      links.forEach(({ title }) => {
+        expect(getByText(title)).toBeTruthy()
+      })
+    })
+  })
+
+  it('should contain the payment forms', () => {
+    const paymentForms = [
+      {
+        title: 'Credit',
+        paymentTypes: ['MasterCard', 'Visa', 'Diners Club'],
+      },
+      {
+        title: 'Debit',
+        paymentTypes: ['MasterCard', 'Visa'],
+      },
+    ]
+
+    const { getByText } = renderComponent({ paymentForms })
+
+    paymentForms.forEach(({ title }) => {
+      expect(getByText(title)).toBeTruthy()
+    })
   })
 })
