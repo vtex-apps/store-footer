@@ -162,9 +162,6 @@ exports[`<Footer /> component should match the snapshot 1`] = `
           <div
             class="listContainer pl0 w-100 mt0-ns"
           >
-            <span
-              class="listTitle t-small ma0 db ttu"
-            />
             <ul
               class="list list flex flex-column flex-wrap pa0 mb0 mt3"
             >
