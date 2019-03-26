@@ -119,10 +119,10 @@ Section Link:
 
 Link:
 
-| Prop name | Type     | Description       |
-| --------- | -------- | ----------------- |
-| `url`     | `String` | URL               |
-| `title`   | `String` | Title of the link |
+| Prop name | Type     | Description                                       |
+| --------- | -------- | ------------------------------------------------- |
+| `url`     | `String` | URL                                               |
+| `title`   | `String` | Title of the link                                 |
 | `target`  | `Enum`   | Target of the link. (values: `_self` or `_blank`) |
 
 Badge:
@@ -220,3 +220,4 @@ To execute our tests go to `react/` folder and run `yarn test`
 ### Travis CI
 
 [![Build Status](https://api.travis-ci.org/vtex-apps/store-footer.svg?branch=master)](https://travis-ci.org/vtex-apps/store-footer)
+[![Coverage Status](https://coveralls.io/repos/github/vtex-apps/store-footer/badge.svg?branch=master)](https://coveralls.io/github/vtex-apps/store-footer?branch=master)
