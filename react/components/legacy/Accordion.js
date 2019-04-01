@@ -5,7 +5,7 @@ import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 
 import { IconCaret } from 'vtex.store-icons'
 
-import footer from '../footer.css'
+import footer from '../../footer.css'
 
 class Accordion extends Component {
   static propTypes = {

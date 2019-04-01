@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Functions } from '@gocommerce/utils'
@@ -6,7 +6,7 @@ import { includes } from 'ramda'
 import { withRuntimeContext } from 'vtex.render-runtime'
 
 import withImage from './withImage'
-import footer from '../footer.css'
+import footer from '../../footer.css'
 
 /**
  * "Powered By Vtex" image's component, used in Footer

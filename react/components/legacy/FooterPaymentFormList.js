@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import footerList from './footerList'
 import withImage from './withImage'
-import footer from '../footer.css'
+import footer from '../../footer.css'
 
 /**
  * Shows an image for the payments forms accepted
