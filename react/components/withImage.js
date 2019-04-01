@@ -19,27 +19,37 @@ export default getImageFilename => {
 
       state = {}
 
-      async componentDidMount() {
+      _isMounted = false
+
+      componentDidMount() {
         const imageName = getImageFilename(this.props)
-        await this.lazyImport(imageName)
+        this._isMounted = true
+        this.lazyImport(imageName)
       }
 
-      async componentDidUpdate() {
+      componentWillUnmount() {
+        this._isMounted = false
+      }
+
+      componentDidUpdate() {
         const imageName = getImageFilename(this.props)
         if (imageName !== this.state.imageName) {
-          await this.lazyImport(imageName)
+          this.lazyImport(imageName)
         }
       }
 
-      lazyImport = (imageName) => {
+      lazyImport = imageName => {
         return import(`../images/${imageName}`).then(imageSrc => {
-          this.setState({ imageSrc: imageSrc.default, imageName })
+          if (this._isMounted) {
+            this.setState({ imageSrc: imageSrc.default, imageName })
+          }
         })
       }
 
       render() {
-        const { imageSrc } = this.state
-        return <WrappedComponent {...this.props} imageSrc={imageSrc} />
+        return (
+          <WrappedComponent {...this.props} imageSrc={this.state.imageSrc} />
+        )
       }
     }
 
