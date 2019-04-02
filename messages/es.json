@@ -38,6 +38,9 @@
   "editor.footer.paymentForms.paymentForm.title": "Título de la Forma de pago",
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Tipos de pago",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Tipo de pago",
+  "editor.footer.paymentMethodIcon.title": "Método de Pago",
+  "editor.footer.paymentMethodIcon.description": "Icono del método de pago",
+  "editor.footer.paymentMethodIcon.method": "Nombre del método de pago",
   "editor.footer.storeInformations": "Informaciónes de la Tienda",
   "editor.footer.storeInformations.storeInformation": "Información de la Tienda"
 }

@@ -38,6 +38,9 @@
   "editor.footer.paymentForms.paymentForm.title": "Payment Form Title",
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Payment Types",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Payment Type",
+  "editor.footer.paymentMethodIcon.title": "Payment Method",
+  "editor.footer.paymentMethodIcon.description": "Payment method icon",
+  "editor.footer.paymentMethodIcon.method": "Payment method name",
   "editor.footer.storeInformations": "Store Informations",
   "editor.footer.storeInformations.storeInformation": "Store Information"
 }

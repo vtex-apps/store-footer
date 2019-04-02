@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import footerList from './footerList'
-import footer from '../../footer.css'
+import footer from './footer.css'
 
 export const FooterLinkItem = ({ url, title, target }) =>
   title ? (

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import footerList from './footerList'
-import withImage from './withImage'
-import footer from '../../footer.css'
+import withImage from '../withImage'
+import footer from './footer.css'
 
 /**
  * Shows an image for an specific social network

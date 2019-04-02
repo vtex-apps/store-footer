@@ -1,5 +1,22 @@
 {
   "footer": {
+    "allowed": [
+      "footer-layout"
+    ],
     "component": "Footer"
+  },
+  "footer-layout": {
+    "component": "FooterLayout",
+    "composition": "children",
+    "allowed": [
+      "social-network-link",
+      "payment-method-icon"
+    ]
+  },
+  "social-network-link": {
+    "component": "SocialNetwork"
+  },
+  "payment-method-icon": {
+    "component": "PaymentMethodIcon"
   }
 }

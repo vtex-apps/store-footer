@@ -38,6 +38,9 @@
   "editor.footer.paymentForms.paymentForm.title": "editor.footer.paymentForms.paymentForm.title",
   "editor.footer.paymentForms.paymentForm.paymentTypes": "editor.footer.paymentForms.paymentForm.paymentTypes",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType",
+  "editor.footer.paymentMethodIcon.title": "Payment Method",
+  "editor.footer.paymentMethodIcon.description": "Payment method icon",
+  "editor.footer.paymentMethodIcon.method": "Payment method name",
   "editor.footer.storeInformations": "editor.footer.storeInformations",
   "editor.footer.storeInformations.storeInformation": "editor.footer.storeInformations.storeInformation"
 }
