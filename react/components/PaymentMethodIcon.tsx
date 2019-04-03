@@ -7,12 +7,19 @@ import withImage from './withImage'
  */
 const PaymentMethodIcon: StorefrontFunctionComponent<
   PaymentMethodIconProps
-> = ({ imageSrc }) => {
+> = ({ imageSrc, paymentMethod }) => {
   if (!imageSrc) {
     return null
   }
 
-  return <img className={`${style.paymentFormItem} pr0 w2 h2`} src={imageSrc} />
+  return (
+    <img
+      className={`${style.paymentFormItem} pr0 w2 h2`}
+      src={imageSrc}
+      alt={paymentMethod}
+      title={paymentMethod}
+    />
+  )
 }
 
 interface PaymentMethodIconProps extends PaymentMethodIconSchema {
@@ -20,8 +27,8 @@ interface PaymentMethodIconProps extends PaymentMethodIconSchema {
 }
 
 interface PaymentMethodIconSchema {
-  /** Indicates which one of the payments forms should the component show its image */
-  paymentType: 'Diners Club' | 'MasterCard' | 'Visa'
+  /** Indicates which one of the payments method should the component show its image */
+  paymentMethod: 'Diners Club' | 'MasterCard' | 'Visa'
   /** If true, the original logo (with color) is used. If not, the grayscale's one */
   showInColor: boolean
 }
@@ -32,11 +39,26 @@ PaymentMethodIcon.displayName = 'PaymentMethodIcon'
 PaymentMethodIcon.schema = {
   title: 'editor.footer.paymentMethodIcon.title',
   description: 'editor.footer.paymentMethodIcon.description',
+  type: 'object',
+  properties: {
+    showInColor: {
+      default: false,
+      isLayout: true,
+      title: 'editor.footer.showSocialNetworksInColor.title',
+      type: 'boolean',
+    },
+    paymentMethod: {
+      default: 'Visa',
+      enum: ['Visa', 'MasterCard', 'Diners Club'],
+      title: 'editor.footer.paymentMethodIcon.method',
+      type: 'string',
+    },
+  },
 }
 
 const getImagePathFromProps = ({
-  paymentType,
+  paymentMethod,
   showInColor,
-}: PaymentMethodIconSchema) => `${paymentType}${showInColor ? '' : '-BW'}.svg`
+}: PaymentMethodIconSchema) => `${paymentMethod}${showInColor ? '' : '-BW'}.svg`
 
 export default withImage(getImagePathFromProps)(PaymentMethodIcon)
