@@ -19,10 +19,21 @@ export default getImageFilename => {
 
       state = {}
 
-      componentDidMount() {
+      async componentDidMount() {
         const imageName = getImageFilename(this.props)
-        import(`../images/${imageName}`).then(imageSrc => {
-          this.setState({ imageSrc: imageSrc.default })
+        await this.lazyImport(imageName)
+      }
+
+      async componentDidUpdate() {
+        const imageName = getImageFilename(this.props)
+        if (imageName !== this.state.imageName) {
+          await this.lazyImport(imageName)
+        }
+      }
+
+      lazyImport = (imageName) => {
+        return import(`../images/${imageName}`).then(imageSrc => {
+          this.setState({ imageSrc: imageSrc.default, imageName })
         })
       }
 
