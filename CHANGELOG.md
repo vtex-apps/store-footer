@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.6.16] - 2019-04-03
+
 ### Fixed
 
 - `withImage` now updates image when props are changed.
