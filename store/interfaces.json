@@ -10,7 +10,11 @@
     "composition": "children",
     "allowed": [
       "social-network-link",
-      "payment-method-icon"
+      "payment-method-icon",
+      "logo",
+      "newsletter",
+      "unstable--menu",
+      "powered-by"
     ]
   },
   "social-network-link": {
@@ -18,5 +22,8 @@
   },
   "payment-method-icon": {
     "component": "PaymentMethodIcon"
+  },
+  "powered-by": {
+    "component": "PoweredBy"
   }
 }

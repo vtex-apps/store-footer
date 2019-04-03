@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "vtex.store-components": "3.x",
-    "vtex.store-icons": "0.x"
+    "vtex.store-icons": "0.x",
+    "vtex.menu": "2.x"
   }
 }
