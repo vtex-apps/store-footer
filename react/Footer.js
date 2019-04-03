@@ -16,4 +16,6 @@ const Footer: StorefrontFunctionComponent = props => {
   )
 }
 
+Footer.schema = LegacyFooter.schema
+
 export default Footer
