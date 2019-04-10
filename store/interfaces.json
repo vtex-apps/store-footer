@@ -1,7 +1,8 @@
 {
   "footer": {
     "allowed": [
-      "footer-layout"
+      "footer-layout.mobile",
+      "footer-layout.desktop"
     ],
     "component": "Footer"
   },
@@ -21,6 +22,8 @@
       "image"
     ]
   },
+  "footer-layout.mobile": {},
+  "footer-layout.desktop": {},
   "social-networks": {
     "component": "SocialNetworks"
   },
