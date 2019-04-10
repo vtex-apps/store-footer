@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import style from './components/FooterLayout.css'
 
 const FooterLayout: StorefrontFunctionComponent<FooterLayoutProps> = props => {
-  return <div>{props.children}</div>
+  return <div className={style.footerLayout}>{props.children}</div>
 }
 
 interface FooterLayoutProps {
