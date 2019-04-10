@@ -5,7 +5,7 @@ import { Functions } from '@gocommerce/utils'
 import { includes } from 'ramda'
 import { withRuntimeContext } from 'vtex.render-runtime'
 
-import withImage from '../withImage'
+import withImage from '../components/withImage'
 import footer from './footer.css'
 
 /**
@@ -18,17 +18,20 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
 
   const isPlatformGCResult = Functions.isGoCommerceAcc(runtime.account)
   const vtexLogoItemClasses = classNames(footer.vtexLogoItem, {
-    'w4': isPlatformGCResult,
-    'h3 w3': !isPlatformGCResult
+    w4: isPlatformGCResult,
+    'h3 w3': !isPlatformGCResult,
   })
 
   return (
-    <div className={`${footer.badgeList} flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}>
-      {logoUrl && 
+    <div
+      className={`${
+        footer.badgeList
+      } flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}>
+      {logoUrl && (
         <span className={`${footer.badge} pa2-s pa1-ns`}>
           <img className={`${footer.logoImage} h3`} src={logoUrl} />
         </span>
-      }
+      )}
       <span className={`${footer.badge} pa2-s pa1-ns nt7-ns`}>
         <img className={vtexLogoItemClasses} src={imageSrc} />
       </span>
@@ -50,6 +53,10 @@ FooterVtexLogo.propTypes = {
 }
 
 const getImagePathFromProps = ({ runtime, showInColor }) =>
-  `${Functions.isGoCommerceAcc(runtime.account) ? 'GoCommerce' : 'VTEX'}${showInColor ? '' : '-BW'}.svg`
+  `${Functions.isGoCommerceAcc(runtime.account) ? 'GoCommerce' : 'VTEX'}${
+    showInColor ? '' : '-BW'
+  }.svg`
 
-export default withRuntimeContext(withImage(getImagePathFromProps)(FooterVtexLogo))
+export default withRuntimeContext(
+  withImage(getImagePathFromProps)(FooterVtexLogo)
+)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ExtensionPoint, Unstable__ChildBlock } from 'vtex.render-runtime'
-import LegacyFooter from './components/legacy/Footer'
+import LegacyFooter from './legacy/Footer'
 
 const Footer: StorefrontFunctionComponent = props => {
   return (

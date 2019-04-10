@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import footerList from './footerList'
-import withImage from '../withImage'
+import withImage from '../components/withImage'
 import footer from './footer.css'
 
 /**
@@ -13,7 +13,9 @@ const FooterPaymentFormItem = ({ imageSrc }) => {
     return null
   }
 
-  return <img className={`${footer.paymentFormItem} pr0 w2 h2`} src={imageSrc} />
+  return (
+    <img className={`${footer.paymentFormItem} pr0 w2 h2`} src={imageSrc} />
+  )
 }
 
 FooterPaymentFormItem.displayName = 'FooterPaymentFormItem'
