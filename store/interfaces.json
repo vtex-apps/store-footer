@@ -9,6 +9,8 @@
     "component": "FooterLayout",
     "composition": "children",
     "allowed": [
+      "footer-row",
+      "footer-spacer",
       "social-networks",
       "accepted-payment-methods",
       "logo",
@@ -26,5 +28,15 @@
   },
   "powered-by": {
     "component": "PoweredBy"
+  },
+  "footer-row": {
+    "component": "Row",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "footer-spacer": {
+    "component": "Spacer",
+    "composition": "children",
+    "allowed": "*"
   }
 }

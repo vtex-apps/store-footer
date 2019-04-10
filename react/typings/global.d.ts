@@ -15,8 +15,4 @@ declare global {
     getSchema?(props: P): object
     schema: object
   }
-
-  interface MenuSchema {
-    orientation?: 'vertical' | 'horizontal'
-  }
 }

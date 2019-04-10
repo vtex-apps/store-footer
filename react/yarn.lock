@@ -1052,6 +1052,11 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
+"@vtex/css-handles@^1.0.0":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@vtex/css-handles/-/css-handles-1.0.2.tgz#be141fdfb7dc55e346fdc26cf53aea12462140cb"
+  integrity sha512-/ZOoiXL5xV1CVlZD4Qj+K30ge1PdUdcdEqULq9Pj0/KfaXNCODsnQo3+D64nOwud+lvk2FPKVkMn3pMdAyvBhg==
+
 "@vtex/test-tools@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@vtex/test-tools/-/test-tools-0.2.0.tgz#3bb202a918bd60201ae23c55901d7308e638743c"
