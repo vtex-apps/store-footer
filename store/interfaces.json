@@ -9,8 +9,8 @@
     "component": "FooterLayout",
     "composition": "children",
     "allowed": [
-      "social-network-link",
-      "payment-method-icon",
+      "social-networks",
+      "accepted-payment-methods",
       "logo",
       "newsletter",
       "unstable--menu",
@@ -18,11 +18,11 @@
       "rich-text"
     ]
   },
-  "social-network-link": {
-    "component": "SocialNetwork"
+  "social-networks": {
+    "component": "SocialNetworks"
   },
-  "payment-method-icon": {
-    "component": "PaymentMethodIcon"
+  "accepted-payment-methods": {
+    "component": "AcceptedPaymentMethods"
   },
   "powered-by": {
     "component": "PoweredBy"

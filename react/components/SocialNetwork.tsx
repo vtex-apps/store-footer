@@ -18,7 +18,7 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
       href={url}
       target="_blank"
       rel="noopener"
-      className={`${style.socialNetworkList} c-muted-1`}>
+      className={`${style.socialNetworkList} c-muted-1 ph2`}>
       <img className={`${style.socialNetworkItem} w2 h2`} src={imageSrc} />
     </a>
   )
@@ -26,53 +26,20 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
 
 SocialNetwork.displayName = 'SocialNetwork'
 
-interface SocialNetworkProps extends SocialNetworkSchema {
+interface SocialNetworkProps {
   imageSrc: string
-}
-
-interface SocialNetworkSchema {
-  url: string
   showInColor: boolean
-  socialNetwork: SocialNetworkEnum
+  url: string
+  name: SocialNetworkName
 }
 
-enum SocialNetworkEnum {
+export enum SocialNetworkName {
   Facebook = 'Facebook',
   Twitter = 'Twitter',
   Instagram = 'Instagram',
   YouTube = 'YouTube',
 }
-
-SocialNetwork.getSchema = () => {
-  // tslint:disable: object-literal-sort-keys
-  return {
-    title: 'editor.footer.socialNetworks',
-    description: '',
-    type: 'object',
-    properties: {
-      showInColor: {
-        default: false,
-        isLayout: true,
-        title: 'editor.footer.showSocialNetworksInColor.title',
-        type: 'boolean',
-      },
-      socialNetwork: {
-        default: 'Facebook',
-        enum: ['Facebook', 'Twitter', 'Instagram', 'YouTube'],
-        title: 'editor.footer.socialNetworks.url.title',
-        type: 'string',
-      },
-      url: {
-        title: 'editor.footer.socialNetworks.url.title',
-        type: 'string',
-      },
-    },
-  }
-}
-
-const getImagePathFromProps = ({
-  socialNetwork,
-  showInColor,
-}: SocialNetworkSchema) => `${socialNetwork}${showInColor ? '' : '-BW'}.svg`
+const getImagePathFromProps = ({ name, showInColor }: SocialNetworkProps) =>
+  `${name}${showInColor ? '' : '-BW'}.svg`
 
 export default withImage(getImagePathFromProps)(SocialNetwork)
