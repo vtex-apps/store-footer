@@ -8,7 +8,7 @@ const AcceptedPaymentMethods: StorefrontFunctionComponent<
   AcceptedPaymentMethodsProps
 > = props => {
   return (
-    <div className={`${style.acceptedPaymentMethodContainer} nh2`}>
+    <div className={`${style.acceptedPaymentMethodContainer} nh2 flex`}>
       {props.paymentMethods.map(paymentMethod => (
         <PaymentMethodIcon
           paymentMethod={paymentMethod}

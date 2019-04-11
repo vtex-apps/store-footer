@@ -17,14 +17,18 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
   }
 
   const isPlatformGCResult = Functions.isGoCommerceAcc(runtime.account)
-  const logoItemClasses = classNames(style.poweredByImage, {
-    w4: isPlatformGCResult,
-    'h3 w3': !isPlatformGCResult,
-  })
 
   return (
-    <div className={`${style.badgeList}`}>
-      <img className={logoItemClasses} src={imageSrc} />
+    <div
+      className={classNames(style.poweredBy, 'flex items-center', {
+        w4: isPlatformGCResult,
+        'h3 w3': !isPlatformGCResult,
+      })}>
+      <img
+        className={`${style.poweredByImage} w-100`}
+        src={imageSrc}
+        title={isPlatformGCResult ? 'GoCommerce' : 'VTEX'}
+      />
     </div>
   )
 }

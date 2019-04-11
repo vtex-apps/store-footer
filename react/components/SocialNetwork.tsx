@@ -8,6 +8,7 @@ import withImage from './withImage'
 const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
   imageSrc,
   url,
+  name,
 }) => {
   if (!imageSrc) {
     return null
@@ -18,8 +19,14 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
       href={url}
       target="_blank"
       rel="noopener"
-      className={`${style.socialNetworkList} c-muted-1 ph2`}>
-      <img className={`${style.socialNetworkItem} w2 h2`} src={imageSrc} />
+      className={`${
+        style.socialNetworkLink
+      } c-muted-1 w2 h2 mh2 flex items-center`}>
+      <img
+        className={`${style.socialNetworkImage}`}
+        src={imageSrc}
+        title={name}
+      />
     </a>
   )
 }

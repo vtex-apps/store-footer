@@ -6,7 +6,7 @@ const SocialNetworks: StorefrontFunctionComponent<
   SocialNetworksSchema
 > = props => {
   return (
-    <div className={`${style.socialNetworksContainer} nh2`}>
+    <div className={`${style.socialNetworksContainer} nh2 flex`}>
       {props.socialNetworks.map(socialNetworkData => (
         <SocialNetwork {...socialNetworkData} />
       ))}

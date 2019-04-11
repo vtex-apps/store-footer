@@ -13,12 +13,14 @@ const PaymentMethodIcon: StorefrontFunctionComponent<
   }
 
   return (
-    <img
-      className={`${style.paymentMethodIcon} w2 h2 ph2`}
-      src={imageSrc}
-      alt={paymentMethod}
-      title={paymentMethod}
-    />
+    <div className={`${style.paymentMethodIcon} w2 h2 mh2 flex items-center`}>
+      <img
+        className={`${style.paymentMethodIconImage} w-100`}
+        src={imageSrc}
+        alt={paymentMethod}
+        title={paymentMethod}
+      />
+    </div>
   )
 }
 
