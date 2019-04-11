@@ -3,8 +3,8 @@ import React, { Component, Fragment } from 'react'
 
 import Accordion from './Accordion'
 import FooterLinkList, { FooterLinkItem } from './FooterLinkList'
-import { objectLikeLinkArray } from './../propTypes'
-import footer from '../footer.css'
+import { objectLikeLinkArray } from './propTypes'
+import footer from './footer.css'
 
 export default class FooterLinksMatrix extends Component {
   static propTypes = {

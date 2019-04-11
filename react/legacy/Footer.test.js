@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@vtex/test-tools/react'
 
-import Footer from '../index'
+import Footer from './Footer'
 
 describe('<Footer /> component', () => {
   const renderComponent = customProps => {

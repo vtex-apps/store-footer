@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.7.0] - 2019-04-11
+
+### Added
+
+- Add new interfaces: `footer-layout`, `social-networks`, `accepted-payment-methods`, `powered-by`, `footer-row` and `footer-spacer`.
+
 ## [2.6.17] - 2019-04-03
 
 ### Fixed

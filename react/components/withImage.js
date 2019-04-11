@@ -16,6 +16,8 @@ export default getImageFilename => {
   return WrappedComponent => {
     class WithImage extends Component {
       static displayName = `WithImage(${getDisplayName(WrappedComponent)})`
+      static getSchema = WrappedComponent.getSchema
+      static schema = WrappedComponent.schema
 
       state = {}
 

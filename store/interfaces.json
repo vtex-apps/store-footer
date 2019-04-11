@@ -1,5 +1,46 @@
 {
   "footer": {
-    "component": "index"
+    "allowed": [
+      "footer-layout.mobile",
+      "footer-layout.desktop"
+    ],
+    "component": "Footer"
+  },
+  "footer-layout": {
+    "component": "FooterLayout",
+    "composition": "children",
+    "allowed": [
+      "footer-row",
+      "footer-spacer",
+      "social-networks",
+      "accepted-payment-methods",
+      "logo",
+      "newsletter",
+      "unstable--menu",
+      "powered-by",
+      "rich-text",
+      "image"
+    ]
+  },
+  "footer-layout.mobile": {},
+  "footer-layout.desktop": {},
+  "social-networks": {
+    "component": "SocialNetworks"
+  },
+  "accepted-payment-methods": {
+    "component": "AcceptedPaymentMethods"
+  },
+  "powered-by": {
+    "component": "PoweredBy"
+  },
+  "footer-row": {
+    "component": "Row",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "footer-spacer": {
+    "component": "Spacer",
+    "composition": "children",
+    "allowed": "*"
   }
 }

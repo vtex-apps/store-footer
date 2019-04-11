@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Container } from 'vtex.store-components'
 
-import FooterBadgeList from './components/FooterBadgeList'
-import FooterLinksMatrix from './components/FooterLinksMatrix'
-import FooterPaymentFormMatrix from './components/FooterPaymentFormMatrix'
-import FooterVtexLogo from './components/FooterVtexLogo'
-import FooterSocialNetworkList from './components/FooterSocialNetworkList'
+import FooterBadgeList from './FooterBadgeList'
+import FooterLinksMatrix from './FooterLinksMatrix'
+import FooterPaymentFormMatrix from './FooterPaymentFormMatrix'
+import FooterVtexLogo from './FooterVtexLogo'
+import FooterSocialNetworkList from './FooterSocialNetworkList'
 import { objectLikeBadgeArray, objectLikeLinkArray } from './propTypes'
 
 import footer from './footer.css'
@@ -86,7 +86,7 @@ export default class Footer extends Component {
       },
       showPaymentFormsInColor: {
         type: 'boolean',
-        title: 'editor.footer.showPaymentFormsInColor.title',
+        title: 'editor.footer.showPaymentMethodsInColor.title',
         default: false,
         isLayout: true,
       },
@@ -273,8 +273,7 @@ export default class Footer extends Component {
             <nav
               className={`${footer.container} ${
                 footer.navigation
-              } pt5-s flex justify-between bg-base c-muted-1`}
-            >
+              } pt5-s flex justify-between bg-base c-muted-1`}>
               <div className={`${footer.links} t-small w-100-s w-80-ns pb5-s`}>
                 <FooterLinksMatrix links={sectionLinks} />
               </div>
@@ -292,8 +291,7 @@ export default class Footer extends Component {
             <div
               className={`${footer.container} ${
                 footer.payment
-              } pv5-s flex justify-between bg-base c-muted-1`}
-            >
+              } pv5-s flex justify-between bg-base c-muted-1`}>
               <FooterPaymentFormMatrix
                 paymentForms={paymentForms}
                 horizontal
@@ -303,13 +301,11 @@ export default class Footer extends Component {
             <div
               className={`${footer.container} ${
                 footer.informationContainer
-              } pt5-s flex justify-between bg-base c-muted-1`}
-            >
+              } pt5-s flex justify-between bg-base c-muted-1`}>
               <div
                 className={`${
                   footer.textContainer
-                } w-100-s pb5-s w-80-ns flex flex-wrap`}
-              >
+                } w-100-s pb5-s w-80-ns flex flex-wrap`}>
                 {storeInformations &&
                   storeInformations.map(({ storeInformation }, index) => (
                     <p
@@ -317,8 +313,7 @@ export default class Footer extends Component {
                       className={this.getInformationCssClasses(
                         storeInformations.length,
                         index
-                      )}
-                    >
+                      )}>
                       {storeInformation}
                     </p>
                   ))}

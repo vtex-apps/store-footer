@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import FooterPaymentFormList from './FooterPaymentFormList'
 
-import footer from '../footer.css'
+import footer from './footer.css'
 
 export default class FooterPaymentFormMatrix extends Component {
   static propTypes = {

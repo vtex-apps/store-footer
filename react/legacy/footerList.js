@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { injectIntl, intlShape } from 'react-intl'
 
-import footer from '../footer.css'
+import footer from './footer.css'
 
 const getDisplayName = Component => {
   return Component.displayName || Component.name || 'Component'

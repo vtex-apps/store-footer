@@ -10,8 +10,8 @@
   "editor.footer.numberOfSectionLinks.title": "Number of section links",
   "editor.footer.numberOfMoreInformationLinks.title": "Number of more information links",
   "editor.footer.numberOfBadges.title": "Number of badges to be displayed",
-  "editor.footer.numberOfPaymentForms.title": "Number of payment forms available",
-  "editor.footer.showPaymentFormsInColor.title": "Show payment form icons in color",
+  "editor.footer.numberOfPaymentForms.title": "Number of payment methods available",
+  "editor.footer.showPaymentMethodsInColor.title": "Show payment methods icons in color",
   "editor.footer.showSocialNetworksInColor.title": "Show social networks icons in color",
   "editor.footer.showVtexLogoInColor.title": "Show VTEX logo in color",
   "editor.footer.linksSections": "Links Sections",
@@ -38,6 +38,11 @@
   "editor.footer.paymentForms.paymentForm.title": "Payment Form Title",
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Payment Types",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Payment Type",
+  "editor.footer.acceptedPaymentMethods.title": "Accepted Payment Methods",
+  "editor.footer.acceptedPaymentMethods.description": "Payment methods accepted by the store",
+  "editor.footer.paymentMethodIcon.title": "Payment Method",
+  "editor.footer.paymentMethodIcon.description": "Payment method icon",
+  "editor.footer.paymentMethodIcon.method": "Payment method name",
   "editor.footer.storeInformations": "Store Informations",
   "editor.footer.storeInformations.storeInformation": "Store Information"
 }

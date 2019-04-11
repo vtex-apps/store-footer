@@ -11,7 +11,7 @@
   "editor.footer.numberOfMoreInformationLinks.title": "Número de enlaces para más información",
   "editor.footer.numberOfBadges.title": "Número de medallas a mostrar",
   "editor.footer.numberOfPaymentForms.title": "Número de formas de pago disponibles",
-  "editor.footer.showPaymentFormsInColor.title": "Mostrar los iconos de las formas de pago de colores",
+  "editor.footer.showPaymentMethodsInColor.title": "Mostrar los iconos de las formas de pago de colores",
   "editor.footer.showSocialNetworksInColor.title": "Mostrar los iconos de las redes sociales de colores",
   "editor.footer.showVtexLogoInColor.title": "Mostrar el logotipo de la VTEX de color",
   "editor.footer.linksSections": "Secciones de Enlaces",
@@ -38,6 +38,11 @@
   "editor.footer.paymentForms.paymentForm.title": "Título de la Forma de pago",
   "editor.footer.paymentForms.paymentForm.paymentTypes": "Tipos de pago",
   "editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Tipo de pago",
+  "editor.footer.acceptedPaymentMethods.title": "Métodos de pago aceptados",
+  "editor.footer.acceptedPaymentMethods.description": "Métodos de pago aceptados por la tienda",
+  "editor.footer.paymentMethodIcon.title": "Método de Pago",
+  "editor.footer.paymentMethodIcon.description": "Icono del método de pago",
+  "editor.footer.paymentMethodIcon.method": "Nombre del método de pago",
   "editor.footer.storeInformations": "Informaciónes de la Tienda",
   "editor.footer.storeInformations.storeInformation": "Información de la Tienda"
 }
