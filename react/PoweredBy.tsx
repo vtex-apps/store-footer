@@ -27,7 +27,7 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
       <img
         className={`${style.poweredByImage} w-100`}
         src={imageSrc}
-        title={isPlatformGCResult ? 'GoCommerce' : 'VTEX'}
+        alt={isPlatformGCResult ? 'GoCommerce' : 'VTEX'}
       />
     </div>
   )

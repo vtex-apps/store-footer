@@ -25,6 +25,7 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
       <img
         className={`${style.socialNetworkImage}`}
         src={imageSrc}
+        alt={name}
         title={name}
       />
     </a>
