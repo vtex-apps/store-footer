@@ -20,7 +20,8 @@
       "unstable--menu",
       "powered-by",
       "rich-text",
-      "image"
+      "image",
+      "flex-layout"
     ]
   },
   "footer-layout.mobile": {},
@@ -40,8 +41,6 @@
     "allowed": "*"
   },
   "footer-spacer": {
-    "component": "Spacer",
-    "composition": "children",
-    "allowed": "*"
+    "component": "Spacer"
   }
 }

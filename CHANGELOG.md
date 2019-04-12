@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.9.0] - 2019-04-12
+### Added
+- Added permission for `flex-layout` on the footer.
+
 ## [2.8.0] - 2019-04-11
 
 ### Added
