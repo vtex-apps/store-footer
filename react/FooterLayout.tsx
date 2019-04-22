@@ -12,8 +12,8 @@ interface FooterLayoutProps {
 FooterLayout.getSchema = () => {
   // tslint:disable: object-literal-sort-keys
   return {
-    title: 'editor.footer.title',
-    description: 'editor.footer.description',
+    title: 'admin/editor.footer.title',
+    description: 'admin/editor.footer.description',
     type: 'object',
   }
 }
