@@ -68,7 +68,7 @@ export default class Footer extends Component {
     badges: [],
     paymentForms: [
       {
-        title: 'editor.footer.paymentForms.paymentForm',
+        title: 'admin/editor.footer.paymentForms.paymentForm',
         paymentTypes: ['MasterCard'],
       },
     ],
@@ -76,47 +76,47 @@ export default class Footer extends Component {
   }
 
   static schema = {
-    title: 'editor.footer.title',
-    description: 'editor.footer.description',
+    title: 'admin/editor.footer.title',
+    description: 'admin/editor.footer.description',
     type: 'object',
     properties: {
       logo: {
         type: 'string',
-        title: 'editor.footer.logoUrl.title',
+        title: 'admin/editor.footer.logoUrl.title',
       },
       showPaymentFormsInColor: {
         type: 'boolean',
-        title: 'editor.footer.showPaymentMethodsInColor.title',
+        title: 'admin/editor.footer.showPaymentMethodsInColor.title',
         default: false,
         isLayout: true,
       },
       showSocialNetworksInColor: {
         type: 'boolean',
-        title: 'editor.footer.showSocialNetworksInColor.title',
+        title: 'admin/editor.footer.showSocialNetworksInColor.title',
         default: false,
         isLayout: true,
       },
       showVtexLogoInColor: {
         type: 'boolean',
-        title: 'editor.footer.showVtexLogoInColor.title',
+        title: 'admin/editor.footer.showVtexLogoInColor.title',
         default: false,
         isLayout: true,
       },
       socialNetworks: {
-        title: 'editor.footer.socialNetworks',
+        title: 'admin/editor.footer.socialNetworks',
         type: 'array',
         minItems: 1,
         maxItems: 4,
         items: {
-          title: 'editor.footer.socialNetworks.title',
+          title: 'admin/editor.footer.socialNetworks.title',
           type: 'object',
           properties: {
             url: {
-              title: 'editor.footer.socialNetworks.url.title',
+              title: 'admin/editor.footer.socialNetworks.url.title',
               type: 'string',
             },
             socialNetwork: {
-              title: 'editor.footer.socialNetworks.title',
+              title: 'admin/editor.footer.socialNetworks.title',
               type: 'string',
               default: 'Facebook',
               enum: ['Facebook', 'Twitter', 'Instagram', 'Youtube'],
@@ -125,46 +125,46 @@ export default class Footer extends Component {
         },
       },
       sectionLinks: {
-        title: 'editor.footer.linksSections',
+        title: 'admin/editor.footer.linksSections',
         type: 'array',
         minItems: 0,
         maxItems: 5,
         items: {
-          title: 'editor.footer.linksSections.linksSection',
+          title: 'admin/editor.footer.linksSections.linksSection',
           type: 'object',
           properties: {
             title: {
-              title: 'editor.footer.linksSections.linksSection.title',
+              title: 'admin/editor.footer.linksSections.linksSection.title',
               type: 'string',
             },
             links: {
-              title: 'editor.footer.linksSections.linksSection.links',
+              title: 'admin/editor.footer.linksSections.linksSection.links',
               type: 'array',
               minItems: 1,
               maxItems: 10,
               items: {
-                title: 'editor.footer.linksSections.linksSection.links.link',
+                title: 'admin/editor.footer.linksSections.linksSection.links.link',
                 type: 'object',
                 properties: {
                   title: {
                     title:
-                      'editor.footer.linksSections.linksSection.links.link.title',
+                      'admin/editor.footer.linksSections.linksSection.links.link.title',
                     type: 'string',
                   },
                   url: {
                     title:
-                      'editor.footer.linksSections.linksSection.links.link.url',
+                      'admin/editor.footer.linksSections.linksSection.links.link.url',
                     type: 'string',
                   },
                   target: {
                     title:
-                      'editor.footer.linksSections.linksSection.links.link.target',
+                      'admin/editor.footer.linksSections.linksSection.links.link.target',
                     type: 'string',
                     default: '_self',
                     enum: ['_self', '_blank'],
                     enumNames: [
-                      'editor.footer.linksSections.linksSection.links.link.target.self',
-                      'editor.footer.linksSections.linksSection.links.link.target.blank',
+                      'admin/editor.footer.linksSections.linksSection.links.link.target.self',
+                      'admin/editor.footer.linksSections.linksSection.links.link.target.blank',
                     ],
                   },
                 },
@@ -174,39 +174,39 @@ export default class Footer extends Component {
         },
       },
       badges: {
-        title: 'editor.footer.badge',
+        title: 'admin/editor.footer.badge',
         type: 'array',
         items: {
-          title: 'editor.footer.badge.title',
+          title: 'admin/editor.footer.badge.title',
           type: 'object',
           properties: {
             image: {
               type: 'string',
-              title: 'editor.footer.badge.image.title',
+              title: 'admin/editor.footer.badge.image.title',
             },
           },
         },
       },
       paymentForms: {
-        title: 'editor.footer.paymentForms',
+        title: 'admin/editor.footer.paymentForms',
         type: 'array',
         minItems: 1,
         maxItems: 5,
         items: {
-          title: 'editor.footer.paymentForms.paymentForm',
+          title: 'admin/editor.footer.paymentForms.paymentForm',
           type: 'object',
           properties: {
             title: {
-              title: 'editor.footer.paymentForms.paymentForm.title',
+              title: 'admin/editor.footer.paymentForms.paymentForm.title',
               type: 'string',
             },
             paymentTypes: {
-              title: 'editor.footer.paymentForms.paymentForm.paymentTypes',
+              title: 'admin/editor.footer.paymentForms.paymentForm.paymentTypes',
               type: 'array',
               minItems: 1,
               items: {
                 title:
-                  'editor.footer.paymentForms.paymentForm.paymentTypes.paymentType',
+                  'admin/editor.footer.paymentForms.paymentForm.paymentTypes.paymentType',
                 type: 'string',
                 default: 'MasterCard',
                 enum: ['MasterCard', 'Visa', 'Diners Club'],
@@ -216,16 +216,16 @@ export default class Footer extends Component {
         },
       },
       storeInformations: {
-        title: 'editor.footer.storeInformations',
+        title: 'admin/editor.footer.storeInformations',
         type: 'array',
         minItems: 0,
         maxItems: 2,
         items: {
-          title: 'editor.footer.storeInformations.storeInformation',
+          title: 'admin/editor.footer.storeInformations.storeInformation',
           type: 'object',
           properties: {
             storeInformation: {
-              title: 'editor.footer.storeInformations.storeInformation',
+              title: 'admin/editor.footer.storeInformations.storeInformation',
               type: 'string',
               widget: {
                 'ui:widget': 'textarea',
@@ -279,7 +279,7 @@ export default class Footer extends Component {
               </div>
               <div className={`${footer.socialNetworkContainer} pv5-s pa1-ns`}>
                 <FooterSocialNetworkList
-                  titleId="social-networks"
+                  titleId="store/social-networks"
                   list={socialNetworks}
                   horizontal
                   alignRight

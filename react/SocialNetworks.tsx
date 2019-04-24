@@ -30,31 +30,31 @@ interface SocialNetworkData {
 }
 
 SocialNetworks.schema = {
-  title: 'editor.footer.socialNetworks.title',
-  description: 'editor.footer.socialNetworks.description',
+  title: 'admin/editor.footer.socialNetworks.title',
+  description: 'admin/editor.footer.socialNetworks.description',
   type: 'object',
   properties: {
     showInColor: {
       default: false,
       isLayout: true,
-      title: 'editor.footer.showSocialNetworksInColor.title',
+      title: 'admin/editor.footer.showSocialNetworksInColor.title',
       type: 'boolean',
     },
     socialNetworks: {
-      title: 'editor.footer.socialNetworks',
+      title: 'admin/editor.footer.socialNetworks',
       type: 'array',
       minItems: 1,
       maxItems: 4,
       items: {
-        title: 'editor.footer.socialNetworks.title',
+        title: 'admin/editor.footer.socialNetworks.title',
         type: 'object',
         properties: {
           url: {
-            title: 'editor.footer.socialNetworks.url.title',
+            title: 'admin/editor.footer.socialNetworks.url.title',
             type: 'string',
           },
           name: {
-            title: 'editor.footer.socialNetworks.title',
+            title: 'admin/editor.footer.socialNetworks.title',
             type: 'string',
             default: 'Facebook',
             enum: ['Facebook', 'Twitter', 'Instagram', 'Youtube'],

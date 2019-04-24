@@ -31,23 +31,23 @@ interface AcceptedPaymentMethodsProps {
 
 // tslint:disable: object-literal-sort-keys
 AcceptedPaymentMethods.schema = {
-  title: 'editor.footer.acceptedPaymentMethods.title',
-  description: 'editor.footer.acceptedPaymentMethods.description',
+  title: 'admin/editor.footer.acceptedPaymentMethods.title',
+  description: 'admin/editor.footer.acceptedPaymentMethods.description',
   type: 'object',
   properties: {
     showInColor: {
       default: false,
       isLayout: true,
-      title: 'editor.footer.showPaymentMethodsInColor.title',
+      title: 'admin/editor.footer.showPaymentMethodsInColor.title',
       type: 'boolean',
     },
     paymentMethods: {
-      title: 'editor.footer.acceptedPaymentMethods.title',
+      title: 'admin/editor.footer.acceptedPaymentMethods.title',
       type: 'array',
       minItems: 1,
       maxItems: 5,
       items: {
-        title: 'editor.footer.paymentMethodIcon.method',
+        title: 'admin/editor.footer.paymentMethodIcon.method',
         type: 'string',
         default: 'MasterCard',
         enum: ['MasterCard', 'Visa', 'Diners Club'],
