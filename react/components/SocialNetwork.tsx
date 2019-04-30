@@ -14,16 +14,16 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
     return null
   }
 
+  const normalizedName = String(name).toLowerCase()
+
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener"
-      className={`${
-        style.socialNetworkLink
-      } c-muted-1 w2 h2 mh2 flex items-center`}>
+      className={`${style.socialNetworkLink} ${style.socialNetworkLink}--${normalizedName} c-muted-1 w2 h2 mh2 flex items-center`}>
       <img
-        className={`${style.socialNetworkImage}`}
+        className={`${style.socialNetworkImage} ${style.socialNetworkImage}--${normalizedName}`}
         src={imageSrc}
         alt={name}
         title={name}
@@ -38,15 +38,9 @@ interface SocialNetworkProps {
   imageSrc: string
   showInColor: boolean
   url: string
-  name: SocialNetworkName
+  name: string
 }
 
-export enum SocialNetworkName {
-  Facebook = 'Facebook',
-  Twitter = 'Twitter',
-  Instagram = 'Instagram',
-  YouTube = 'YouTube',
-}
 const getImagePathFromProps = ({ name, showInColor }: SocialNetworkProps) =>
   `${name}${showInColor ? '' : '-BW'}.svg`
 

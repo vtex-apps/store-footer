@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.11.0] - 2019-04-30
+### Added
+- Added social network name as a modifier to their CSS classes.
+- Added `title` prop to SocialNetworks block.
+
 ## [2.10.0] - 2019-04-24
 ### Changes
 - Scopes messages by domain
