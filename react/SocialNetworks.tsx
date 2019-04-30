@@ -26,7 +26,7 @@ interface SocialNetworksSchema {
 
 interface SocialNetworkData {
   url: string
-  name: SocialNetworkName
+  name: string
 }
 
 SocialNetworks.schema = {
