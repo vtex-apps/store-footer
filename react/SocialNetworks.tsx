@@ -1,15 +1,25 @@
 import React from 'react'
-import SocialNetwork, { SocialNetworkName } from './components/SocialNetwork'
+import SocialNetwork from './components/SocialNetwork'
 import style from './components/SocialNetworks.css'
 
 const SocialNetworks: StorefrontFunctionComponent<
   SocialNetworksSchema
-> = props => {
+> = ({
+  title,
+  socialNetworks,
+}) => {
   return (
-    <div className={`${style.socialNetworksContainer} nh2 flex`}>
-      {props.socialNetworks.map(socialNetworkData => (
-        <SocialNetwork {...socialNetworkData} />
-      ))}
+    <div>
+      {title && (
+        <div className={`${style.socialNetworksTitle} mb4`}>
+          {title}
+        </div>
+      )}
+      <div className={`${style.socialNetworksContainer} nh2 flex`}>
+        {socialNetworks.map(socialNetworkData => (
+          <SocialNetwork {...socialNetworkData} />
+        ))}
+      </div>
     </div>
   )
 }
@@ -20,6 +30,7 @@ SocialNetworks.defaultProps = {
 }
 
 interface SocialNetworksSchema {
+  title?: string
   socialNetworks: SocialNetworkData[]
   showInColor: boolean
 }
