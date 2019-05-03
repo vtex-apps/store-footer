@@ -2,22 +2,21 @@ import React from 'react'
 import SocialNetwork from './components/SocialNetwork'
 import style from './components/SocialNetworks.css'
 
-const SocialNetworks: StorefrontFunctionComponent<
-  SocialNetworksSchema
-> = ({
+const SocialNetworks: StorefrontFunctionComponent<SocialNetworksSchema> = ({
   title,
   socialNetworks,
 }) => {
   return (
     <div>
       {title && (
-        <div className={`${style.socialNetworksTitle} mb4`}>
-          {title}
-        </div>
+        <div className={`${style.socialNetworksTitle} mb4`}>{title}</div>
       )}
       <div className={`${style.socialNetworksContainer} nh2 flex`}>
         {socialNetworks.map(socialNetworkData => (
-          <SocialNetwork {...socialNetworkData} />
+          <SocialNetwork
+            key={socialNetworkData.name + socialNetworkData.url}
+            {...socialNetworkData}
+          />
         ))}
       </div>
     </div>

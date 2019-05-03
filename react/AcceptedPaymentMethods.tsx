@@ -11,6 +11,7 @@ const AcceptedPaymentMethods: StorefrontFunctionComponent<
     <div className={`${style.acceptedPaymentMethodContainer} nh2 flex`}>
       {props.paymentMethods.map(paymentMethod => (
         <PaymentMethodIcon
+          key={paymentMethod}
           paymentMethod={paymentMethod}
           showInColor={props.showInColor}
         />
