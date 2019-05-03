@@ -28,6 +28,7 @@ See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for mor
       - [CSS namespaces](#css-namespaces)
   - [Troubleshooting](#troubleshooting)
   - [Tests](#tests)
+  - [Contributing](#contributing)
 
 ## Usage
 
@@ -212,6 +213,10 @@ When the footer is displayed in mobile view, the `matrixContainer` constricts it
 ## Troubleshooting
 
 You can check if others are passing through similar issues [here](https://github.com/vtex-apps/store-footer/issues). Also feel free to [open issues](https://github.com/vtex-apps/store-footer/issues/new) or contribute with pull requests.
+
+## Contributing
+
+Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project. 
 
 ## Tests
 
