@@ -37,7 +37,7 @@
   "admin/editor.footer.paymentForms.paymentForm": "Forma de pago",
   "admin/editor.footer.paymentForms.paymentForm.title": "Título de la Forma de pago",
   "admin/editor.footer.paymentForms.paymentForm.paymentTypes": "Tipos de pago",
-  "admin/editor.footer.paymentForm.paymentForm.paymentTypes.paymentType": "Tipo de pago",
+  "admin/editor.footer.paymentForms.paymentForm.paymentTypes.paymentType": "Tipo de pago",
   "admin/editor.footer.acceptedPaymentMethods.title": "Métodos de pago aceptados",
   "admin/editor.footer.acceptedPaymentMethods.description": "Métodos de pago aceptados por la tienda",
   "admin/editor.footer.paymentMethodIcon.title": "Método de Pago",
