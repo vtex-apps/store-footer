@@ -11,7 +11,7 @@ const PaymentMethodIcon: StorefrontFunctionComponent<
   if (!imageSrc) {
     return null
   }
-
+  
   return (
     <div className={`${style.paymentMethodIcon} w2 h2 mh2 flex items-center`}>
       <img
@@ -25,9 +25,9 @@ const PaymentMethodIcon: StorefrontFunctionComponent<
 }
 
 export enum PaymentMethod {
-  'Diners Club' = 'Diners Club',
-  'MasterCard' = 'MasterCard',
-  'Visa' = 'Visa',
+  'diners club' = 'diners club',
+  'mastercard' = 'mastercard',
+  'visa' = 'visa',
 }
 
 interface PaymentMethodIconProps {
@@ -41,6 +41,6 @@ interface PaymentMethodIconProps {
 const getImagePathFromProps = ({
   paymentMethod,
   showInColor,
-}: PaymentMethodIconProps) => `${paymentMethod}${showInColor ? '' : '-BW'}.svg`
+}: PaymentMethodIconProps) => `${paymentMethod.toLowerCase()}${showInColor ? '' : '-bw'}.svg`
 
 export default withImage(getImagePathFromProps)(PaymentMethodIcon)

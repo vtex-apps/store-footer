@@ -42,6 +42,6 @@ interface SocialNetworkProps {
 }
 
 const getImagePathFromProps = ({ name, showInColor }: SocialNetworkProps) =>
-  `${name}${showInColor ? '' : '-BW'}.svg`
+  `${name.toLowerCase()}${showInColor ? '' : '-bw'}.svg`
 
 export default withImage(getImagePathFromProps)(SocialNetwork)

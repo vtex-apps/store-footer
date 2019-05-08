@@ -66,7 +66,6 @@ SocialNetworks.schema = {
           name: {
             title: 'admin/editor.footer.socialNetworks.title',
             type: 'string',
-            default: 'Facebook',
             enum: [
               'Facebook',
               'Twitter',
