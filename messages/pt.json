@@ -24,6 +24,8 @@
   "admin/editor.footer.linksSections.linksSection.links.link.target": "Objetivo do link",
   "admin/editor.footer.linksSections.linksSection.links.link.target.self": "Janela atual do browser",
   "admin/editor.footer.linksSections.linksSection.links.link.target.blank": "Nova janela do browser",
+  "admin/editor.footer.moreInformationLink": "Links adicionais",
+  "admin/editor.footer.moreInformationLink.title": "Link adicional",
   "admin/editor.footer.badge": "Medalhas",
   "admin/editor.footer.badge.title": "Medalha",
   "admin/editor.footer.badge.image.title": "URL da imagem da medalha",

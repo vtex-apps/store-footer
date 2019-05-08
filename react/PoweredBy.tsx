@@ -48,8 +48,8 @@ interface PoweredBySchema {
 PoweredBy.displayName = 'PoweredBy'
 
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
-  `${Functions.isGoCommerceAcc(runtime.account) ? 'GoCommerce' : 'VTEX'}${
-    showInColor ? '' : '-BW'
+  `${Functions.isGoCommerceAcc(runtime.account) ? 'gocommerce' : 'vtex'}${
+    showInColor ? '' : '-bw'
   }.svg`
 
 export default withRuntimeContext(withImage(getImagePathFromProps)(PoweredBy))

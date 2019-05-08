@@ -54,7 +54,7 @@ SocialNetworks.schema = {
       title: 'admin/editor.footer.socialNetworks',
       type: 'array',
       minItems: 1,
-      maxItems: 4,
+      maxItems: 6,
       items: {
         title: 'admin/editor.footer.socialNetworks.title',
         type: 'object',
@@ -66,8 +66,14 @@ SocialNetworks.schema = {
           name: {
             title: 'admin/editor.footer.socialNetworks.title',
             type: 'string',
-            default: 'Facebook',
-            enum: ['Facebook', 'Twitter', 'Instagram', 'Youtube'],
+            enum: [
+              'Facebook',
+              'Twitter',
+              'Instagram',
+              'YouTube',
+              'LinkedIn',
+              'Pinterest',
+            ],
           },
         },
       },
