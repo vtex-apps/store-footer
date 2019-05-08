@@ -28,7 +28,7 @@ FooterPaymentFormItem.propTypes = {
 }
 
 const getImagePathFromProps = ({ paymentType, showInColor }) =>
-  `${paymentType}${showInColor ? '' : '-BW'}.svg`
+  `${paymentType.toLowerCase()}${showInColor ? '' : '-bw'}.svg`
 
 export default footerList(
   withImage(getImagePathFromProps)(FooterPaymentFormItem)

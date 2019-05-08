@@ -42,7 +42,7 @@ FooterSocialNetworkItem.propTypes = {
   ]),
 }
 const getImagePathFromProps = ({ socialNetwork, showInColor }) =>
-  `${socialNetwork}${showInColor ? '' : '-BW'}.svg`
+  `${socialNetwork.toLowerCase()}${showInColor ? '' : '-bw'}.svg`
 
 export default footerList(
   withImage(getImagePathFromProps)(FooterSocialNetworkItem)
