@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "store-footer",
-  "version": "2.11.2",
+  "version": "2.11.3",
   "title": "VTEX Store Footer component",
   "defaultLocale": "pt-BR",
   "description": "The canonical VTEX store footer component",
