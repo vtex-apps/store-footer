@@ -24,7 +24,8 @@
       "powered-by",
       "rich-text",
       "image",
-      "flex-layout"
+      "flex-layout",
+      "shop-review-badge"
     ]
   },
   "footer-layout.mobile": {},

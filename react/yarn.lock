@@ -5930,6 +5930,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+"sandboxusdev.shop-review-interfaces@https://marc--sandboxusdev.myvtex.com/_v/private/typings/linked/v1/sandboxusdev.shop-review-interfaces@0.0.1+build1557950963/public/_types/react":
+  version "0.0.1"
+  resolved "https://marc--sandboxusdev.myvtex.com/_v/private/typings/linked/v1/sandboxusdev.shop-review-interfaces@0.0.1+build1557950963/public/_types/react#69886a17a05a4e860f84ca7552bf9b58611abbcb"
+
 sane@^4.0.3:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/sane/-/sane-4.1.0.tgz#ed881fd922733a6c461bc189dc2b6c006f3ffded"
@@ -6624,6 +6628,30 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+"vtex.flex-layout@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.flex-layout@0.4.2/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.flex-layout@0.4.2/public/_types/react#46c6643f07aa7f6bfe7118de926b86defc5087c4"
+
+"vtex.menu@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.menu@2.13.1/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.menu@2.13.1/public/_types/react#46c6643f07aa7f6bfe7118de926b86defc5087c4"
+
+"vtex.render-runtime@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.28.0/public/_types/react":
+  version "8.28.0"
+  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.28.0/public/_types/react#2210c10cca4a67dba9d030383b750ec4a4898a5e"
+
+"vtex.rich-text@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.rich-text@0.2.0/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.rich-text@0.2.0/public/_types/react#46c6643f07aa7f6bfe7118de926b86defc5087c4"
+
+"vtex.store-components@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-components@3.36.1/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-components@3.36.1/public/_types/react#46c6643f07aa7f6bfe7118de926b86defc5087c4"
+
+"vtex.store-icons@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-icons@0.10.1/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-icons@0.10.1/public/_types/react#46c6643f07aa7f6bfe7118de926b86defc5087c4"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
