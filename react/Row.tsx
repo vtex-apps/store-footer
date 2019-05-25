@@ -10,7 +10,7 @@ const Row: StorefrontFunctionComponent<RowProps> = ({
   fullWidth,
   inverted,
 }) => {
-  const content = <div className="w-100 flex items-center">{children}</div>
+  const content = <div className={`${style.rowContainer} w-100 flex items-center`}>{children}</div>
 
   const classes = generateBlockClass(style.row, blockClass)
 

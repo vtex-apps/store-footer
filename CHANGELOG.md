@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.12.0] - 2019-05-25
+### Added
+- Added new `rowContainer` CSS override class.
+
 ## [2.11.5] - 2019-05-09
 ### Fixed
 - Fix reference to `VTEX` logo reference and `Diner's club` image name.
