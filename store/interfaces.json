@@ -4,7 +4,10 @@
       "footer-layout.mobile",
       "footer-layout.desktop"
     ],
-    "component": "Footer"
+    "component": "Footer",
+    "content": {
+      "$ref": "#/definitions/Footer"
+    }
   },
   "footer-layout": {
     "component": "FooterLayout",
@@ -27,10 +30,16 @@
   "footer-layout.mobile": {},
   "footer-layout.desktop": {},
   "social-networks": {
-    "component": "SocialNetworks"
+    "component": "SocialNetworks",
+    "content": {
+      "$ref": "#/definitions/SocialNetworks"
+    }
   },
   "accepted-payment-methods": {
-    "component": "AcceptedPaymentMethods"
+    "component": "AcceptedPaymentMethods",
+    "content": {
+      "$ref": "#/definitions/AcceptedPaymentMethods"
+    }
   },
   "powered-by": {
     "component": "PoweredBy"

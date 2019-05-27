@@ -1,12 +1,16 @@
 import React from 'react'
+
 import PaymentMethodIcon, {
   PaymentMethod,
 } from './components/PaymentMethodIcon'
 import style from './components/AcceptedPaymentMethods.css'
 
-const AcceptedPaymentMethods: StorefrontFunctionComponent<
-  AcceptedPaymentMethodsProps
-> = props => {
+interface Props {
+  paymentMethods: PaymentMethod[]
+  showInColor: boolean
+}
+
+const AcceptedPaymentMethods: React.FC<Props> = props => {
   return (
     <div className={`${style.acceptedPaymentMethodContainer} nh2 flex`}>
       {props.paymentMethods.map(paymentMethod => (
@@ -24,14 +28,7 @@ AcceptedPaymentMethods.defaultProps = {
   paymentMethods: [],
   showInColor: false,
 }
-
-interface AcceptedPaymentMethodsProps {
-  paymentMethods: PaymentMethod[]
-  showInColor: boolean
-}
-
-// tslint:disable: object-literal-sort-keys
-AcceptedPaymentMethods.schema = {
+;(AcceptedPaymentMethods as any).schema = {
   title: 'admin/editor.footer.acceptedPaymentMethods.title',
   description: 'admin/editor.footer.acceptedPaymentMethods.description',
   type: 'object',
@@ -41,18 +38,6 @@ AcceptedPaymentMethods.schema = {
       isLayout: true,
       title: 'admin/editor.footer.showPaymentMethodsInColor.title',
       type: 'boolean',
-    },
-    paymentMethods: {
-      title: 'admin/editor.footer.acceptedPaymentMethods.title',
-      type: 'array',
-      minItems: 1,
-      maxItems: 5,
-      items: {
-        title: 'admin/editor.footer.paymentMethodIcon.method',
-        type: 'string',
-        default: 'MasterCard',
-        enum: ['MasterCard', 'Visa', 'Diners Club'],
-      },
     },
   },
 }
