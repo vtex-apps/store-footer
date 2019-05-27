@@ -89,8 +89,4 @@ describe('<Footer /> component', () => {
       expect(getByText(title)).toBeTruthy()
     })
   })
-
-  it('should export static schema with title', () => {
-    expect(Footer.schema).toEqual(expect.objectContaining({title: expect.any(String)}))
-  })
 })
