@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Container } from 'vtex.store-components'
+import { IOMessage } from 'vtex.native-types'
 
 import FooterBadgeList from './FooterBadgeList'
 import FooterLinksMatrix from './FooterLinksMatrix'
@@ -73,168 +74,6 @@ export default class Footer extends Component {
       },
     ],
     storeInformations: [],
-  }
-
-  static schema = {
-    title: 'admin/editor.footer.title',
-    description: 'admin/editor.footer.description',
-    type: 'object',
-    properties: {
-      logo: {
-        type: 'string',
-        title: 'admin/editor.footer.logoUrl.title',
-      },
-      showPaymentFormsInColor: {
-        type: 'boolean',
-        title: 'admin/editor.footer.showPaymentMethodsInColor.title',
-        default: false,
-        isLayout: true,
-      },
-      showSocialNetworksInColor: {
-        type: 'boolean',
-        title: 'admin/editor.footer.showSocialNetworksInColor.title',
-        default: false,
-        isLayout: true,
-      },
-      showVtexLogoInColor: {
-        type: 'boolean',
-        title: 'admin/editor.footer.showVtexLogoInColor.title',
-        default: false,
-        isLayout: true,
-      },
-      socialNetworks: {
-        title: 'admin/editor.footer.socialNetworks',
-        type: 'array',
-        minItems: 1,
-        maxItems: 4,
-        items: {
-          title: 'admin/editor.footer.socialNetworks.title',
-          type: 'object',
-          properties: {
-            url: {
-              title: 'admin/editor.footer.socialNetworks.url.title',
-              type: 'string',
-            },
-            socialNetwork: {
-              title: 'admin/editor.footer.socialNetworks.title',
-              type: 'string',
-              default: 'Facebook',
-              enum: ['Facebook', 'Twitter', 'Instagram', 'Youtube'],
-            },
-          },
-        },
-      },
-      sectionLinks: {
-        title: 'admin/editor.footer.linksSections',
-        type: 'array',
-        minItems: 0,
-        maxItems: 5,
-        items: {
-          title: 'admin/editor.footer.linksSections.linksSection',
-          type: 'object',
-          properties: {
-            title: {
-              title: 'admin/editor.footer.linksSections.linksSection.title',
-              type: 'string',
-            },
-            links: {
-              title: 'admin/editor.footer.linksSections.linksSection.links',
-              type: 'array',
-              minItems: 1,
-              maxItems: 10,
-              items: {
-                title: 'admin/editor.footer.linksSections.linksSection.links.link',
-                type: 'object',
-                properties: {
-                  title: {
-                    title:
-                      'admin/editor.footer.linksSections.linksSection.links.link.title',
-                    type: 'string',
-                  },
-                  url: {
-                    title:
-                      'admin/editor.footer.linksSections.linksSection.links.link.url',
-                    type: 'string',
-                  },
-                  target: {
-                    title:
-                      'admin/editor.footer.linksSections.linksSection.links.link.target',
-                    type: 'string',
-                    default: '_self',
-                    enum: ['_self', '_blank'],
-                    enumNames: [
-                      'admin/editor.footer.linksSections.linksSection.links.link.target.self',
-                      'admin/editor.footer.linksSections.linksSection.links.link.target.blank',
-                    ],
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      badges: {
-        title: 'admin/editor.footer.badge',
-        type: 'array',
-        items: {
-          title: 'admin/editor.footer.badge.title',
-          type: 'object',
-          properties: {
-            image: {
-              type: 'string',
-              title: 'admin/editor.footer.badge.image.title',
-            },
-          },
-        },
-      },
-      paymentForms: {
-        title: 'admin/editor.footer.paymentForms',
-        type: 'array',
-        minItems: 1,
-        maxItems: 5,
-        items: {
-          title: 'admin/editor.footer.paymentForms.paymentForm',
-          type: 'object',
-          properties: {
-            title: {
-              title: 'admin/editor.footer.paymentForms.paymentForm.title',
-              type: 'string',
-            },
-            paymentTypes: {
-              title: 'admin/editor.footer.paymentForms.paymentForm.paymentTypes',
-              type: 'array',
-              minItems: 1,
-              items: {
-                title:
-                  'admin/editor.footer.paymentForms.paymentForm.paymentTypes.paymentType',
-                type: 'string',
-                default: 'MasterCard',
-                enum: ['MasterCard', 'Visa', 'Diners Club'],
-              },
-            },
-          },
-        },
-      },
-      storeInformations: {
-        title: 'admin/editor.footer.storeInformations',
-        type: 'array',
-        minItems: 0,
-        maxItems: 2,
-        items: {
-          title: 'admin/editor.footer.storeInformations.storeInformation',
-          type: 'object',
-          properties: {
-            storeInformation: {
-              title: 'admin/editor.footer.storeInformations.storeInformation',
-              type: 'string',
-              widget: {
-                'ui:widget': 'textarea',
-              },
-            },
-          },
-        },
-      },
-    },
   }
 
   getInformationCssClasses = (listLength, index) => {
@@ -314,7 +153,7 @@ export default class Footer extends Component {
                         storeInformations.length,
                         index
                       )}>
-                      {storeInformation}
+                      <IOMessage id={storeInformation} />
                     </p>
                   ))}
               </div>

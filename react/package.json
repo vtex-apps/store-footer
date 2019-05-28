@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "vtex-test-tools test",
-    "lint": "tsc --noEmit && eslint --ext ts .",
+    "lint": "tsc --noEmit && eslint --ext ts,tsx .",
     "test:coverage": "vtex-test-tools test --collectCoverage",
     "gen:coveralls": "yarn test:coverage && cat ./coverage/lcov.info | coveralls"
   },
@@ -29,10 +29,9 @@
     "apollo-client": "^2.5.1",
     "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
-    "eslint-config-vtex": "^10.1.0",
+    "eslint-config-vtex-react": "^4.1.0",
     "prettier": "^1.16.4",
     "react-dom": "^16.8.3",
-    "tslint-eslint-rules": "^5.4.0",
     "typescript": "3.3.4000"
   }
 }

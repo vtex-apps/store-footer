@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "store-footer",
-  "version": "2.12.0",
+  "version": "2.13.0",
   "title": "VTEX Store Footer component",
   "defaultLocale": "pt-BR",
   "description": "The canonical VTEX store footer component",
@@ -19,6 +19,8 @@
     "vtex.store-icons": "0.x",
     "vtex.rich-text": "0.x",
     "vtex.menu": "2.x",
-    "vtex.flex-layout": "0.x"
-  }
+    "vtex.flex-layout": "0.x",
+    "vtex.native-types": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

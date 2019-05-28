@@ -21,6 +21,10 @@ class Accordion extends Component {
     open: false,
   }
 
+  handleClick = () => {
+    this.setState({ open: !open })
+  }
+
   translate = id => {
     return this.props.intl.messages[id]
       ? this.props.intl.formatMessage({ id })
@@ -34,10 +38,15 @@ class Accordion extends Component {
     return (
       <div className={`${footer.accordion} pv2`}>
         <div
+          role="button"
+          tabIndex={0}
           className="pointer"
-          onClick={() => {
-            this.setState({ open: !open })
+          onKeyDown={e => {
+            if (e.key === 'Enter') {
+              this.handleClick()
+            }
           }}
+          onClick={this.handleClick}
         >
           <div>
             {title && (

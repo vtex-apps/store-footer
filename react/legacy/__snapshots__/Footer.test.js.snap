@@ -54,6 +54,8 @@ exports[`<Footer /> component should match the snapshot 1`] = `
                 >
                   <div
                     class="pointer"
+                    role="button"
+                    tabindex="0"
                   >
                     <div>
                       <span

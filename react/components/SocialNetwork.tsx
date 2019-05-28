@@ -1,14 +1,26 @@
 import React from 'react'
+import { injectIntl } from 'react-intl'
+import { formatIOMessage } from 'vtex.native-types'
+
 import style from './SocialNetwork.css'
 import withImage from './withImage'
+
+interface SocialNetworkProps {
+  imageSrc: string
+  showInColor: boolean
+  url: string
+  name: string
+  intl: any
+}
 
 /**
  * Shows an image for an specific social network
  */
-const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
+const SocialNetwork: React.FC<SocialNetworkProps> = ({
   imageSrc,
   url,
   name,
+  intl,
 }) => {
   if (!imageSrc) {
     return null
@@ -18,15 +30,20 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
 
   return (
     <a
-      href={url}
+      href={formatIOMessage({ id: url, intl })}
       target="_blank"
-      rel="noopener"
-      className={`${style.socialNetworkLink} ${style.socialNetworkLink}--${normalizedName} c-muted-1 w2 h2 mh2 flex items-center`}>
+      rel="noopener noreferrer"
+      className={`${style.socialNetworkLink} ${
+        style.socialNetworkLink
+      }--${normalizedName} c-muted-1 w2 h2 mh2 flex items-center`}
+    >
       <img
-        className={`${style.socialNetworkImage} ${style.socialNetworkImage}--${normalizedName}`}
+        className={`${style.socialNetworkImage} ${
+          style.socialNetworkImage
+        }--${normalizedName}`}
         src={imageSrc}
-        alt={name}
-        title={name}
+        alt={formatIOMessage({ id: name, intl })}
+        title={formatIOMessage({ id: name, intl })}
       />
     </a>
   )
@@ -34,14 +51,7 @@ const SocialNetwork: StorefrontFunctionComponent<SocialNetworkProps> = ({
 
 SocialNetwork.displayName = 'SocialNetwork'
 
-interface SocialNetworkProps {
-  imageSrc: string
-  showInColor: boolean
-  url: string
-  name: string
-}
-
 const getImagePathFromProps = ({ name, showInColor }: SocialNetworkProps) =>
   `${name.toLowerCase()}${showInColor ? '' : '-bw'}.svg`
 
-export default withImage(getImagePathFromProps)(SocialNetwork)
+export default withImage(getImagePathFromProps)(injectIntl(SocialNetwork))

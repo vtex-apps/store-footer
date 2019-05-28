@@ -43,6 +43,30 @@ const Footer = props => {
   )
 }
 
-Footer.schema = LegacyFooter.schema
+Footer.schema = {
+  title: 'admin/editor.footer.title',
+  description: 'admin/editor.footer.description',
+  type: 'object',
+  properties: {
+    showPaymentFormsInColor: {
+      type: 'boolean',
+      title: 'admin/editor.footer.showPaymentMethodsInColor.title',
+      default: false,
+      isLayout: true,
+    },
+    showSocialNetworksInColor: {
+      type: 'boolean',
+      title: 'admin/editor.footer.showSocialNetworksInColor.title',
+      default: false,
+      isLayout: true,
+    },
+    showVtexLogoInColor: {
+      type: 'boolean',
+      title: 'admin/editor.footer.showVtexLogoInColor.title',
+      default: false,
+      isLayout: true,
+    },
+  },
+}
 
 export default Footer
