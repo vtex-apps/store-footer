@@ -6,7 +6,7 @@ import { IOMessage, formatIOMessage } from 'vtex.native-types'
 import footerList from './footerList'
 import footer from './footer.css'
 
-export const FooterLinkItem = ({ url, title, target, intl }) =>
+const FooterLinkItem = ({ url, title, target, intl }) =>
   title ? (
     <a
       className={`${
@@ -28,4 +28,8 @@ FooterLinkItem.propTypes = {
   intl: intlShape,
 }
 
-export default footerList(injectIntl(FooterLinkItem))
+const FooterLinkItemWithIntl = injectIntl(FooterLinkItem)
+
+export { FooterLinkItemWithIntl as FooterLinkItem }
+
+export default footerList(FooterLinkItemWithIntl)
