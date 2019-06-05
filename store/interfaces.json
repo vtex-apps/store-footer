@@ -6,7 +6,7 @@
     ],
     "component": "Footer",
     "content": {
-      "$ref": "#/definitions/Footer"
+      "$ref": "app:vtex.store-footer#/definitions/Footer"
     }
   },
   "footer-layout": {
