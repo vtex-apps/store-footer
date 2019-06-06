@@ -6,8 +6,8 @@
     "gen:coveralls": "yarn test:coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
-    "@gocommerce/utils": "^0.5.32",
-    "@vtex/css-handles": "^1.0.0",
+    "@gocommerce/utils": "^0.6.6",
+    "@vtex/css-handles": "^1.1.3",
     "classnames": "^2.2.6",
     "ramda": "^0.26.1",
     "react": "^16.8.3",
