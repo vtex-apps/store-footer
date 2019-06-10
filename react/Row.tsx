@@ -30,7 +30,8 @@ const Row: React.FC<RowProps> = ({
         classes,
         'w-100',
         inverted ? 'bg-base--inverted c-on-base--inverted' : 'bg-base c-on-base'
-      )}>
+      )}
+    >
       {fullWidth ? (
         content
       ) : (
@@ -39,7 +40,6 @@ const Row: React.FC<RowProps> = ({
     </div>
   )
 }
-
 ;(Row as any).schema = {
   title: 'admin/editor.row.title',
   type: 'object',
