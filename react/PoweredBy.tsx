@@ -23,7 +23,8 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
       className={classNames(style.poweredBy, 'flex items-center', {
         w4: isPlatformGCResult,
         'h3 w3': !isPlatformGCResult,
-      })}>
+      })}
+    >
       <img
         className={`${style.poweredByImage} w-100`}
         src={imageSrc}
