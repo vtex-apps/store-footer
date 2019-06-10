@@ -28,10 +28,19 @@
     "@vtex/test-tools": "^0.2.0",
     "apollo-client": "^2.5.1",
     "coveralls": "^3.0.3",
-    "eslint": "^5.16.0",
+    "eslint": "5.15.1",
+    "eslint-config-vtex": "10.1.0",
     "eslint-config-vtex-react": "^4.1.0",
     "prettier": "^1.16.4",
     "react-dom": "^16.8.3",
-    "typescript": "3.3.4000"
+    "typescript": "3.3.4000",
+    "vtex.store-components": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-components@3.37.2/public/_types/react",
+    "vtex.render-runtime": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.32.4/public/_types/react",
+    "vtex.shop-review-interfaces": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.shop-review-interfaces@0.0.1/public/_types/react",
+    "vtex.flex-layout": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.flex-layout@0.5.1/public/_types/react",
+    "vtex.menu": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.menu@2.14.2/public/_types/react",
+    "vtex.rich-text": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.rich-text@0.4.0/public/_types/react",
+    "vtex.store-icons": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-icons@0.11.1/public/_types/react",
+    "vtex.native-types": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.native-types@0.2.0/public/_types/react"
   }
 }
