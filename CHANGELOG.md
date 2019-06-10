@@ -6,41 +6,55 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [2.14.2] - 2019-06-10
 
 ### Added
-- add support for shop-review-interfaces app to display block in site footer
+
+- Support for shop-review-interfaces app to display block in site footer.
 
 ## [2.13.2] - 2019-06-05
+
 ### Fixed
+
 - Absolute path for contentSchema Footer definition
 
-
 ## [2.13.1] - 2019-05-28
+
 ### Fix
+
 - Intl prop undefined in `FooterLinkItem`.
 
 ## [2.13.0] - 2019-05-28
+
 ### Added
+
 - Content schema.
 
 ## [2.12.0] - 2019-05-25
+
 ### Added
+
 - Added new `rowContainer` CSS override class.
 
 ## [2.11.5] - 2019-05-09
+
 ### Fixed
+
 - Fix reference to `VTEX` logo reference and `Diner's club` image name.
 
 ## [2.11.4] - 2019-05-08
+
 ###
+
 - Use lowercase in assets references in legacy component.
 
 ## [2.11.3] - 2019-05-08
+
 - Use lowercase in assets references.
 
 ## [2.11.2] - 2019-05-07
+
 ### Added
+
 - Added `Linkedin` and `Pinterest` social network options.
 - Fixed messages keys in pt.json.
 
