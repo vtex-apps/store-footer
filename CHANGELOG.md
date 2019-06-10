@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.14.0] - 2019-06-10
+
 ### Added
 
 - Support for shop-review-interfaces app to display block in site footer.
