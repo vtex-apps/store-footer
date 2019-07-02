@@ -21,7 +21,6 @@
               },
               "socialNetwork": {
                 "title": "admin/editor.footer.socialNetworks.title",
-                "$ref": "app:vtex.native-types#/definitions/text",
                 "default": "Facebook",
                 "enum": ["Facebook", "Twitter", "Instagram", "Youtube"]
               }
