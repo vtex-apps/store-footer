@@ -21,7 +21,8 @@
     "vtex.menu": "2.x",
     "vtex.shop-review-interfaces": "0.x",
     "vtex.flex-layout": "0.x",
-    "vtex.native-types": "0.x"
+    "vtex.native-types": "0.x",
+    "vtex.device-detector": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
