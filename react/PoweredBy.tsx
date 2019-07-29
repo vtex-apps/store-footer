@@ -16,19 +16,26 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
     return null
   }
 
-  const isPlatformGCResult = Functions.isGoCommerceAcc(runtime.account)
+  if (Functions.isGoCommerceAcc(runtime.account)) {
+    return (
+      <a href="https://www.gocommerce.com/" target="_blank">
+        <div className={classNames(style.poweredBy, 'flex items-center w4')}>
+          <img
+            className={`${style.poweredByImage} w-100`}
+            src={imageSrc}
+            alt="GoCommerce"
+          />
+        </div>
+      </a>
+    )
+  }
 
   return (
-    <div
-      className={classNames(style.poweredBy, 'flex items-center', {
-        w4: isPlatformGCResult,
-        'h3 w3': !isPlatformGCResult,
-      })}
-    >
+    <div className={classNames(style.poweredBy, 'flex items-center h3 w3')}>
       <img
         className={`${style.poweredByImage} w-100`}
         src={imageSrc}
-        alt={isPlatformGCResult ? 'GoCommerce' : 'VTEX'}
+        alt="VTEX"
       />
     </div>
   )
