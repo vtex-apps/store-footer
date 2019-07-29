@@ -23,7 +23,7 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
           <img
             className={`${style.poweredByImage} w-100`}
             src={imageSrc}
-            alt={'GoCommerce'}
+            alt="GoCommerce"
           />
         </div>
       </a>
@@ -35,7 +35,7 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
       <img
         className={`${style.poweredByImage} w-100`}
         src={imageSrc}
-        alt={'VTEX'}
+        alt="VTEX"
       />
     </div>
   )
