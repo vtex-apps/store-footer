@@ -22,7 +22,7 @@ class Accordion extends Component {
   }
 
   handleClick = () => {
-    this.setState({ open: !open })
+    this.setState(({ open }) => ({ open: !open }))
   }
 
   translate = id => {
