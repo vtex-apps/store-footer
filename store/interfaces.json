@@ -7,7 +7,8 @@
     "component": "Footer",
     "content": {
       "$ref": "app:vtex.store-footer#/definitions/Footer"
-    }
+    },
+    "render": "lazy"
   },
   "footer-layout": {
     "component": "FooterLayout",
@@ -26,7 +27,8 @@
       "image",
       "flex-layout",
       "shop-review-badge"
-    ]
+    ],
+    "render": "lazy"
   },
   "footer-layout.mobile": {},
   "footer-layout.desktop": {},
