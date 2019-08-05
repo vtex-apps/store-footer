@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.16.2-beta] - 2019-08-04
+
 ## [2.16.1] - 2019-08-01
 ### Fixed
 - Issue on legacy mobile-mode menu, where clicking on it wouldn't expand the accordion menu.
