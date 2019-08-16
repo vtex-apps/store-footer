@@ -25,7 +25,8 @@
       "rich-text",
       "image",
       "flex-layout",
-      "shop-review-badge"
+      "shop-review-badge",
+      "sandbox"
     ]
   },
   "footer-layout.mobile": {},
