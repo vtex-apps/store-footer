@@ -153,7 +153,7 @@ To use this CSS API, you must add the `styles` builder and create an app styling
   }
 ```
 
-2. Create a file called `vtex.footer.css` inside the `styles/css` folder. Add your custom styles:
+2. Create a file called `vtex.store-footer.css` inside the `styles/css` folder. Add your custom styles:
 
 ```css
 .container {
