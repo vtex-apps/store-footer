@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Make render strategy `client`, i.e. component assets are fetched client-side with same priority as server-side blocks.
 
 ## [2.16.4] - 2019-08-30
 ### Changed

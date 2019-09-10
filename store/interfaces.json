@@ -8,7 +8,7 @@
     "content": {
       "$ref": "app:vtex.store-footer#/definitions/Footer"
     },
-    "render": "lazy"
+    "render": "client"
   },
   "footer-layout": {
     "component": "FooterLayout",
