@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { isGoCommerceAccount } from '../modules/isGoCommerceAccount'
 import { withRuntimeContext } from 'vtex.render-runtime'
-
+import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
 import withImage from '../components/withImage'
 import footer from './footer.css'
 
@@ -15,7 +14,7 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
     return null
   }
 
-  const isPlatformGCResult = isGoCommerceAccount(runtime.account)
+  const isPlatformGCResult = runtime.platform === PLATFORM_GOCOMMERCE
   const vtexLogoItemClasses = classNames(footer.vtexLogoItem, {
     w4: isPlatformGCResult,
     'h3 w3': !isPlatformGCResult,
@@ -27,11 +26,19 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
     >
       {logoUrl && (
         <span className={`${footer.badge} pa2-s pa1-ns`}>
-          <img className={`${footer.logoImage} h3`} alt="" src={logoUrl} />
+          <img
+            className={`${footer.logoImage} h3`}
+            alt={runtime.platform}
+            src={logoUrl}
+          />
         </span>
       )}
       <span className={`${footer.badge} pa2-s pa1-ns nt7-ns`}>
-        <img className={vtexLogoItemClasses} alt="" src={imageSrc} />
+        <img
+          className={vtexLogoItemClasses}
+          alt={runtime.platform}
+          src={imageSrc}
+        />
       </span>
     </div>
   )
@@ -43,6 +50,7 @@ FooterVtexLogo.propTypes = {
   /** Get the account name to find the correct platfom */
   runtime: PropTypes.shape({
     account: PropTypes.string.isRequired,
+    platform: PropTypes.string.isRequired,
   }).isRequired,
   /** If true, the original logo (with color) is used. If not, the grayscale's one */
   showInColor: PropTypes.bool,
@@ -52,7 +60,7 @@ FooterVtexLogo.propTypes = {
 }
 
 const getImagePathFromProps = ({ runtime, showInColor }) =>
-  `${isGoCommerceAccount(runtime.account) ? 'gocommerce' : 'vtex'}${
+  `${runtime.platform === PLATFORM_GOCOMMERCE ? 'gocommerce' : 'vtex'}${
     showInColor ? '' : '-bw'
   }.svg`
 

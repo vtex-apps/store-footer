@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { withRuntimeContext } from 'vtex.render-runtime'
-import { isGoCommerceAccount } from './modules/isGoCommerceAccount'
+import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
 import withImage from './components/withImage'
 import style from './components/PoweredBy.css'
 
@@ -16,7 +16,7 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
     return null
   }
 
-  if (isGoCommerceAccount(runtime.account)) {
+  if (runtime.platform === PLATFORM_GOCOMMERCE) {
     return (
       <a
         href="https://www.gocommerce.com/"
@@ -48,6 +48,7 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
 interface PoweredByProps extends PoweredBySchema {
   runtime: {
     account: string
+    platform: string
   }
   logoUrl: string
   imageSrc: string
@@ -60,7 +61,7 @@ interface PoweredBySchema {
 PoweredBy.displayName = 'PoweredBy'
 
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
-  `${isGoCommerceAccount(runtime.account) ? 'gocommerce' : 'vtex'}${
+  `${runtime.platform === PLATFORM_GOCOMMERCE ? 'gocommerce' : 'vtex'}${
     showInColor ? '' : '-bw'
   }.svg`
 
