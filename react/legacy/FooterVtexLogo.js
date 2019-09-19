@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Functions } from '@gocommerce/utils'
-import { includes } from 'ramda'
+import { isGoCommerceAccount } from '../modules/isGoCommerceAccount'
 import { withRuntimeContext } from 'vtex.render-runtime'
 
 import withImage from '../components/withImage'
@@ -16,7 +15,7 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
     return null
   }
 
-  const isPlatformGCResult = Functions.isGoCommerceAcc(runtime.account)
+  const isPlatformGCResult = isGoCommerceAccount(runtime.account)
   const vtexLogoItemClasses = classNames(footer.vtexLogoItem, {
     w4: isPlatformGCResult,
     'h3 w3': !isPlatformGCResult,
@@ -24,16 +23,15 @@ const FooterVtexLogo = ({ runtime, logoUrl, imageSrc }) => {
 
   return (
     <div
-      className={`${
-        footer.badgeList
-      } flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}>
+      className={`${footer.badgeList} flex flex-row justify-center pv4-s pa0-ns items-center ml-auto-m`}
+    >
       {logoUrl && (
         <span className={`${footer.badge} pa2-s pa1-ns`}>
-          <img className={`${footer.logoImage} h3`} src={logoUrl} />
+          <img className={`${footer.logoImage} h3`} alt="" src={logoUrl} />
         </span>
       )}
       <span className={`${footer.badge} pa2-s pa1-ns nt7-ns`}>
-        <img className={vtexLogoItemClasses} src={imageSrc} />
+        <img className={vtexLogoItemClasses} alt="" src={imageSrc} />
       </span>
     </div>
   )
@@ -50,10 +48,11 @@ FooterVtexLogo.propTypes = {
   showInColor: PropTypes.bool,
   /** The source for an external customizable logo to show above "Powered By Vtex" */
   logoUrl: PropTypes.string,
+  imageSrc: PropTypes.string,
 }
 
 const getImagePathFromProps = ({ runtime, showInColor }) =>
-  `${Functions.isGoCommerceAcc(runtime.account) ? 'gocommerce' : 'vtex'}${
+  `${isGoCommerceAccount(runtime.account) ? 'gocommerce' : 'vtex'}${
     showInColor ? '' : '-bw'
   }.svg`
 

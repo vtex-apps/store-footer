@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { withRuntimeContext } from 'vtex.render-runtime'
-import { Functions } from '@gocommerce/utils'
+import { isGoCommerceAccount } from './modules/isGoCommerceAccount'
 import withImage from './components/withImage'
 import style from './components/PoweredBy.css'
 
@@ -16,9 +16,13 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
     return null
   }
 
-  if (Functions.isGoCommerceAcc(runtime.account)) {
+  if (isGoCommerceAccount(runtime.account)) {
     return (
-      <a href="https://www.gocommerce.com/" target="_blank">
+      <a
+        href="https://www.gocommerce.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className={classNames(style.poweredBy, 'flex items-center w4')}>
           <img
             className={`${style.poweredByImage} w-100`}
@@ -56,7 +60,7 @@ interface PoweredBySchema {
 PoweredBy.displayName = 'PoweredBy'
 
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
-  `${Functions.isGoCommerceAcc(runtime.account) ? 'gocommerce' : 'vtex'}${
+  `${isGoCommerceAccount(runtime.account) ? 'gocommerce' : 'vtex'}${
     showInColor ? '' : '-bw'
   }.svg`
 
