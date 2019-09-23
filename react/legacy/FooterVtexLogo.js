@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { withRuntimeContext } from 'vtex.render-runtime'
-import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
+import { PLATFORM_GOCOMMERCE } from '../modules/platformCode'
 import withImage from '../components/withImage'
 import footer from './footer.css'
 
