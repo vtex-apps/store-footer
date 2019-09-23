@@ -61,7 +61,7 @@ interface PoweredBySchema {
 PoweredBy.displayName = 'PoweredBy'
 
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
-  `${runtime.platform === PLATFORM_GOCOMMERCE ? 'gocommerce' : 'vtex'}${
+  `${runtime.platform}${
     showInColor ? '' : '-bw'
   }.svg`
 
