@@ -60,7 +60,7 @@ FooterVtexLogo.propTypes = {
 }
 
 const getImagePathFromProps = ({ runtime, showInColor }) =>
-  `${runtime.platform === PLATFORM_GOCOMMERCE ? 'gocommerce' : 'vtex'}${
+  `${runtime.platform}${
     showInColor ? '' : '-bw'
   }.svg`
 
