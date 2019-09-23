@@ -60,9 +60,7 @@ FooterVtexLogo.propTypes = {
 }
 
 const getImagePathFromProps = ({ runtime, showInColor }) =>
-  `${runtime.platform}${
-    showInColor ? '' : '-bw'
-  }.svg`
+  `${runtime.platform}${showInColor ? '' : '-bw'}.svg`
 
 export default withRuntimeContext(
   withImage(getImagePathFromProps)(FooterVtexLogo)

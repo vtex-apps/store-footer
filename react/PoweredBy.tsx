@@ -19,7 +19,7 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
   if (runtime.platform === PLATFORM_GOCOMMERCE) {
     return (
       <a
-        href="https://www.gocommerce.com/"
+        href="https://www.gocommerce.com/?utm_source=store_footer"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -61,8 +61,6 @@ interface PoweredBySchema {
 PoweredBy.displayName = 'PoweredBy'
 
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
-  `${runtime.platform}${
-    showInColor ? '' : '-bw'
-  }.svg`
+  `${runtime.platform}${showInColor ? '' : '-bw'}.svg`
 
 export default withRuntimeContext(withImage(getImagePathFromProps)(PoweredBy))
