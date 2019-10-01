@@ -35,7 +35,7 @@ const Row: React.FC<RowProps> = ({
       {fullWidth ? (
         content
       ) : (
-        <Container className="w-100 flex">{content}</Container>
+        <Container className="flex">{content}</Container>
       )}
     </div>
   )
