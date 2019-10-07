@@ -1,17 +1,21 @@
 import React from 'react'
-import classNames from 'classnames'
-import { withRuntimeContext } from 'vtex.render-runtime'
-import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
+import { useCssHandles } from 'vtex.css-handles'
+import { useRuntime } from 'vtex.render-runtime'
+
 import withImage from './components/withImage'
-import style from './components/PoweredBy.css'
+import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
+
+const CSS_HANDLES = ['poweredBy', 'poweredByImage', 'poweredByLink']
 
 /**
  * "Powered By VTEX/GoCommerce" image component, used in Footer
  */
 const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
-  runtime,
   imageSrc,
 }) => {
+  const handles = useCssHandles(CSS_HANDLES)
+  const runtime = useRuntime()
+
   if (!imageSrc) {
     return null
   }
@@ -20,12 +24,13 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
     return (
       <a
         href="https://www.gocommerce.com/?utm_source=store_footer"
+        className={handles.poweredByLink}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className={classNames(style.poweredBy, 'flex items-center w4')}>
+        <div className={`${handles.poweredBy} flex items-center w4`}>
           <img
-            className={`${style.poweredByImage} w-100`}
+            className={`${handles.poweredByImage} w-100`}
             src={imageSrc}
             alt="GoCommerce"
           />
@@ -35,9 +40,9 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
   }
 
   return (
-    <div className={classNames(style.poweredBy, 'flex items-center h3 w3')}>
+    <div className={`${handles.poweredBy} flex items-center h3 w3`}>
       <img
-        className={`${style.poweredByImage} w-100`}
+        className={`${handles.poweredByImage} w-100`}
         src={imageSrc}
         alt="VTEX"
       />
@@ -63,4 +68,4 @@ PoweredBy.displayName = 'PoweredBy'
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
   `${runtime.platform}${showInColor ? '' : '-bw'}.svg`
 
-export default withRuntimeContext(withImage(getImagePathFromProps)(PoweredBy))
+export default withImage(getImagePathFromProps)(PoweredBy)

@@ -1,34 +1,37 @@
 import React from 'react'
+import { useCssHandles } from 'vtex.css-handles'
 
 import PaymentMethodIcon, {
   PaymentMethod,
 } from './components/PaymentMethodIcon'
-import style from './components/AcceptedPaymentMethods.css'
 
 interface Props {
   paymentMethods: PaymentMethod[]
   showInColor: boolean
 }
 
-const AcceptedPaymentMethods: React.FC<Props> = props => {
+const CSS_HANDLES = ['acceptedPaymentMethodContainer'] as const
+
+const AcceptedPaymentMethods: StorefrontFunctionComponent<Props> = ({
+  paymentMethods = [],
+  showInColor = false,
+}) => {
+  const handles = useCssHandles(CSS_HANDLES)
+
   return (
-    <div className={`${style.acceptedPaymentMethodContainer} nh2 flex`}>
-      {props.paymentMethods.map(paymentMethod => (
+    <div className={`${handles.acceptedPaymentMethodContainer} nh2 flex`}>
+      {paymentMethods.map(paymentMethod => (
         <PaymentMethodIcon
           key={paymentMethod}
           paymentMethod={paymentMethod}
-          showInColor={props.showInColor}
+          showInColor={showInColor}
         />
       ))}
     </div>
   )
 }
 
-AcceptedPaymentMethods.defaultProps = {
-  paymentMethods: [],
-  showInColor: false,
-}
-;(AcceptedPaymentMethods as any).schema = {
+AcceptedPaymentMethods.schema = {
   title: 'admin/editor.footer.acceptedPaymentMethods.title',
   description: 'admin/editor.footer.acceptedPaymentMethods.description',
   type: 'object',
