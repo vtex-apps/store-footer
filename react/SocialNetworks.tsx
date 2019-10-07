@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { IOMessage } from 'vtex.native-types'
 import { useCssHandles } from 'vtex.css-handles'
 
