@@ -15,7 +15,11 @@ interface Props {
   showInColor: boolean
 }
 
-const CSS_HANDLES = ['socialNetworksTitle', 'socialNetworksContainer']
+const CSS_HANDLES = [
+  'socialNetworksTitle',
+  'socialNetworksContainer',
+  'socialNetworkWrapper',
+]
 
 const SocialNetworks: StorefrontFunctionComponent<Props> = ({
   title,
@@ -24,7 +28,7 @@ const SocialNetworks: StorefrontFunctionComponent<Props> = ({
   const handles = useCssHandles(CSS_HANDLES)
 
   return (
-    <Fragment>
+    <div className={handles.socialNetworkWrapper}>
       {title && (
         <div className={`${handles.socialNetworksTitle} mb4`}>
           <IOMessage id={title} />
@@ -38,7 +42,7 @@ const SocialNetworks: StorefrontFunctionComponent<Props> = ({
           />
         ))}
       </div>
-    </Fragment>
+    </div>
   )
 }
 
