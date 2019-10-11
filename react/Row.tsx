@@ -1,8 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
+import { useCssHandles } from 'vtex.css-handles'
 import { Container } from 'vtex.store-components'
-import { generateBlockClass } from '@vtex/css-handles'
-import style from './components/Row.css'
 
 interface RowProps {
   fullWidth?: boolean
@@ -10,24 +9,25 @@ interface RowProps {
   blockClass?: string
 }
 
-const Row: React.FC<RowProps> = ({
-  blockClass,
+const CSS_HANDLES = ['rowContainer', 'row', 'rowContentContainer'] as const
+
+const Row: StorefrontFunctionComponent<RowProps> = ({
   children,
   fullWidth,
   inverted,
 }) => {
+  const handles = useCssHandles(CSS_HANDLES)
+
   const content = (
-    <div className={`${style.rowContainer} w-100 flex items-center`}>
+    <div className={`${handles.rowContainer} w-100 flex items-center`}>
       {children}
     </div>
   )
 
-  const classes = generateBlockClass(style.row, blockClass)
-
   return (
     <div
       className={classNames(
-        classes,
+        handles.row,
         'w-100',
         inverted ? 'bg-base--inverted c-on-base--inverted' : 'bg-base c-on-base'
       )}
@@ -35,12 +35,15 @@ const Row: React.FC<RowProps> = ({
       {fullWidth ? (
         content
       ) : (
-        <Container className="w-100 flex">{content}</Container>
+        <Container className={`${handles.rowContentContainer} w-100 flex`}>
+          {content}
+        </Container>
       )}
     </div>
   )
 }
-;(Row as any).schema = {
+
+Row.schema = {
   title: 'admin/editor.row.title',
   type: 'object',
   properties: {

@@ -1,8 +1,8 @@
 import React from 'react'
-import { injectIntl } from 'react-intl'
+import { injectIntl, InjectedIntl } from 'react-intl'
 import { formatIOMessage } from 'vtex.native-types'
+import { useCssHandles } from 'vtex.css-handles'
 
-import style from './PaymentMethodIcon.css'
 import withImage from './withImage'
 
 interface PaymentMethodIconProps {
@@ -11,8 +11,10 @@ interface PaymentMethodIconProps {
   showInColor?: boolean
   /** Indicates which one of the payments method should the component show its image */
   paymentMethod: PaymentMethod
-  intl: any
+  intl: InjectedIntl
 }
+
+const CSS_HANDLES = ['paymentMethodIcon', 'paymentMethodIconImage']
 
 /**
  * Shows an image for the payments forms accepted
@@ -20,14 +22,16 @@ interface PaymentMethodIconProps {
 const PaymentMethodIcon: StorefrontFunctionComponent<
   PaymentMethodIconProps
 > = ({ imageSrc, paymentMethod, intl }) => {
+  const handles = useCssHandles(CSS_HANDLES)
+
   if (!imageSrc) {
     return null
   }
 
   return (
-    <div className={`${style.paymentMethodIcon} w2 h2 mh2 flex items-center`}>
+    <div className={`${handles.paymentMethodIcon} w2 h2 mh2 flex items-center`}>
       <img
-        className={`${style.paymentMethodIconImage} w-100`}
+        className={`${handles.paymentMethodIconImage} w-100`}
         src={imageSrc}
         alt={formatIOMessage({ id: paymentMethod, intl })}
         title={formatIOMessage({ id: paymentMethod, intl })}

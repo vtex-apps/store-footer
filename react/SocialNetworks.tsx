@@ -1,8 +1,8 @@
 import React from 'react'
 import { IOMessage } from 'vtex.native-types'
+import { useCssHandles } from 'vtex.css-handles'
 
 import SocialNetwork from './components/SocialNetwork'
-import style from './components/SocialNetworks.css'
 
 interface SocialNetworkData {
   url: string
@@ -15,15 +15,26 @@ interface Props {
   showInColor: boolean
 }
 
-const SocialNetworks: React.FC<Props> = ({ title, socialNetworks }) => {
+const CSS_HANDLES = [
+  'socialNetworksTitle',
+  'socialNetworksContainer',
+  'socialNetworkWrapper',
+]
+
+const SocialNetworks: StorefrontFunctionComponent<Props> = ({
+  title,
+  socialNetworks = [],
+}) => {
+  const handles = useCssHandles(CSS_HANDLES)
+
   return (
-    <div>
+    <div className={handles.socialNetworkWrapper}>
       {title && (
-        <div className={`${style.socialNetworksTitle} mb4`}>
+        <div className={`${handles.socialNetworksTitle} mb4`}>
           <IOMessage id={title} />
         </div>
       )}
-      <div className={`${style.socialNetworksContainer} nh2 flex`}>
+      <div className={`${handles.socialNetworksContainer} nh2 flex`}>
         {socialNetworks.map(socialNetworkData => (
           <SocialNetwork
             key={socialNetworkData.name + socialNetworkData.url}
@@ -35,11 +46,7 @@ const SocialNetworks: React.FC<Props> = ({ title, socialNetworks }) => {
   )
 }
 
-SocialNetworks.defaultProps = {
-  socialNetworks: [],
-  showInColor: false,
-}
-;(SocialNetworks as any).schema = {
+SocialNetworks.schema = {
   title: 'admin/editor.footer.socialNetworks.title',
   description: 'admin/editor.footer.socialNetworks.description',
   type: 'object',
