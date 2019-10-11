@@ -61,7 +61,7 @@ Now, you can change the behavior of the footer block. See an example of how to c
         { "url":"www.mystore.com/talktous", "title":"Talk to us", "target": "_self" }
       ]}
     ],
-    "storeInformations": ["CNPJ n.ยบ 1231132.231.1231/000", "All the rights reserved."],
+    "storeInformations": ["CNPJ n.บ 1231132.231.1231/000", "All the rights reserved."],
     "badges": [
       {"image":"https://phots.icons8.com/foo"},
       {"image":"https://phots.icons8.com/xpto"}
@@ -226,3 +226,8 @@ To execute our tests go to `react/` folder and run `yarn test`
 
 [![Build Status](https://api.travis-ci.org/vtex-apps/store-footer.svg?branch=master)](https://travis-ci.org/vtex-apps/store-footer)
 [![Coverage Status](https://coveralls.io/repos/github/vtex-apps/store-footer/badge.svg?branch=master)](https://coveralls.io/github/vtex-apps/store-footer?branch=master)
+
+
+**Upcoming documentation:**
+
+ - [Update CSS handles](https://github.com/vtex-apps/store-footer/pull/90)
