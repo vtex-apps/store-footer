@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { useRuntime } from 'vtex.render-runtime'
+import { withRuntimeContext } from 'vtex.render-runtime'
 
 import withImage from './components/withImage'
 import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
@@ -12,10 +12,9 @@ const CSS_HANDLES = ['poweredBy', 'poweredByImage', 'poweredByLink']
  */
 const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
   imageSrc,
+  runtime,
 }) => {
   const handles = useCssHandles(CSS_HANDLES)
-  const runtime = useRuntime()
-
   if (!imageSrc) {
     return null
   }
@@ -52,7 +51,6 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
 
 interface PoweredByProps extends PoweredBySchema {
   runtime: {
-    account: string
     platform: string
   }
   logoUrl: string
@@ -68,4 +66,4 @@ PoweredBy.displayName = 'PoweredBy'
 const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
   `${runtime.platform}${showInColor ? '' : '-bw'}.svg`
 
-export default withImage(getImagePathFromProps)(PoweredBy)
+export default withRuntimeContext(withImage(getImagePathFromProps)(PoweredBy))
