@@ -61,7 +61,7 @@ Now, you can change the behavior of the footer block. See an example of how to c
         { "url":"www.mystore.com/talktous", "title":"Talk to us", "target": "_self" }
       ]}
     ],
-    "storeInformations": ["CNPJ n.º 1231132.231.1231/000", "All the rights reserved."],
+    "storeInformations": ["CNPJ n.ï¿½ 1231132.231.1231/000", "All the rights reserved."],
     "badges": [
       {"image":"https://phots.icons8.com/foo"},
       {"image":"https://phots.icons8.com/xpto"}
@@ -199,6 +199,10 @@ Below, we describe the namespaces that are define in the `Footer`.
 | `textContainer`             | The wrapper for all the information at the footer's bottom                        | [index](/react/index.js)                                               |
 | `navigation`                | The wrapper for the navigation area in footer                                     | [index](/react/index.js)                                               |
 | `payment`                   | The wrapper for `FooterPaymentFormMatrix`                                         | [index](/react/index.js)                                               |
+| `footerLayoutSpacer`                   | The spacer div inside a `FooterLayout`                                         | [FooterLayout](/react/FooterLayout.tsx)                                               |
+| `rowContentContainer`                   | The container of the content in a Row                                         | [Row](/react/Row.tsx)                                               |
+| `socialNetworkWrapper`                   | Wrapper for the `SocialNetworks` component                                         | [SocialNetworks](/react/SocialNetworks.tsx)                                               |
+| `footerSpacer`                   | Spacer component                                         | [Spacer](/react/Spacer.tsx)                                               |
 
 When the footer is displayed in mobile view, the `matrixContainer` constricts itself and displays a list of `matrixItemSmall`, each one containing an `accordion`. Below, we describe the tokens, their explanation and the component where it is located.
 
