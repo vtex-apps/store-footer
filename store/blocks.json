@@ -1,0 +1,25 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.mobile", "footer-layout.desktop"]
+  },
+  "footer-layout.mobile": {
+    "children": ["flex-layout.row#powered-by"]
+  },
+  "footer-layout.desktop": {
+    "children": ["flex-layout.row#powered-by"]
+  },
+
+  "flex-layout.row#powered-by": {
+    "children": ["flex-layout.col#powered-by"],
+    "props": {
+      "paddingTop": 4,
+      "paddingBottom": 4
+    }
+  },
+  "flex-layout.col#powered-by": {
+    "children": ["powered-by"],
+    "props": {
+      "horizontalAlign": "center"
+    }
+  }
+}
