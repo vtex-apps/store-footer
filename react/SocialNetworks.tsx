@@ -23,6 +23,7 @@ const CSS_HANDLES = [
 
 const SocialNetworks: StorefrontFunctionComponent<Props> = ({
   title,
+  showInColor,
   socialNetworks = [],
 }) => {
   const handles = useCssHandles(CSS_HANDLES)
@@ -38,7 +39,9 @@ const SocialNetworks: StorefrontFunctionComponent<Props> = ({
         {socialNetworks.map(socialNetworkData => (
           <SocialNetwork
             key={socialNetworkData.name + socialNetworkData.url}
-            {...socialNetworkData}
+            showInColor={showInColor}
+            url={socialNetworkData.url}
+            name={socialNetworkData.name}
           />
         ))}
       </div>
