@@ -1,40 +1,14 @@
-# VTEX Footer
+📢 Don't fork this project. Use, [contribute](https://github.com/vtex-apps/awesome-io#contributing), or open issues through [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-## Description
+# Footer
 
-The VTEX Footer app is a store component that shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This app is used by store theme.
+Footer is a store component that shows information about the store such as address, social networks and payment methods. Furthermore, it is possible to add hyperlinks for privacy policy, FAQ, benefits and attendance. This app is used by store theme.
 
-:loudspeaker: **Disclaimer:** Don't fork this project, use, contribute, or open issue with your feature request.
+![image](https://user-images.githubusercontent.com/284515/70253374-dde10680-1761-11ea-8a81-856cec500f89.png)
 
-## Release schedule
+## Configuration
 
-| Release |       Status        | Initial Release | Maintenance LTS Start | End-of-life | Store Compatibility |
-| :-----: | :-----------------: | :-------------: | :-------------------: | :---------: | :-----------------: |
-|  [2.x]  | **Current Release** |   2018-11-21    |                       |             |         2.x         |
-|  [1.x]  | **Maintenance LTS** |   2018-09-20    |      2018-11-21       | March 2019  |         1.x         |
-
-See our [LTS policy](https://github.com/vtex-apps/awesome-io#lts-policy) for more information.
-
-## Table of Contents
-
-- [VTEX Footer](#vtex-footer)
-  - [Description](#description)
-  - [Release schedule](#release-schedule)
-  - [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
-    - [Blocks API](#blocks-api)
-      - [Configuration](#configuration)
-    - [Styles API](#styles-api)
-      - [CSS namespaces](#css-namespaces)
-  - [Troubleshooting](#troubleshooting)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-
-## Usage
-
-This app uses our store builder with the blocks architecture. To know more about Store Builder [click here.](https://help.vtex.com/en/tutorial/understanding-storebuilder-and-stylesbuilder#structuring-and-configuring-our-store-with-object-object)
-
-To configure or customize this app, you need to import it in your dependencies in `manifest.json`.
+1. Import the `vtex.store-footer`'s app to your theme's dependencies in the `manifest.json`, for example:
 
 ```json
   dependencies: {
@@ -42,196 +16,115 @@ To configure or customize this app, you need to import it in your dependencies i
   }
 ```
 
-Then, add `footer` block into our app theme, like we do in our [Store theme app](https://github.com/vtex-apps/store-theme/blob/master/store/blocks.json).
-
-Now, you can change the behavior of the footer block. See an example of how to configure:
+2. Define the `footer` block. For example:
 
 ```json
-"footer": {
-  "props": {
-    "socialNetworks": [
-      { "links":[
-        { "url":"www.facebook.com", "title":"Facebook" },
-        { "url":"www.twitter.com", "title":"Twitter" }
-      ]}
-    ],
-    "sectionLinks": [
-      {"title": "About us", "links":[
-        { "url":"www.mystore.com/faq", "title":"FAQ", "target": "_blank" },
-        { "url":"www.mystore.com/talktous", "title":"Talk to us", "target": "_self" }
-      ]}
-    ],
-    "storeInformations": ["CNPJ n.� 1231132.231.1231/000", "All the rights reserved."],
-    "badges": [
-      {"image":"https://phots.icons8.com/foo"},
-      {"image":"https://phots.icons8.com/xpto"}
-    ],
-    "paymentForms": [
-      {"title": "Payment form", "paymentTypes": ["MasterCard"]}
-    ],
-    "showPaymentFormsInColor": true,
-    "showSocialNetworksInColor": true,
-    "showVtexLogoInColor": true,
-    "logo": "My store logo",
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#footer-desktop"
+    ]
+  },
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#footer-mobile"
+    ]
+  },
+  "flex-layout.row#footer-desktop": {
+    "children": [
+      "social-networks",
+      "accepted-payment-methods",
+      "powered-by"
+    ]
+  },
+  "flex-layout.row#footer-mobile": {
+    "children": [
+      "social-networks",
+      "accepted-payment-methods",
+      "powered-by"
+    ]
+  },
+  "social-networks": {
+    "props": {
+      "socialNetworks": [
+        { "url": "https://facebook.com/foo", "name": "Facebook" },
+        { "url": "https://twitter.com/foo", "name": "Twitter" }
+      ]
+    }
+  },
+  "accepted-payment-methods": {
+    "props": {
+      "paymentMethods": ["mastercard", "visa", "diners club"]
+    }
   }
 }
 ```
 
-### Blocks API
-
-This app has an interface that describes what rules must be implemented by a block when you want to use the footer.
-
-```json
-  "footer": {
-    "component": "index"
-  }
-```
-
-#### Configuration
-
-Through the Storefront, you can change the footer's behavior and interface. However, you also can make in your theme app, as Store theme does.
-
-Store Footer:
-
-| Prop name                   | Type                    | Description                           | Default Value                                                                                  |
-| --------------------------- | ----------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `socialNetworks`            | `Array(Social Network)` | Array of social networks              | `[{socialNetwork: 'Facebook', url: '#'},]`                                                     |
-| `sectionLinks`              | `Array(Section Link)`   | Array of section links                | []                                                                                             |
-| `storeInformations`         | `Array(String)`         | Array of informations about the store | []                                                                                             |
-| `badges`                    | `Array(Badge)`          | Array of badges                       | []                                                                                             |
-| `paymentForms`              | `Array(Payment Form)`   | Array of payment forms                | `` [{title: `Payment Form/Forma de pago/Forma de pagamento`, paymentTypes: ['MasterCard']}] `` |
-| `showPaymentFormsInColor`   | `Boolean`               | Set color of payment forms            | false                                                                                          |
-| `showSocialNetworksInColor` | `Boolean`               | Set color of social networks          | false                                                                                          |
-| `showVtexLogoInColor`       | `Boolean`               | Set color of VTEX logo                | false                                                                                          |
-| `logo`                      | `String`                | Link of Store logo                    | -                                                                                              |
-
-Social Network:
+`social-networks`:
 
 | Prop name | Type          | Description    |
 | --------- | ------------- | -------------- |
-| `links`   | `Array(Link)` | Array of links |
+| `title` | `string` | Text to show above of list of links |
+| `socialNetworks`   | `Array(SocialNetwork)` | Array of social networks |
+| `showInColor` | `boolean` | Whether the icons are colored or not |
 
-Section Link:
+SocialNetwork
 
-| Prop name | Type          | Description          |
-| --------- | ------------- | -------------------- |
-| `title`   | `String!`     | Title of the section |
-| `links`   | `Array(Link)` | Array of links       |
+| Prop name | Type          | Description    |
+| --------- | ------------- | -------------- |
+| `url`   | `string` | Link to the social network profile |
+| `name`   | `enum` | Possible values: `facebook`, `twitter`, `linkedin`, `youtube`, `pinterest` |
 
-Link:
+`accepted-payment-methods`:
 
-| Prop name | Type     | Description                                       |
-| --------- | -------- | ------------------------------------------------- |
-| `url`     | `String` | URL                                               |
-| `title`   | `String` | Title of the link                                 |
-| `target`  | `Enum`   | Target of the link. (values: `_self` or `_blank`) |
+| Prop name | Type          | Description    |
+| --------- | ------------- | -------------- |
+| `paymentMethods`   | `Array` | Possible values: `mastercard`, `visa`, `diners club` |
+| `showInColor` | `boolean` | Whether the icons are colored or not |
 
-Badge:
+`powered-by`:
 
-| Prop name | Type     | Description      |
-| --------- | -------- | ---------------- |
-| `image`   | `String` | URL of the badge |
-
-Payment Form:
-
-| Prop name      | Type            | Description                                   |
-| -------------- | --------------- | --------------------------------------------- |
-| `title`        | `String!`       | Title of payment form                         |
-| `paymentTypes` | `Array(String)` | Array of strings containing the payment types |
-
-### Styles API
-
-This app provides some CSS classes as an API for style customization.
-
-To use this CSS API, you must add the `styles` builder and create an app styling CSS file.
-
-1. Add the `styles` builder to your `manifest.json`:
-
-```json
-  "builders": {
-    "styles": "1.x"
-  }
-```
-
-2. Create a file called `vtex.store-footer.css` inside the `styles/css` folder. Add your custom styles:
-
-```css
-.container {
-  margin-top: 10px;
-}
-```
-
-Also, create a `vtex.footer.css` file in `styles/css` for your handlers customization.
-
-#### CSS namespaces
-
-Below, we describe the namespaces that are define in the `Footer`.
-
-| Class name                  | Description                                                                       | Component Source                                                       |
-| --------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `footer`                    | The main content of the footer                                                    | [index](/react/index.js)                                               |
-| `container`                 | The generical container of the footer                                             | [index](/react/index.js)                                               |
-| `linksContainer`            | The wrapper containing the matrices of links                                      | [index](/react/index.js)                                               |
-| `matrixContainer`           | The container that holds all the listContainers                                   | [FooterLinksMatrix](react/components/FooterLinksMatrix.js)             |
-| `matrixItem`                | The wrapper for an item of the matrix. (e.g, `listContainer`)                     | [FooterLinksMatrix](react/components/FooterLinksMatrix.js)             |
-| `listContainer`             | The wrapper containing the `listTitle` and a `list`                               | [footerList](react/components/footerList.js)                           |
-| `listContainerHorizontal`   | The properties to be applied when the `listContainer` is horizontal               | [footerList](react/components/footerList.js)                           |
-| `listContainerRightAligned` | The properties to be applied when the `listContainer` is right aligned            | [footerList](react/components/footerList.js)                           |
-| `listTitle`                 | The title of a item list. (e.g, `Institutional`)                                  | [footerList](react/components/footerList.js)                           |
-| `list`                      | The container for a list of `listItem`                                            | [footerList](react/components/footerList.js)                           |
-| `listHorizontal`            | The properties to be applied to the list when the `horizontal` props is true      | [footerList](react/components/footerList.js)                           |
-| `listItem`                  | The item of a list                                                                | [footerList](react/components/footerList.js)                           |
-| `listLink`                  | The link inside a list                                                            | [footerList](react/components/footerList.js)                           |
-| `listItemHorizontal`        | The properties to be applied to the item list when the `horizontal` props is true | [footerList](react/components/footerList.js)                           |
-| `socialNetworkContainer`    | The social networks container                                                     | [index](/react/index.js)                                               |
-| `socialNetworkItem`         | The image of a social network                                                     | [FooterSocialNetworkList](react/components/FooterSocialNetworkList.js) |
-| `paymentMatrix`             | The wrapper that holds all the paymentMatrixItems                                 | [FooterPaymentFormMatrix](react/components/FooterPaymentFormMatrix.js) |
-| `paymentMatrixItem`         | The image of a social network                                                     | [FooterPaymentFormMatrix](react/components/FooterPaymentFormMatrix.js) |
-| `paymentFormItem`           | The image of the payment form                                                     | [FooterPaymentFormList](react/components/FooterPaymentFormList.js)     |
-| `textContainer`             | The container for the text informations of the store                              | [index](/react/index.js)                                               |
-| `badgeList`                 | The wrapper for all the bagdes                                                    | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
-| `badge`                     | One store badge                                                                   | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
-| `vtexLogoItem`              | The 'Powered by VTEX' logo                                                        | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
-| `logoImage`                 | The image of one logo of the store                                                | [FooterVtexLogo](react/components/FooterVtexLogo.js)                   |
-| `textInformation`           | Information at the footer's bottom                                                | [index](/react/index.js)                                               |
-| `links`                     | The wrapper for `FooterLinksMatrix`                                               | [index](/react/index.js)                                               |
-| `socialNetworkContainer`    | The wrapper for the `FooterSocialNetworkList`                                     | [index](/react/index.js)                                               |
-| `textContainer`             | The wrapper for all the information at the footer's bottom                        | [index](/react/index.js)                                               |
-| `navigation`                | The wrapper for the navigation area in footer                                     | [index](/react/index.js)                                               |
-| `payment`                   | The wrapper for `FooterPaymentFormMatrix`                                         | [index](/react/index.js)                                               |
-| `footerLayoutSpacer`                   | The spacer div inside a `FooterLayout`                                         | [FooterLayout](/react/FooterLayout.tsx)                                               |
-| `rowContentContainer`                   | The container of the content in a Row                                         | [Row](/react/Row.tsx)                                               |
-| `socialNetworkWrapper`                   | Wrapper for the `SocialNetworks` component                                         | [SocialNetworks](/react/SocialNetworks.tsx)                                               |
-| `footerSpacer`                   | Spacer component                                         | [Spacer](/react/Spacer.tsx)                                               |
-
-When the footer is displayed in mobile view, the `matrixContainer` constricts itself and displays a list of `matrixItemSmall`, each one containing an `accordion`. Below, we describe the tokens, their explanation and the component where it is located.
-
-| Class name        | Description                                           | Component Source                                           |
-| ----------------- | ----------------------------------------------------- | ---------------------------------------------------------- |
-| `matrixItemSmall` | The item of the matrix                                | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
-| `accordionTitle`  | The accordion title                                   | [Accordion](react/components/Accordion.js)                 |
-| `accordion`       | The accordion container for a list of `accordionItem` | [Accordion](react/components/Accordion.js)                 |
-| `accordionItem`   | The item inside the accordion (e.g, `listLink`)       | [FooterLinksMatrix](react/components/FooterLinksMatrix.js) |
-| `accordionIcon`   | The accordion icon                                    | [Accordion](react/components/Accordion.js)                 |
-
-## Troubleshooting
-
-You can check if others are passing through similar issues [here](https://github.com/vtex-apps/store-footer/issues). Also feel free to [open issues](https://github.com/vtex-apps/store-footer/issues/new) or contribute with pull requests.
-
-## Contributing
-
-Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project. 
-
-## Tests
-
-To execute our tests go to `react/` folder and run `yarn test`
-
-### Travis CI
-
-[![Build Status](https://api.travis-ci.org/vtex-apps/store-footer.svg?branch=master)](https://travis-ci.org/vtex-apps/store-footer)
-[![Coverage Status](https://coveralls.io/repos/github/vtex-apps/store-footer/badge.svg?branch=master)](https://coveralls.io/github/vtex-apps/store-footer?branch=master)
+| Prop name | Type          | Description    |
+| --------- | ------------- | -------------- |
+| `showInColor` | `boolean` | Whether the icons are colored or not |
 
 
-**Upcoming documentation:**
+## Customization
 
- - [Update CSS handles](https://github.com/vtex-apps/store-footer/pull/90)
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization). 
+
+`footer-layout`:
+
+| CSS Handles |
+| --- |
+| `footerLayout` |
+| `footerLayoutSpacer` |
+
+`social-networks`:
+
+| CSS Handles |
+| --- |
+| `socialNetworksTitle` |
+| `socialNetworksContainer` |
+| `socialNetworkWrapper` |
+| `socialNetworkLink` |
+| `socialNetworkImage` |
+
+`accepted-payment-methods`:
+
+| CSS Handles |
+| --- |
+| `acceptedPaymentMethodContainer` |
+| `paymentMethodIcon` |
+| `paymentMethodIconImage` |
+
+`powered-by`:
+
+| CSS Handles |
+| --- |
+| `poweredBy` |
+| `poweredByImage` |
+| `poweredByLink` |
