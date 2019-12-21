@@ -1,7 +1,8 @@
-import React from 'react'
-import { ExtensionPoint, useChildBlock } from 'vtex.render-runtime'
-import LegacyFooter from './legacy/Footer'
+import React, { Suspense } from 'react'
+import { ExtensionPoint, useChildBlock, NoSSR } from 'vtex.render-runtime'
 import { useDevice } from 'vtex.device-detector'
+
+const LegacyFooter = React.lazy(() => import('./legacy/Footer'))
 
 const Footer = props => {
   const hasFooterDesktop = !!useChildBlock({
@@ -16,7 +17,13 @@ const Footer = props => {
   const hasFooterLayout = hasFooterDesktop || hasFooterMobile
 
   if (!hasFooterLayout) {
-    return <LegacyFooter {...props} />
+    return (
+      <NoSSR>
+        <Suspense fallback={<div />}>
+          <LegacyFooter {...props} />
+        </Suspense>
+      </NoSSR>
+    )
   }
 
   // SSR fallback
