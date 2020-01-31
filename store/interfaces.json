@@ -29,8 +29,12 @@
       "shop-review-badge"
     ]
   },
-  "footer-layout.mobile": {},
-  "footer-layout.desktop": {},
+  "footer-layout.mobile": {
+    "device": "mobile"
+  },
+  "footer-layout.desktop": {
+    "device": "desktop"
+  },
   "social-networks": {
     "component": "SocialNetworks",
     "content": {
