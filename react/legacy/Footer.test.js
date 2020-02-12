@@ -60,13 +60,13 @@ describe('<Footer /> component', () => {
       },
     ]
 
-    const { getByText } = renderComponent({ sectionLinks })
+    const { getAllByText } = renderComponent({ sectionLinks })
 
     sectionLinks.forEach(({ title, links }) => {
-      expect(getByText(title)).toBeTruthy()
+      expect(getAllByText(title)).toBeTruthy()
 
       links.forEach(({ title }) => {
-        expect(getByText(title)).toBeTruthy()
+        expect(getAllByText(title)).toBeTruthy()
       })
     })
   })

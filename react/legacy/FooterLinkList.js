@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { injectIntl, intlShape } from 'react-intl'
+import { injectIntl } from 'react-intl'
 import { IOMessage, formatIOMessage } from 'vtex.native-types'
 
 import footerList from './footerList'
@@ -25,7 +25,7 @@ FooterLinkItem.propTypes = {
   url: PropTypes.string,
   title: PropTypes.string,
   target: PropTypes.oneOf(['_self', '_blank']),
-  intl: intlShape,
+  intl: PropTypes.object,
 }
 
 const FooterLinkItemWithIntl = injectIntl(FooterLinkItem)

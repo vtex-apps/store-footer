@@ -40,12 +40,37 @@ declare module 'vtex.render-runtime' {
     currency: string
   }
 
+  interface Extensions {
+    [name: string]: Extension
+  }
+
+  interface Extension {
+    after?: string[]
+    around?: string[]
+    before?: string[]
+    blockId?: string
+    blocks?: BlockInsertion[]
+    context?: {
+      component: string
+      props?: any
+    }
+    component: string
+    track?: string[]
+    props?: any
+    content?: Record<string, any>
+    render?: RenderStrategy
+    preview?: Preview
+    composition?: Composition
+    hasContentSchema?: boolean
+    contentIds?: string[]
+  }
   export interface RenderRuntime {
     account: string
     accountId: string
     appsEtag: string
     workspace: string
     disableSSR: boolean
+    extensions: Extensions
     hints: {
       desktop: boolean
       mobile: boolean

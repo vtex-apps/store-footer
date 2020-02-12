@@ -1,5 +1,5 @@
 import React from 'react'
-import { injectIntl, InjectedIntl } from 'react-intl'
+import { injectIntl, IntlShape } from 'react-intl'
 import { formatIOMessage } from 'vtex.native-types'
 import { useCssHandles } from 'vtex.css-handles'
 
@@ -11,7 +11,7 @@ interface PaymentMethodIconProps {
   showInColor?: boolean
   /** Indicates which one of the payments method should the component show its image */
   paymentMethod: PaymentMethod
-  intl: InjectedIntl
+  intl: IntlShape
 }
 
 const CSS_HANDLES = ['paymentMethodIcon', 'paymentMethodIconImage']

@@ -1,5 +1,5 @@
 import React from 'react'
-import { injectIntl, InjectedIntl } from 'react-intl'
+import { injectIntl, IntlShape } from 'react-intl'
 import { formatIOMessage } from 'vtex.native-types'
 import { useCssHandles, applyModifiers } from 'vtex.css-handles'
 
@@ -10,7 +10,7 @@ interface SocialNetworkProps {
   showInColor: boolean
   url: string
   name: string
-  intl: InjectedIntl
+  intl: IntlShape
 }
 
 const CSS_HANDLES = ['socialNetworkLink', 'socialNetworkImage'] as const
