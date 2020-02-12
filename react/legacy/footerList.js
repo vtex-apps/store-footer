@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { injectIntl, intlShape } from 'react-intl'
+import { injectIntl } from 'react-intl'
 
 import footer from './footer.css'
 
@@ -16,7 +16,7 @@ export default WrappedComponent => {
     static propTypes = {
       titleId: PropTypes.string,
       list: PropTypes.array,
-      intl: intlShape.isRequired,
+      intl: PropTypes.object,
       alignRight: PropTypes.bool,
       horizontal: PropTypes.bool,
       titleCapitals: PropTypes.bool,

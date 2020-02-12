@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Collapse } from 'react-collapse'
-import { injectIntl, intlShape } from 'react-intl'
+import { injectIntl } from 'react-intl'
 
 import { IconCaret } from 'vtex.store-icons'
 
@@ -14,7 +14,7 @@ class Accordion extends Component {
     /** Accordion children. Components shown inside Collapse */
     children: PropTypes.node.isRequired,
     /** Internationalization */
-    intl: intlShape.isRequired,
+    intl: PropTypes.object,
   }
 
   state = {
