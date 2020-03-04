@@ -1,9 +1,27 @@
 import React from 'react'
-import { injectIntl, IntlShape } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { formatIOMessage } from 'vtex.native-types'
 import { useCssHandles } from 'vtex.css-handles'
 
-import withImage from './withImage'
+import dinersClub from '../images/diners club.svg'
+import dinersClubBw from '../images/diners club-bw.svg'
+import mastercard from '../images/mastercard.svg'
+import mastercardBw from '../images/mastercard-bw.svg'
+import visa from '../images/visa.svg'
+import visaBw from '../images/visa-bw.svg'
+
+const PAYMENT_METHOD_ICONS = {
+  'diners club': dinersClub,
+  'diners club-bw': dinersClubBw,
+  mastercard: mastercard,
+  'mastercard-bw': mastercardBw,
+  visa,
+  'visa-bw': visaBw
+}
+
+function isValidIcon (key: string): key is keyof typeof PAYMENT_METHOD_ICONS {
+  return key in PAYMENT_METHOD_ICONS
+}
 
 interface PaymentMethodIconProps {
   imageSrc?: string
@@ -11,22 +29,32 @@ interface PaymentMethodIconProps {
   showInColor?: boolean
   /** Indicates which one of the payments method should the component show its image */
   paymentMethod: PaymentMethod
-  intl: IntlShape
 }
 
 const CSS_HANDLES = ['paymentMethodIcon', 'paymentMethodIconImage']
+
+const getImagePathFromProps = ({
+  paymentMethod,
+  showInColor,
+}: PaymentMethodIconProps) =>
+  `${paymentMethod.toLowerCase()}${showInColor ? '' : '-bw'}`
 
 /**
  * Shows an image for the payments forms accepted
  */
 const PaymentMethodIcon: StorefrontFunctionComponent<
   PaymentMethodIconProps
-> = ({ imageSrc, paymentMethod, intl }) => {
+> = ({ paymentMethod, showInColor }) => {
+  const intl = useIntl()
   const handles = useCssHandles(CSS_HANDLES)
 
-  if (!imageSrc) {
+  const imagePath = getImagePathFromProps({paymentMethod, showInColor})
+
+  if (!isValidIcon(imagePath)) {
     return null
   }
+
+  const imageSrc = PAYMENT_METHOD_ICONS[imagePath]
 
   return (
     <div className={`${handles.paymentMethodIcon} w2 h2 mh2 flex items-center`}>
@@ -46,10 +74,4 @@ export enum PaymentMethod {
   'visa' = 'visa',
 }
 
-const getImagePathFromProps = ({
-  paymentMethod,
-  showInColor,
-}: PaymentMethodIconProps) =>
-  `${paymentMethod.toLowerCase()}${showInColor ? '' : '-bw'}.svg`
-
-export default withImage(getImagePathFromProps)(injectIntl(PaymentMethodIcon))
+export default PaymentMethodIcon

@@ -1,23 +1,45 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { withRuntimeContext } from 'vtex.render-runtime'
+import { useRuntime } from 'vtex.render-runtime'
 
-import withImage from './components/withImage'
 import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
+import gocommerce from './images/gocommerce.svg'
+import gocommerceBw from './images/gocommerce-bw.svg'
+import vtex from './images/vtex.svg'
+import vtexBw from './images/vtex-bw.svg'
+
+const POWERED_BY_ICONS = {
+  gocommerce: gocommerce,
+  'gocommerce-bw': gocommerceBw,
+  vtex,
+  'vtex-bw': vtexBw
+}
 
 const CSS_HANDLES = ['poweredBy', 'poweredByImage', 'poweredByLink']
+
+function isValidIcon (key: string): key is keyof typeof POWERED_BY_ICONS {
+  return key in POWERED_BY_ICONS
+}
+
+const getImagePathFromProps = (runtime: ReturnType<typeof useRuntime>, showInColor: boolean) =>
+  `${runtime.platform}${showInColor ? '' : '-bw'}`
 
 /**
  * "Powered By VTEX/GoCommerce" image component, used in Footer
  */
 const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
-  imageSrc,
-  runtime,
+  showInColor,
 }) => {
   const handles = useCssHandles(CSS_HANDLES)
-  if (!imageSrc) {
+  const runtime = useRuntime()
+
+  const imagePath = getImagePathFromProps(runtime, showInColor)
+
+  if (!isValidIcon(imagePath)) {
     return null
   }
+
+  const imageSrc = POWERED_BY_ICONS[imagePath]
 
   if (runtime.platform === PLATFORM_GOCOMMERCE) {
     return (
@@ -50,9 +72,6 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
 }
 
 interface PoweredByProps extends PoweredBySchema {
-  runtime: {
-    platform: string
-  }
   logoUrl: string
   imageSrc: string
 }
@@ -63,7 +82,4 @@ interface PoweredBySchema {
 
 PoweredBy.displayName = 'PoweredBy'
 
-const getImagePathFromProps = ({ runtime, showInColor }: PoweredByProps) =>
-  `${runtime.platform}${showInColor ? '' : '-bw'}.svg`
-
-export default withRuntimeContext(withImage(getImagePathFromProps)(PoweredBy))
+export default PoweredBy

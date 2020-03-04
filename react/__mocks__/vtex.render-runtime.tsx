@@ -6,3 +6,5 @@ const runtime = { account: 'account', platform: 'vtex' }
 export const withRuntimeContext = (Comp: ElementType) => (props: any) => (
   <Comp {...props} runtime={runtime} />
 )
+
+export const useRuntime = () => runtime
