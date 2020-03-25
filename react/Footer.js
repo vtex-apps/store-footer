@@ -21,7 +21,8 @@ const Footer = props => {
   const { isMobile } = useDevice()
 
   if (!shouldRenderBelowTheFold) {
-    return null
+    // This is a placeholder for partial hydration
+    return <div style={{ height: 400 }} />
   }
 
   const hasFooterLayout = hasFooterDesktop || hasFooterMobile
