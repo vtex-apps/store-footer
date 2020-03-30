@@ -21,7 +21,9 @@ const Footer = props => {
   const { isMobile } = useDevice()
 
   if (!shouldRenderBelowTheFold) {
-    return null
+    /** This is a placeholder for view detection work properly when the
+     * footer hasn't rendered yet (for things such as partial hydration) */
+    return <div style={{ height: 400 }} />
   }
 
   const hasFooterLayout = hasFooterDesktop || hasFooterMobile
