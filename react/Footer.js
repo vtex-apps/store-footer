@@ -1,16 +1,10 @@
 import React, { Suspense } from 'react'
 import { ExtensionPoint, useChildBlock, NoSSR } from 'vtex.render-runtime'
 import { useDevice } from 'vtex.device-detector'
-import useFold from './hooks/useFold'
 
 const LegacyFooter = React.lazy(() => import('./legacy/Footer'))
 
 const Footer = props => {
-  /** This is a temporary fix--this behaviour is supposed
-   * to come from render-runtime delayed hydration in the
-   * future. */
-  const shouldRenderBelowTheFold = useFold()
-
   const hasFooterDesktop = !!useChildBlock({
     id: 'footer-layout.desktop',
   })
@@ -19,10 +13,6 @@ const Footer = props => {
   })
 
   const { isMobile } = useDevice()
-
-  if (!shouldRenderBelowTheFold) {
-    return null
-  }
 
   const hasFooterLayout = hasFooterDesktop || hasFooterMobile
 
