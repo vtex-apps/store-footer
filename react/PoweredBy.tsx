@@ -8,29 +8,34 @@ import gocommerceBw from './images/gocommerce-bw.svg'
 import vtex from './images/vtex.svg'
 import vtexBw from './images/vtex-bw.svg'
 
+const CSS_HANDLES = ['poweredBy', 'poweredByImage', 'poweredByLink'] as const
+
 const POWERED_BY_ICONS = {
-  gocommerce: gocommerce,
+  gocommerce,
   'gocommerce-bw': gocommerceBw,
   vtex,
-  'vtex-bw': vtexBw
+  'vtex-bw': vtexBw,
 }
 
-const CSS_HANDLES = ['poweredBy', 'poweredByImage', 'poweredByLink']
+interface Props {
+  /** Define if logo should be displayed in color */
+  showInColor: boolean
+}
 
-function isValidIcon (key: string): key is keyof typeof POWERED_BY_ICONS {
+function isValidIcon(key: string): key is keyof typeof POWERED_BY_ICONS {
   return key in POWERED_BY_ICONS
 }
 
-const getImagePathFromProps = (runtime: ReturnType<typeof useRuntime>, showInColor: boolean) =>
-  `${runtime.platform}${showInColor ? '' : '-bw'}`
+const getImagePathFromProps = (
+  runtime: ReturnType<typeof useRuntime>,
+  showInColor: boolean
+) => `${runtime.platform}${showInColor ? '' : '-bw'}`
 
 /**
  * "Powered By VTEX/GoCommerce" image component, used in Footer
  */
-const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
-  showInColor,
-}) => {
-  const handles = useCssHandles(CSS_HANDLES)
+function PoweredBy({ showInColor }: Props) {
+  const { handles } = useCssHandles(CSS_HANDLES)
   const runtime = useRuntime()
 
   const imagePath = getImagePathFromProps(runtime, showInColor)
@@ -69,15 +74,6 @@ const PoweredBy: StorefrontFunctionComponent<PoweredByProps> = ({
       />
     </div>
   )
-}
-
-interface PoweredByProps extends PoweredBySchema {
-  logoUrl: string
-  imageSrc: string
-}
-
-interface PoweredBySchema {
-  showInColor: boolean
 }
 
 PoweredBy.displayName = 'PoweredBy'
