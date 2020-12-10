@@ -19,7 +19,7 @@ const POWERED_BY_ICONS = {
 
 interface Props {
   /** Define if logo should be displayed in color */
-  showInColor: boolean
+  showInColor?: boolean
 }
 
 function isValidIcon(key: string): key is keyof typeof POWERED_BY_ICONS {

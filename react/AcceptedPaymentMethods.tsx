@@ -3,12 +3,19 @@ import type { CssHandlesTypes } from 'vtex.css-handles'
 import { useCssHandles } from 'vtex.css-handles'
 
 import type { PaymentMethod } from './components/PaymentMethodIcon'
-import PaymentMethodIcon from './components/PaymentMethodIcon'
+import PaymentMethodIcon, {
+  CSS_HANDLES as PaymentMethodIconHandles,
+} from './components/PaymentMethodIcon'
 
-const CSS_HANDLES = ['acceptedPaymentMethodContainer'] as const
+const CSS_HANDLES = [
+  'acceptedPaymentMethodContainer',
+  ...PaymentMethodIconHandles,
+] as const
 
 interface Props {
+  /** list of accepeted payment methods */
   paymentMethods: PaymentMethod[]
+  /** Define if payment method icons will be coloured */
   showInColor: boolean
   classes?: CssHandlesTypes.CustomClasses<typeof CSS_HANDLES>
 }
@@ -29,6 +36,7 @@ function AcceptedPaymentMethods({
           key={paymentMethod}
           paymentMethod={paymentMethod}
           showInColor={showInColor}
+          handles={handles}
         />
       ))}
     </div>

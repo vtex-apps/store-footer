@@ -24,11 +24,7 @@ const PAYMENT_METHOD_ICONS = {
   'visa-bw': visaBw,
 }
 
-export const enum PaymentMethod {
-  'diners club' = 'diners club',
-  'mastercard' = 'mastercard',
-  'visa' = 'visa',
-}
+export type PaymentMethod = 'diners club' | 'mastercard' | 'visa'
 
 function isValidIcon(key: string): key is keyof typeof PAYMENT_METHOD_ICONS {
   return key in PAYMENT_METHOD_ICONS
