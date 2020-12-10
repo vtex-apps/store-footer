@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import footerList from './footerList'
-import withImage from '../withImage'
+import withImage from './withImage'
 import footer from './footer.css'
 
 /**

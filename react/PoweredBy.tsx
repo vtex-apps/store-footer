@@ -18,7 +18,10 @@ const POWERED_BY_ICONS = {
 }
 
 interface Props {
-  /** Define if logo should be displayed in color */
+  /**
+   * Define if logo should be displayed in color
+   * @default false
+   * */
   showInColor?: boolean
 }
 
@@ -34,7 +37,7 @@ const getImagePathFromProps = (
 /**
  * "Powered By VTEX/GoCommerce" image component, used in Footer
  */
-function PoweredBy({ showInColor }: Props) {
+function PoweredBy({ showInColor = false }: Props) {
   const { handles } = useCssHandles(CSS_HANDLES)
   const runtime = useRuntime()
 
