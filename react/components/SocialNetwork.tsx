@@ -16,12 +16,6 @@ import twitterBw from '../images/twitter-bw.svg'
 import youtube from '../images/youtube.svg'
 import youtubeBw from '../images/youtube-bw.svg'
 
-interface SocialNetworkProps {
-  showInColor: boolean
-  url: string
-  name: string
-}
-
 const CSS_HANDLES = ['socialNetworkLink', 'socialNetworkImage'] as const
 
 const SOCIAL_NETWORK_ICONS = {
@@ -39,23 +33,28 @@ const SOCIAL_NETWORK_ICONS = {
   'youtube-bw': youtubeBw,
 }
 
-const getImagePathFromProps = ({ name, showInColor }: Pick<SocialNetworkProps, 'name' | 'showInColor'>) =>
+const getImagePathFromProps = ({
+  name,
+  showInColor,
+}: Pick<Props, 'name' | 'showInColor'>) =>
   `${name.toLowerCase()}${showInColor ? '' : '-bw'}`
 
-  function isValidIcon (key: string): key is keyof typeof SOCIAL_NETWORK_ICONS {
-    return key in SOCIAL_NETWORK_ICONS
-  }
+function isValidIcon(key: string): key is keyof typeof SOCIAL_NETWORK_ICONS {
+  return key in SOCIAL_NETWORK_ICONS
+}
+
+interface Props {
+  showInColor: boolean
+  url: string
+  name: string
+}
 
 /**
  * Shows an image for an specific social network
  */
-const SocialNetwork: React.FC<SocialNetworkProps> = ({
-  name,
-  showInColor,
-  url,
-}) => {
+function SocialNetwork({ name, showInColor, url }: Props) {
   const intl = useIntl()
-  const handles = useCssHandles(CSS_HANDLES)
+  const { handles } = useCssHandles(CSS_HANDLES)
 
   const normalizedName = String(name).toLowerCase()
   const imagePath = getImagePathFromProps({ name: normalizedName, showInColor })
@@ -90,6 +89,5 @@ const SocialNetwork: React.FC<SocialNetworkProps> = ({
 }
 
 SocialNetwork.displayName = 'SocialNetwork'
-
 
 export default SocialNetwork
