@@ -1,8 +1,16 @@
+import type { PropsWithChildren } from 'react'
 import React from 'react'
 import { IOMessage } from 'vtex.native-types'
+import type { CssHandlesTypes } from 'vtex.css-handles'
 import { useCssHandles } from 'vtex.css-handles'
 
 import SocialNetwork from './components/SocialNetwork'
+
+const CSS_HANDLES = [
+  'socialNetworksTitle',
+  'socialNetworksContainer',
+  'socialNetworkWrapper',
+] as const
 
 interface SocialNetworkData {
   url: string
@@ -10,23 +18,24 @@ interface SocialNetworkData {
 }
 
 interface Props {
+  /** Section title */
   title?: string
+  /** List of social networks to display */
   socialNetworks: SocialNetworkData[]
+  /** Define if social network icons will be coloured */
   showInColor: boolean
+  classes?: CssHandlesTypes.CustomClasses<typeof CSS_HANDLES>
 }
 
-const CSS_HANDLES = [
-  'socialNetworksTitle',
-  'socialNetworksContainer',
-  'socialNetworkWrapper',
-]
-
-const SocialNetworks: StorefrontFunctionComponent<Props> = ({
+function SocialNetworks({
   title,
   showInColor,
   socialNetworks = [],
-}) => {
-  const handles = useCssHandles(CSS_HANDLES)
+  classes,
+}: PropsWithChildren<Props>) {
+  const { handles } = useCssHandles(CSS_HANDLES, {
+    classes,
+  })
 
   return (
     <div className={handles.socialNetworkWrapper}>
@@ -36,7 +45,7 @@ const SocialNetworks: StorefrontFunctionComponent<Props> = ({
         </div>
       )}
       <div className={`${handles.socialNetworksContainer} nh2 flex`}>
-        {socialNetworks.map(socialNetworkData => (
+        {socialNetworks.map((socialNetworkData) => (
           <SocialNetwork
             key={socialNetworkData.name + socialNetworkData.url}
             showInColor={showInColor}
