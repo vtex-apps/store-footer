@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import footerList from './footerList'
-import withImage from '../components/withImage'
+import withImage from '../withImage'
 import footer from './footer.css'
 
 /**
@@ -17,9 +17,14 @@ const FooterSocialNetworkItem = ({ imageSrc, url }) => {
     <a
       href={url}
       target="_blank"
-      rel="noopener"
-      className={`${footer.socialNetworkList} c-muted-1`}>
-      <img className={`${footer.socialNetworkItem} w2 h2`} src={imageSrc} />
+      rel="noreferrer noopener"
+      className={`${footer.socialNetworkList} c-muted-1`}
+    >
+      <img
+        className={`${footer.socialNetworkItem} w2 h2`}
+        src={imageSrc}
+        alt=""
+      />
     </a>
   )
 }
