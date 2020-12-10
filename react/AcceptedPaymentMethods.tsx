@@ -1,26 +1,30 @@
 import React from 'react'
+import type { CssHandlesTypes } from 'vtex.css-handles'
 import { useCssHandles } from 'vtex.css-handles'
 
-import PaymentMethodIcon, {
-  PaymentMethod,
-} from './components/PaymentMethodIcon'
+import type { PaymentMethod } from './components/PaymentMethodIcon'
+import PaymentMethodIcon from './components/PaymentMethodIcon'
+
+const CSS_HANDLES = ['acceptedPaymentMethodContainer'] as const
 
 interface Props {
   paymentMethods: PaymentMethod[]
   showInColor: boolean
+  classes?: CssHandlesTypes.CustomClasses<typeof CSS_HANDLES>
 }
 
-const CSS_HANDLES = ['acceptedPaymentMethodContainer'] as const
-
-const AcceptedPaymentMethods: StorefrontFunctionComponent<Props> = ({
+function AcceptedPaymentMethods({
   paymentMethods = [],
   showInColor = false,
-}) => {
-  const handles = useCssHandles(CSS_HANDLES)
+  classes,
+}: Props) {
+  const { handles } = useCssHandles(CSS_HANDLES, {
+    classes,
+  })
 
   return (
     <div className={`${handles.acceptedPaymentMethodContainer} nh2 flex`}>
-      {paymentMethods.map(paymentMethod => (
+      {paymentMethods.map((paymentMethod) => (
         <PaymentMethodIcon
           key={paymentMethod}
           paymentMethod={paymentMethod}
