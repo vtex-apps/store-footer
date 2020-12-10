@@ -4,12 +4,15 @@ import { IOMessage } from 'vtex.native-types'
 import type { CssHandlesTypes } from 'vtex.css-handles'
 import { useCssHandles } from 'vtex.css-handles'
 
-import SocialNetwork from './components/SocialNetwork'
+import SocialNetwork, {
+  CSS_HANDLES as SocialNetworkHandles,
+} from './components/SocialNetwork'
 
 const CSS_HANDLES = [
   'socialNetworksTitle',
   'socialNetworksContainer',
   'socialNetworkWrapper',
+  ...SocialNetworkHandles,
 ] as const
 
 interface SocialNetworkData {
@@ -51,6 +54,7 @@ function SocialNetworks({
             showInColor={showInColor}
             url={socialNetworkData.url}
             name={socialNetworkData.name}
+            handles={handles}
           />
         ))}
       </div>

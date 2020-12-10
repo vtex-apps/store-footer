@@ -1,6 +1,7 @@
 import React from 'react'
 import { useIntl } from 'react-intl'
 import { formatIOMessage } from 'vtex.native-types'
+import type { CssHandlesTypes } from 'vtex.css-handles'
 import { useCssHandles, applyModifiers } from 'vtex.css-handles'
 
 import facebook from '../images/facebook.svg'
@@ -16,7 +17,7 @@ import twitterBw from '../images/twitter-bw.svg'
 import youtube from '../images/youtube.svg'
 import youtubeBw from '../images/youtube-bw.svg'
 
-const CSS_HANDLES = ['socialNetworkLink', 'socialNetworkImage'] as const
+export const CSS_HANDLES = ['socialNetworkLink', 'socialNetworkImage'] as const
 
 const SOCIAL_NETWORK_ICONS = {
   facebook,
@@ -47,14 +48,15 @@ interface Props {
   showInColor: boolean
   url: string
   name: string
+  /** CSS handles from parent */
+  handles: CssHandlesTypes.CssHandles<typeof CSS_HANDLES>
 }
 
 /**
  * Shows an image for an specific social network
  */
-function SocialNetwork({ name, showInColor, url }: Props) {
+function SocialNetwork({ name, showInColor, url, handles }: Props) {
   const intl = useIntl()
-  const { handles } = useCssHandles(CSS_HANDLES)
 
   const normalizedName = String(name).toLowerCase()
   const imagePath = getImagePathFromProps({ name: normalizedName, showInColor })
