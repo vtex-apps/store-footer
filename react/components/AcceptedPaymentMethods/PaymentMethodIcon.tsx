@@ -1,14 +1,14 @@
 import React from 'react'
 import { useIntl } from 'react-intl'
 import { formatIOMessage } from 'vtex.native-types'
-import type { CssHandlesTypes } from 'vtex.css-handles'
 
-import dinersClub from '../images/diners club.svg'
-import dinersClubBw from '../images/diners club-bw.svg'
-import mastercard from '../images/mastercard.svg'
-import mastercardBw from '../images/mastercard-bw.svg'
-import visa from '../images/visa.svg'
-import visaBw from '../images/visa-bw.svg'
+import dinersClub from '../../images/diners club.svg'
+import dinersClubBw from '../../images/diners club-bw.svg'
+import mastercard from '../../images/mastercard.svg'
+import mastercardBw from '../../images/mastercard-bw.svg'
+import visa from '../../images/visa.svg'
+import visaBw from '../../images/visa-bw.svg'
+import { usePaymentMethodsHandles } from './HandlesContext'
 
 export const CSS_HANDLES = [
   'paymentMethodIcon',
@@ -36,8 +36,6 @@ interface Props {
   showInColor?: boolean
   /** Indicates which one of the payments method should the component show its image */
   paymentMethod: PaymentMethod
-  /** CSS handles from parent */
-  handles: CssHandlesTypes.CssHandles<typeof CSS_HANDLES>
 }
 
 const getImagePathFromProps = ({
@@ -49,9 +47,10 @@ const getImagePathFromProps = ({
 /**
  * Shows an image for the payments forms accepted
  */
-function PaymentMethodIcon({ paymentMethod, showInColor, handles }: Props) {
+function PaymentMethodIcon({ paymentMethod, showInColor }: Props) {
   const intl = useIntl()
 
+  const { handles } = usePaymentMethodsHandles()
   const imagePath = getImagePathFromProps({ paymentMethod, showInColor })
 
   if (!isValidIcon(imagePath)) {
