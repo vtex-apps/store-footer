@@ -1,13 +1,13 @@
 import React from 'react'
-import { render, waitForElement } from '@vtex/test-tools/react'
+import { render, screen } from '@vtex/test-tools/react'
 
 import PoweredBy from '../PoweredBy'
 
 describe('PoweredBy', () => {
   it('should get the platform from runtime', async () => {
-    const { getByAltText } = render(<PoweredBy />)
+    render(<PoweredBy />)
 
-    const element = await waitForElement(() => getByAltText('VTEX'))
+    const element = await screen.findByAltText('VTEX')
 
     const src = element.getAttribute('src')
 
