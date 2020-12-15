@@ -4,10 +4,12 @@ import { useDevice } from 'vtex.device-detector'
 
 const LegacyFooter = React.lazy(() => import('./legacy/Footer'))
 
-const Footer = props => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Footer = (props: any) => {
   const hasFooterDesktop = !!useChildBlock({
     id: 'footer-layout.desktop',
   })
+
   const hasFooterMobile = !!useChildBlock({
     id: 'footer-layout.mobile',
   })
