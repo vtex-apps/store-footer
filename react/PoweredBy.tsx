@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import type { RenderContext } from 'vtex.render-runtime'
 import { useRuntime } from 'vtex.render-runtime'
 
 import { PLATFORM_GOCOMMERCE } from './modules/platformCode'
@@ -29,19 +30,17 @@ function isValidIcon(key: string): key is keyof typeof POWERED_BY_ICONS {
   return key in POWERED_BY_ICONS
 }
 
-const getImagePathFromProps = (
-  runtime: ReturnType<typeof useRuntime>,
-  showInColor: boolean
-) => `${runtime.platform}${showInColor ? '' : '-bw'}`
+const getImagePathFromProps = (platform: string, showInColor: boolean) =>
+  `${platform}${showInColor ? '' : '-bw'}`
 
 /**
  * "Powered By VTEX/GoCommerce" image component, used in Footer
  */
 function PoweredBy({ showInColor = false }: Props) {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const runtime = useRuntime()
+  const { platform } = useRuntime() as RenderContext.RenderContext
 
-  const imagePath = getImagePathFromProps(runtime, showInColor)
+  const imagePath = getImagePathFromProps(platform, showInColor)
 
   if (!isValidIcon(imagePath)) {
     return null
@@ -49,7 +48,7 @@ function PoweredBy({ showInColor = false }: Props) {
 
   const imageSrc = POWERED_BY_ICONS[imagePath]
 
-  if (runtime.platform === PLATFORM_GOCOMMERCE) {
+  if (platform === PLATFORM_GOCOMMERCE) {
     return (
       <a
         href="https://www.gocommerce.com/?utm_source=store_footer"
