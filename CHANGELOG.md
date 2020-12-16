@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Update `vtex.css-handles` to `1.x`.
+
 ## [2.20.1] - 2020-04-08
 ### Changed
 - Footer is no longer sensitive to `__fold__`--it relies on partial hydration for performance instead.

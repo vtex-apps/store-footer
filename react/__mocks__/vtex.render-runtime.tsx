@@ -1,4 +1,5 @@
-import React, { ElementType } from 'react'
+import type { ElementType } from 'react'
+import React from 'react'
 
 const runtime = { account: 'account', platform: 'vtex' }
 

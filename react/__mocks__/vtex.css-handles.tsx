@@ -1,3 +1,8 @@
-const useCssHandles = (input: string[]) => Object.keys(input)
+const useCssHandles = (input: string[]) => {
+  return {
+    handles: Object.keys(input),
+    withModifier: (id: string, mod: any) => id,
+  }
+}
 
 export { useCssHandles }

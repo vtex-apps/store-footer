@@ -1,10 +1,13 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
 const CSS_HANDLES = ['footerSpacer'] as const
 
-const Spacer: FunctionComponent = () => {
-  const handles = useCssHandles(CSS_HANDLES)
+/**
+ * @deprecated Use a simple inline element instead
+ */
+function Spacer() {
+  const { handles } = useCssHandles(CSS_HANDLES)
 
   return <div className={`${handles.footerSpacer} flex flex-grow-1`} />
 }
