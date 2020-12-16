@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.21.0] - 2020-12-16
+
 ### Changed
 - Update `vtex.css-handles` to `1.x`.
 
