@@ -1,5 +1,5 @@
 {
-  "store/social-networks": "Redes Sociais",
+  "store/social-networks": "Redes sociais",
   "store/section-links": "Links",
   "store/more-information-links": "Mais Informações",
   "store/payment-form": "Formas de Pagamento",
@@ -18,7 +18,7 @@
   "admin/editor.footer.linksSections.linksSection": "Seção de Links",
   "admin/editor.footer.linksSections.linksSection.title": "Título da Seção de Links",
   "admin/editor.footer.linksSections.linksSection.links": "Links da Seção de Links",
-  "admin/editor.footer.linksSections.linksSection.links.link": "Link",
+  "admin/editor.footer.linksSections.linksSection.links.link": "URL",
   "admin/editor.footer.linksSections.linksSection.links.link.title": "Título do link",
   "admin/editor.footer.linksSections.linksSection.links.link.url": "URL do link",
   "admin/editor.footer.linksSections.linksSection.links.link.target": "Objetivo do link",
