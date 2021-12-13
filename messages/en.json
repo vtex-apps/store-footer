@@ -43,6 +43,6 @@
   "admin/editor.footer.paymentMethodIcon.title": "Payment Method",
   "admin/editor.footer.paymentMethodIcon.description": "Payment method icon",
   "admin/editor.footer.paymentMethodIcon.method": "Payment method name",
-  "admin/editor.footer.storeInformations": "Store Informations",
+  "admin/editor.footer.storeInformations": "Store Information",
   "admin/editor.footer.storeInformations.storeInformation": "Store Information"
 }

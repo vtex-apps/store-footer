@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- English, French, Japanese, Korean and Dutch translation.
+
+### Removed
+- Pseudolanguage.
+
 ## [2.24.0] - 2021-09-24
 
 ### Added
@@ -14,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - I18n En, Es, Fr, It, Nl, Pt and Ro.
- 
+
 ## [2.23.1] - 2021-06-17
 
 ### Fixed
