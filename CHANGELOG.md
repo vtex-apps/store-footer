@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Indonesian and Thai translations.
+
+### Fixed
+- English, Italian and Portuguese translations.
+
 ## [2.25.0] - 2022-03-09
 
 ### Added
@@ -27,7 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - I18n En, Es, Fr, It, Nl, Pt and Ro.
-
 ## [2.23.1] - 2021-06-17
 
 ### Fixed

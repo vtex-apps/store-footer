@@ -109,7 +109,7 @@ exports[`<Footer /> component should match the snapshot 1`] = `
               <span
                 class="listTitle t-small ma0 db"
               >
-                Social Networks
+                Social Media
               </span>
               <ul
                 class="list list flex flex-column flex-wrap pa0 mb0 mt3 listHorizontal flex-row flex-wrap"
